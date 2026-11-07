@@ -89,3 +89,22 @@ async def sign_up(email: str, password: str, redirect_to: str) -> Any:
             {"email": email, "password": password, "options": {"email_redirect_to": redirect_to}}
         )
     )
+
+
+async def send_recovery(email: str, redirect_to: str) -> None:
+    await asyncio.to_thread(lambda: _client().auth.reset_password_for_email(email, {"redirect_to": redirect_to}))
+
+
+async def resend_confirmation(email: str, redirect_to: str) -> None:
+    await asyncio.to_thread(
+        lambda: _client().auth.resend({"type": "signup", "email": email, "options": {"email_redirect_to": redirect_to}})
+    )
+
+
+async def update_password(access_token: str, refresh_token: str, password: str) -> None:
+    def run() -> None:
+        c = _client()
+        c.auth.set_session(access_token, refresh_token)
+        c.auth.update_user({"password": password})
+
+    await asyncio.to_thread(run)

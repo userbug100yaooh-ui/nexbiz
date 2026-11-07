@@ -6,7 +6,7 @@ from fastapi import APIRouter
 
 from lib.db import db
 from models.entities import AppUser, Company, CompanyUpdate
-from routers.common import clean, get_company
+from routers.common import clean, get_company, require_role
 
 router = APIRouter()
 
@@ -18,6 +18,7 @@ async def read_company() -> Company:
 
 @router.put("/company", response_model=Company)
 async def update_company(body: CompanyUpdate) -> Company:
+    require_role("admin")
     company = await get_company()
     changes = {k: v for k, v in body.model_dump(exclude_none=True).items()}
     if changes:

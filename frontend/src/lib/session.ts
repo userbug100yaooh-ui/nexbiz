@@ -34,6 +34,9 @@ export function useSession(): Session | null {
   return useSyncExternalStore(subscribe, () => current);
 }
 
+/** Leitura não reativa da sessão (para a camada de dados). */
+export const getSession = (): Session | null => current;
+
 export function signIn(session: Session): void {
   queryClient.clear();
   current = session;

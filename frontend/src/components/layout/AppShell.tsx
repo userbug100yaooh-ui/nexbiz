@@ -406,6 +406,18 @@ export default function AppShell() {
       </aside>
       <div className="flex min-h-svh flex-col lg:pl-64">
         <Topbar />
+        {session.mode !== "supabase" && (
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 border-b border-amber-200 bg-amber-50 px-4 py-2 text-center text-xs text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300" data-testid="banner-demo">
+            <span>Você está na <b>conta demo (somente leitura)</b>. Os dados são fictícios.</span>
+            <button
+              onClick={() => void signOut().then(() => navigate("/cadastro"))}
+              className="font-semibold underline"
+              data-testid="banner-demo-criar-conta"
+            >
+              Criar minha conta grátis
+            </button>
+          </div>
+        )}
         <main className="flex-1 px-4 py-6 sm:px-6 lg:px-8" data-testid="app-main">
           <div className="mx-auto w-full max-w-7xl">
             <Outlet />

@@ -16,6 +16,15 @@ def clean(doc: Dict[str, Any]) -> Dict[str, Any]:
     return doc
 
 
+def require_role(*roles: str) -> None:
+    """Permissão por papel (admin | gerente | vendedor) do usuário da sessão."""
+    ctx = current_ctx.get()
+    if ctx is None:
+        raise HTTPException(status_code=401, detail="Sessão ausente ou expirada — faça login novamente.")
+    if ctx.role not in roles:
+        raise HTTPException(status_code=403, detail="Seu perfil não tem permissão para esta ação.")
+
+
 async def get_company() -> Company:
     """Empresa da sessão atual (resolvida pelo tenant_middleware a partir do cookie).
     Toda rota de negócio filtra por company.id — usuários nunca veem dados de outra empresa."""

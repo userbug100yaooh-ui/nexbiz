@@ -12,6 +12,7 @@ from dataclasses import dataclass
 from typing import Any, Optional, Tuple
 
 from fastapi import Request, Response
+from fastapi.responses import JSONResponse
 
 from lib import supabase_auth
 from lib.db import db
@@ -23,7 +24,8 @@ DEMO_USER_ID = "usr-001"
 COOKIE_OPTS = dict(httponly=True, secure=True, samesite="lax", path="/", max_age=60 * 60 * 24 * 30)
 
 # Rotas que gerenciam a própria sessão (não resolvidas pelo middleware)
-SESSION_ROUTES = {"/api/auth/login", "/api/auth/register", "/api/auth/demo", "/api/auth/logout"}
+SESSION_ROUTES = {"/api/auth/login", "/api/auth/register", "/api/auth/demo", "/api/auth/logout", "/api/auth/session", "/api/auth/forgot", "/api/auth/resend"}
+READ_METHODS = {"GET", "HEAD", "OPTIONS"}
 
 
 @dataclass
@@ -31,6 +33,7 @@ class Ctx:
     company_id: str
     user_id: str
     mode: str  # demo | supabase
+    role: str = "vendedor"
 
 
 current_ctx: ContextVar[Optional[Ctx]] = ContextVar("nexbiz_ctx", default=None)
@@ -67,12 +70,12 @@ async def resolve(request: Request) -> Tuple[Optional[Ctx], Any]:
         if uid:
             user = await db.users.find_one({"supabase_user_id": uid})
             if user:
-                return Ctx(company_id=user["company_id"], user_id=user["id"], mode="supabase"), new_session
+                return Ctx(company_id=user["company_id"], user_id=user["id"], mode="supabase", role=user.get("role", "vendedor")), new_session
         return None, None  # sessão real inválida nunca cai silenciosamente no demo
     if request.cookies.get(DEMO) == "1":
         user = await db.users.find_one({"id": DEMO_USER_ID})
         if user:
-            return Ctx(company_id=user["company_id"], user_id=user["id"], mode="demo"), None
+            return Ctx(company_id=user["company_id"], user_id=user["id"], mode="demo", role=user.get("role", "admin")), None
     return None, None
 
 
@@ -81,6 +84,11 @@ async def tenant_middleware(request: Request, call_next):
     if not path.startswith("/api") or path in SESSION_ROUTES:
         return await call_next(request)
     ctx, new_session = await resolve(request)
+    if ctx and ctx.mode == "demo" and request.method not in READ_METHODS:
+        return JSONResponse(
+            status_code=403,
+            content={"detail": "Conta demo é somente leitura — crie sua conta grátis para cadastrar e editar dados."},
+        )
     token = current_ctx.set(ctx)
     try:
         response = await call_next(request)

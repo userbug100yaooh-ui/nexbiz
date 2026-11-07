@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { ArrowLeft, Check, Lock, Mail, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import { Logo } from "@/components/Logo";
@@ -10,7 +10,7 @@ import { Field } from "@/components/Field";
 import { Input } from "@/components/ui/input";
 import { ApiError } from "@/lib/api";
 import { demoData } from "@/lib/demo-data";
-import { errMessage, useDemoMutation, useLoginMutation } from "@/lib/queries";
+import { errMessage, useDemoMutation, useLoginMutation, useOpenSessionMutation, useResendMutation } from "@/lib/queries";
 import { signIn, useSession } from "@/lib/session";
 import type { AppUser, Company } from "@/lib/types";
 
@@ -27,8 +27,40 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const login = useLoginMutation();
   const demo = useDemoMutation();
+  const openSession = useOpenSessionMutation();
+  const resend = useResendMutation();
+  const [unconfirmed, setUnconfirmed] = useState("");
+
+  // Link de confirmação do Supabase: /login#access_token=…&refresh_token=…&type=signup
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.hash.slice(1));
+    const access_token = params.get("access_token");
+    const refresh_token = params.get("refresh_token");
+    const linkError = params.get("error_description");
+    if (linkError) {
+      toast.error("Link de confirmação inválido ou expirado. Faça login para receber um novo.");
+      window.history.replaceState(null, "", "/login");
+      return;
+    }
+    if (!access_token || !refresh_token) return;
+    window.history.replaceState(null, "", "/login");
+    openSession.mutate(
+      { access_token, refresh_token },
+      {
+        onSuccess: (res) => enter(res.user, res.company, "E-mail confirmado — bem-vindo ao NEXBIZ!", res.mode),
+        onError: (err) => toast.error(errMessage(err)),
+      },
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (session) return <Navigate to="/app" replace />;
+
+  const resendConfirmation = () =>
+    resend.mutate(unconfirmed, {
+      onSuccess: (r) => toast.success(r.detail),
+      onError: (err) => toast.error(errMessage(err)),
+    });
 
   const enter = (user: AppUser, company: Company, message: string, mode: string) => {
     signIn({ user, company, mode });
@@ -48,13 +80,11 @@ export default function Login() {
         onSuccess: (res) => enter(res.user, res.company, "Bem-vindo de volta!", res.mode),
         onError: (err) => {
           if (err instanceof ApiError) {
+            if (err.status === 403) setUnconfirmed(email.trim());
             toast.error(errMessage(err));
             return;
           }
-          // Sem backend (preview estático): entra no modo demonstração.
-          const user =
-            demoData.users.find((u) => u.email.toLowerCase() === email.trim().toLowerCase()) ?? demoData.users[0];
-          enter(user, demoData.company, "Sem conexão — modo demonstração offline.", "offline");
+          toast.error("Sem conexão com o servidor. Verifique sua internet e tente novamente.");
         },
       },
     );
@@ -138,9 +168,22 @@ export default function Login() {
                   />
                 </div>
               </Field>
-              <Button type="submit" className="w-full" disabled={login.isPending} data-testid="btn-entrar">
-                {login.isPending ? "Entrando…" : "Entrar"}
+              <div className="flex justify-end">
+                <Link to="/recuperar-senha" className="text-xs font-semibold text-primary hover:underline" data-testid="link-esqueci-senha">
+                  Esqueci minha senha
+                </Link>
+              </div>
+              <Button type="submit" className="w-full" disabled={login.isPending || openSession.isPending} data-testid="btn-entrar">
+                {login.isPending || openSession.isPending ? "Entrando…" : "Entrar"}
               </Button>
+              {unconfirmed && (
+                <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300" data-testid="aviso-email-nao-confirmado">
+                  Confirme o e-mail <b>{unconfirmed}</b> pelo link que enviamos.{" "}
+                  <button type="button" onClick={resendConfirmation} disabled={resend.isPending} className="font-semibold underline" data-testid="btn-reenviar-confirmacao">
+                    {resend.isPending ? "Reenviando…" : "Reenviar e-mail"}
+                  </button>
+                </div>
+              )}
             </form>
 
             <div className="my-5 flex items-center gap-3 text-xs text-muted-foreground">

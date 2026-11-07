@@ -6,7 +6,7 @@ from fastapi import APIRouter, HTTPException
 
 from lib.db import db
 from models.entities import Client, ClientIn
-from routers.common import clean, get_company
+from routers.common import clean, get_company, require_role
 
 router = APIRouter()
 
@@ -39,6 +39,7 @@ async def update_client(id: str, body: ClientIn) -> Client:
 
 @router.delete("/clients/{id}", response_model=Client)
 async def delete_client(id: str) -> Client:
+    require_role("admin", "gerente")
     company = await get_company()
     doc = await db.clients.find_one_and_delete({"id": id, "company_id": company.id})
     if not doc:

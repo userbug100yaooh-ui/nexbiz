@@ -71,6 +71,19 @@ class LoginIn(BaseModel):
     password: str  # verificado pelo Supabase; nunca armazenado no Mongo
 
 
+class SessionIn(BaseModel):
+    access_token: str  # tokens do link de e-mail do Supabase (confirmação/recuperação)
+    refresh_token: str
+
+
+class EmailIn(BaseModel):
+    email: str
+
+
+class PasswordIn(BaseModel):
+    password: str = Field(min_length=6, max_length=72)
+
+
 class RegisterIn(BaseModel):
     name: str
     email: str
@@ -109,14 +122,14 @@ class Product(BaseModel):
 
 
 class ProductIn(BaseModel):
-    name: str
-    sku: str = ""
+    name: str = Field(min_length=1, max_length=200)
+    sku: str = Field(default="", max_length=60)
     category: str = "Geral"
     unit: str = "un"
-    price: float
-    cost: float = 0.0
-    stock: int = 0
-    min_stock: int = 0
+    price: float = Field(gt=0)
+    cost: float = Field(default=0.0, ge=0)
+    stock: int = Field(default=0, ge=0)
+    min_stock: int = Field(default=0, ge=0)
     active: bool = True
 
 
@@ -138,7 +151,7 @@ class Client(BaseModel):
 
 
 class ClientIn(BaseModel):
-    name: str
+    name: str = Field(min_length=1, max_length=200)
     kind: str = "PJ"
     document: str = ""
     email: str = ""
@@ -165,12 +178,12 @@ class Service(BaseModel):
 
 
 class ServiceIn(BaseModel):
-    name: str
+    name: str = Field(min_length=1, max_length=200)
     description: str = ""
     category: str = "Geral"
     pricing: str = "fixo"
-    price: float
-    estimated_hours: float = 0.0
+    price: float = Field(gt=0)
+    estimated_hours: float = Field(default=0.0, ge=0)
     active: bool = True
 
 
@@ -187,7 +200,7 @@ class SaleItem(BaseModel):
 
 class SaleItemIn(BaseModel):
     product_id: str
-    qty: int
+    qty: int = Field(gt=0)
 
 
 class Sale(BaseModel):
@@ -232,9 +245,9 @@ class Transaction(BaseModel):
 
 class TransactionIn(BaseModel):
     kind: str  # receita | despesa
-    description: str
+    description: str = Field(min_length=1, max_length=300)
     category: str = "Outros"
-    amount: float
+    amount: float = Field(gt=0)
     due_date: str
     paid: bool = False
     method: str = "Pix"

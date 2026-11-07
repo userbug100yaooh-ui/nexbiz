@@ -4,28 +4,28 @@ import type { DemoBundle } from "./types";
 
 export const demoData: DemoBundle = {
   "company": {
-    "id": "emp-nexbiz-001",
-    "name": "NEXBIZ Comercial Ltda.",
-    "legal_name": "NexBiz Comércio e Serviços Ltda.",
-    "cnpj": "12.345.678/0001-90",
-    "segment": "Comércio & Serviços",
-    "email": "contato@nexbiz.com.br",
-    "phone": "(11) 4002-8922",
-    "address": "Av. Paulista, 1000 — Sala 42",
-    "city": "São Paulo",
+    "id": "b7a23dd2-a438-44f7-973a-37bbbcd84c82",
+    "name": "Empresa QA 1794031215",
+    "legal_name": "",
+    "cnpj": "",
+    "segment": "Comércio",
+    "email": "nexbiz.qa.1794031215@mailinator.com",
+    "phone": "",
+    "address": "",
+    "city": "",
     "state": "SP",
-    "plan": "profissional",
-    "created_at": "2026-11-07T05:30:57.807000"
+    "plan": "trial",
+    "created_at": "2026-11-07T06:00:16.212000"
   },
   "users": [
     {
       "id": "usr-001",
       "company_id": "emp-nexbiz-001",
-      "name": "Administrador NEXBIZ",
-      "email": "pintopinto.yaooh@gmail.com",
+      "name": "Administrador Demo",
+      "email": "demo@nexbiz.com.br",
       "role": "admin",
       "supabase_user_id": "",
-      "created_at": "2026-04-21T05:30:57.368000"
+      "created_at": "2026-04-21T06:39:43.787000"
     },
     {
       "id": "usr-002",
@@ -34,7 +34,7 @@ export const demoData: DemoBundle = {
       "email": "carlos@nexbiz.com.br",
       "role": "gerente",
       "supabase_user_id": "",
-      "created_at": "2026-04-21T05:30:57.368000"
+      "created_at": "2026-04-21T06:39:43.787000"
     },
     {
       "id": "usr-003",
@@ -43,7 +43,25 @@ export const demoData: DemoBundle = {
       "email": "marina@nexbiz.com.br",
       "role": "vendedor",
       "supabase_user_id": "",
-      "created_at": "2026-04-21T05:30:57.368000"
+      "created_at": "2026-04-21T06:39:43.787000"
+    },
+    {
+      "id": "0bd83993-40a7-40fb-8eae-4bbbb66bae96",
+      "company_id": "b7a23dd2-a438-44f7-973a-37bbbcd84c82",
+      "name": "QA Teste",
+      "email": "nexbiz.qa.1794031215@mailinator.com",
+      "role": "admin",
+      "supabase_user_id": "9ad180a1-a7d3-4279-a3af-70e7ded5e516",
+      "created_at": "2026-11-07T06:00:16.212000"
+    },
+    {
+      "id": "6808dc39-9942-4190-9f0b-a1e5db0381f9",
+      "company_id": "123d0c3a-2ad2-4e12-b965-0d8075a57b0a",
+      "name": "QA Tester",
+      "email": "nexbiz.qa.1794031258@mailinator.com",
+      "role": "admin",
+      "supabase_user_id": "b1849ca9-b73d-4751-b583-7eb93c79b51d",
+      "created_at": "2026-11-07T06:00:58.706000"
     }
   ],
   "products": [
@@ -59,7 +77,7 @@ export const demoData: DemoBundle = {
       "stock": 60,
       "min_stock": 20,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-013",
@@ -73,7 +91,7 @@ export const demoData: DemoBundle = {
       "stock": 5,
       "min_stock": 2,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-010",
@@ -87,7 +105,7 @@ export const demoData: DemoBundle = {
       "stock": 4,
       "min_stock": 8,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-015",
@@ -101,7 +119,7 @@ export const demoData: DemoBundle = {
       "stock": 9,
       "min_stock": 3,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-005",
@@ -115,7 +133,7 @@ export const demoData: DemoBundle = {
       "stock": 15,
       "min_stock": 6,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-009",
@@ -129,7 +147,7 @@ export const demoData: DemoBundle = {
       "stock": 30,
       "min_stock": 10,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-016",
@@ -143,7 +161,7 @@ export const demoData: DemoBundle = {
       "stock": 6,
       "min_stock": 2,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-008",
@@ -157,7 +175,7 @@ export const demoData: DemoBundle = {
       "stock": 22,
       "min_stock": 8,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-014",
@@ -171,7 +189,7 @@ export const demoData: DemoBundle = {
       "stock": 3,
       "min_stock": 3,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-002",
@@ -185,7 +203,7 @@ export const demoData: DemoBundle = {
       "stock": 12,
       "min_stock": 4,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-003",
@@ -199,7 +217,7 @@ export const demoData: DemoBundle = {
       "stock": 25,
       "min_stock": 8,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-001",
@@ -213,7 +231,7 @@ export const demoData: DemoBundle = {
       "stock": 8,
       "min_stock": 3,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-018",
@@ -227,7 +245,7 @@ export const demoData: DemoBundle = {
       "stock": 2,
       "min_stock": 10,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-017",
@@ -241,7 +259,7 @@ export const demoData: DemoBundle = {
       "stock": 40,
       "min_stock": 15,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-007",
@@ -255,7 +273,7 @@ export const demoData: DemoBundle = {
       "stock": 18,
       "min_stock": 6,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-012",
@@ -269,7 +287,7 @@ export const demoData: DemoBundle = {
       "stock": 14,
       "min_stock": 5,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-004",
@@ -283,7 +301,7 @@ export const demoData: DemoBundle = {
       "stock": 6,
       "min_stock": 10,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "prd-006",
@@ -297,7 +315,7 @@ export const demoData: DemoBundle = {
       "stock": 0,
       "min_stock": 5,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     }
   ],
   "clients": [
@@ -312,7 +330,7 @@ export const demoData: DemoBundle = {
       "city": "Osasco",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-005",
@@ -325,7 +343,7 @@ export const demoData: DemoBundle = {
       "city": "Curitiba",
       "state": "PR",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-004",
@@ -338,7 +356,7 @@ export const demoData: DemoBundle = {
       "city": "Belo Horizonte",
       "state": "MG",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-003",
@@ -351,7 +369,7 @@ export const demoData: DemoBundle = {
       "city": "Rio de Janeiro",
       "state": "RJ",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-006",
@@ -364,7 +382,7 @@ export const demoData: DemoBundle = {
       "city": "Campinas",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-008",
@@ -377,7 +395,7 @@ export const demoData: DemoBundle = {
       "city": "São Paulo",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-013",
@@ -390,7 +408,7 @@ export const demoData: DemoBundle = {
       "city": "São Bernardo do Campo",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-014",
@@ -403,7 +421,7 @@ export const demoData: DemoBundle = {
       "city": "Diadema",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-009",
@@ -416,7 +434,7 @@ export const demoData: DemoBundle = {
       "city": "Guarulhos",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-002",
@@ -429,7 +447,7 @@ export const demoData: DemoBundle = {
       "city": "Santo André",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-010",
@@ -442,7 +460,7 @@ export const demoData: DemoBundle = {
       "city": "Campinas",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-012",
@@ -455,7 +473,7 @@ export const demoData: DemoBundle = {
       "city": "Santos",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-007",
@@ -468,7 +486,7 @@ export const demoData: DemoBundle = {
       "city": "São Paulo",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "cli-001",
@@ -481,7 +499,7 @@ export const demoData: DemoBundle = {
       "city": "São Paulo",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     }
   ],
   "services": [
@@ -495,7 +513,7 @@ export const demoData: DemoBundle = {
       "price": 320.0,
       "estimated_hours": 0.0,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "srv-007",
@@ -507,7 +525,7 @@ export const demoData: DemoBundle = {
       "price": 1500.0,
       "estimated_hours": 12.0,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "srv-003",
@@ -519,7 +537,7 @@ export const demoData: DemoBundle = {
       "price": 250.0,
       "estimated_hours": 6.0,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "srv-004",
@@ -531,7 +549,7 @@ export const demoData: DemoBundle = {
       "price": 3500.0,
       "estimated_hours": 40.0,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "srv-001",
@@ -543,7 +561,7 @@ export const demoData: DemoBundle = {
       "price": 800.0,
       "estimated_hours": 8.0,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "srv-002",
@@ -555,7 +573,7 @@ export const demoData: DemoBundle = {
       "price": 120.0,
       "estimated_hours": 3.0,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "srv-005",
@@ -567,7 +585,7 @@ export const demoData: DemoBundle = {
       "price": 990.0,
       "estimated_hours": 0.0,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     },
     {
       "id": "srv-008",
@@ -579,7 +597,7 @@ export const demoData: DemoBundle = {
       "price": 180.0,
       "estimated_hours": 4.0,
       "active": true,
-      "created_at": "2026-11-07T05:30:57.807000"
+      "created_at": "2026-11-07T06:39:43.813000"
     }
   ],
   "service_orders": [
@@ -595,7 +613,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-10-08",
       "price": 990.0,
       "notes": "Serviço executado e aprovado pelo cliente.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     },
     {
       "id": "os-002",
@@ -609,7 +627,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-11-18",
       "price": 800.0,
       "notes": "Aguardando agendamento com o cliente.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     },
     {
       "id": "os-003",
@@ -623,7 +641,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-11-22",
       "price": 3500.0,
       "notes": "Execução em andamento pela equipe técnica.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     },
     {
       "id": "os-004",
@@ -637,7 +655,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-10-04",
       "price": 320.0,
       "notes": "Serviço executado e aprovado pelo cliente.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     },
     {
       "id": "os-005",
@@ -651,7 +669,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-11-15",
       "price": 180.0,
       "notes": "Aguardando agendamento com o cliente.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     },
     {
       "id": "os-006",
@@ -665,7 +683,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-09-13",
       "price": 180.0,
       "notes": "Serviço executado e aprovado pelo cliente.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     },
     {
       "id": "os-007",
@@ -679,7 +697,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-11-11",
       "price": 250.0,
       "notes": "Execução em andamento pela equipe técnica.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     },
     {
       "id": "os-008",
@@ -693,7 +711,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-10-28",
       "price": 320.0,
       "notes": "Cancelada a pedido do cliente.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     },
     {
       "id": "os-009",
@@ -707,7 +725,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-11-18",
       "price": 3500.0,
       "notes": "Aguardando agendamento com o cliente.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     },
     {
       "id": "os-010",
@@ -721,7 +739,7 @@ export const demoData: DemoBundle = {
       "scheduled_date": "2026-10-24",
       "price": 3500.0,
       "notes": "Serviço executado e aprovado pelo cliente.",
-      "created_at": "2026-11-07T05:30:57.808000"
+      "created_at": "2026-11-07T06:39:43.814000"
     }
   ],
   "sales": [
@@ -743,7 +761,7 @@ export const demoData: DemoBundle = {
       "total": 14697.0,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-11-06T16:15:57.368000"
+      "created_at": "2026-11-06T17:24:43.787000"
     },
     {
       "id": "sal-002",
@@ -777,7 +795,7 @@ export const demoData: DemoBundle = {
       "total": 1283.8,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-11-05T17:16:57.368000"
+      "created_at": "2026-11-05T18:25:43.787000"
     },
     {
       "id": "sal-003",
@@ -797,7 +815,7 @@ export const demoData: DemoBundle = {
       "total": 69.8,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-11-04T17:02:57.368000"
+      "created_at": "2026-11-04T18:11:43.787000"
     },
     {
       "id": "sal-004",
@@ -817,7 +835,7 @@ export const demoData: DemoBundle = {
       "total": 1798.0,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-11-03T16:21:57.368000"
+      "created_at": "2026-11-03T17:30:43.787000"
     },
     {
       "id": "sal-040",
@@ -837,7 +855,7 @@ export const demoData: DemoBundle = {
       "total": 379.8,
       "status": "cancelado",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-11-02T14:40:57.368000"
+      "created_at": "2026-11-02T15:49:43.787000"
     },
     {
       "id": "sal-005",
@@ -857,7 +875,7 @@ export const demoData: DemoBundle = {
       "total": 1299.0,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-11-02T14:36:57.368000"
+      "created_at": "2026-11-02T15:45:43.787000"
     },
     {
       "id": "sal-020",
@@ -891,7 +909,7 @@ export const demoData: DemoBundle = {
       "total": 15131.6,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-10-30T18:33:57.368000"
+      "created_at": "2026-10-30T19:42:43.787000"
     },
     {
       "id": "sal-029",
@@ -911,7 +929,7 @@ export const demoData: DemoBundle = {
       "total": 1049.7,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-30T17:05:57.368000"
+      "created_at": "2026-10-30T18:14:43.787000"
     },
     {
       "id": "sal-012",
@@ -945,7 +963,7 @@ export const demoData: DemoBundle = {
       "total": 2228.5,
       "status": "pago",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-10-28T19:35:57.368000"
+      "created_at": "2026-10-28T20:44:43.787000"
     },
     {
       "id": "sal-006",
@@ -965,7 +983,7 @@ export const demoData: DemoBundle = {
       "total": 1347.0,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-27T14:25:57.368000"
+      "created_at": "2026-10-27T15:34:43.787000"
     },
     {
       "id": "sal-046",
@@ -999,7 +1017,7 @@ export const demoData: DemoBundle = {
       "total": 6693.8,
       "status": "cancelado",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-10-27T13:48:57.368000"
+      "created_at": "2026-10-27T14:57:43.787000"
     },
     {
       "id": "sal-025",
@@ -1019,7 +1037,7 @@ export const demoData: DemoBundle = {
       "total": 349.9,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-10-25T13:00:57.368000"
+      "created_at": "2026-10-25T14:09:43.787000"
     },
     {
       "id": "sal-043",
@@ -1053,7 +1071,7 @@ export const demoData: DemoBundle = {
       "total": 1528.7,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-10-24T16:28:57.368000"
+      "created_at": "2026-10-24T17:37:43.787000"
     },
     {
       "id": "sal-042",
@@ -1080,7 +1098,7 @@ export const demoData: DemoBundle = {
       "total": 434.6,
       "status": "pendente",
       "payment_method": "Boleto",
-      "created_at": "2026-10-24T15:13:57.368000"
+      "created_at": "2026-10-24T16:22:43.787000"
     },
     {
       "id": "sal-007",
@@ -1107,7 +1125,7 @@ export const demoData: DemoBundle = {
       "total": 1599.6,
       "status": "pendente",
       "payment_method": "Pix",
-      "created_at": "2026-10-22T16:25:57.368000"
+      "created_at": "2026-10-22T17:34:43.787000"
     },
     {
       "id": "sal-035",
@@ -1134,7 +1152,7 @@ export const demoData: DemoBundle = {
       "total": 1969.5,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-10-21T20:25:57.368000"
+      "created_at": "2026-10-21T21:34:43.787000"
     },
     {
       "id": "sal-023",
@@ -1168,7 +1186,7 @@ export const demoData: DemoBundle = {
       "total": 5966.7,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-10-21T16:56:57.368000"
+      "created_at": "2026-10-21T18:05:43.787000"
     },
     {
       "id": "sal-044",
@@ -1202,7 +1220,7 @@ export const demoData: DemoBundle = {
       "total": 3086.7,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-21T14:30:57.368000"
+      "created_at": "2026-10-21T15:39:43.787000"
     },
     {
       "id": "sal-011",
@@ -1236,7 +1254,7 @@ export const demoData: DemoBundle = {
       "total": 4196.0,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-21T11:56:57.368000"
+      "created_at": "2026-10-21T13:05:43.787000"
     },
     {
       "id": "sal-010",
@@ -1256,7 +1274,7 @@ export const demoData: DemoBundle = {
       "total": 99.8,
       "status": "cancelado",
       "payment_method": "Boleto",
-      "created_at": "2026-10-20T16:32:57.368000"
+      "created_at": "2026-10-20T17:41:43.787000"
     },
     {
       "id": "sal-027",
@@ -1283,7 +1301,7 @@ export const demoData: DemoBundle = {
       "total": 1183.9,
       "status": "pendente",
       "payment_method": "Pix",
-      "created_at": "2026-10-19T19:53:57.368000"
+      "created_at": "2026-10-19T21:02:43.787000"
     },
     {
       "id": "sal-031",
@@ -1310,7 +1328,7 @@ export const demoData: DemoBundle = {
       "total": 4556.7,
       "status": "pendente",
       "payment_method": "Pix",
-      "created_at": "2026-10-18T14:31:57.368000"
+      "created_at": "2026-10-18T15:40:43.787000"
     },
     {
       "id": "sal-008",
@@ -1337,7 +1355,7 @@ export const demoData: DemoBundle = {
       "total": 628.8,
       "status": "cancelado",
       "payment_method": "Pix",
-      "created_at": "2026-10-16T15:46:57.368000"
+      "created_at": "2026-10-16T16:55:43.787000"
     },
     {
       "id": "sal-022",
@@ -1364,7 +1382,7 @@ export const demoData: DemoBundle = {
       "total": 1419.6,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-10-12T14:04:57.368000"
+      "created_at": "2026-10-12T15:13:43.787000"
     },
     {
       "id": "sal-019",
@@ -1391,7 +1409,7 @@ export const demoData: DemoBundle = {
       "total": 2867.7,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-10-10T17:16:57.368000"
+      "created_at": "2026-10-10T18:25:43.787000"
     },
     {
       "id": "sal-014",
@@ -1425,7 +1443,7 @@ export const demoData: DemoBundle = {
       "total": 709.5,
       "status": "pendente",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-10T15:58:57.368000"
+      "created_at": "2026-10-10T17:07:43.787000"
     },
     {
       "id": "sal-032",
@@ -1452,7 +1470,7 @@ export const demoData: DemoBundle = {
       "total": 1219.6,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-10-07T17:31:57.368000"
+      "created_at": "2026-10-07T18:40:43.787000"
     },
     {
       "id": "sal-028",
@@ -1479,7 +1497,7 @@ export const demoData: DemoBundle = {
       "total": 5766.8,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-07T12:20:57.368000"
+      "created_at": "2026-10-07T13:29:43.787000"
     },
     {
       "id": "sal-030",
@@ -1513,7 +1531,7 @@ export const demoData: DemoBundle = {
       "total": 9443.7,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-10-06T16:17:57.368000"
+      "created_at": "2026-10-06T17:26:43.787000"
     },
     {
       "id": "sal-013",
@@ -1547,7 +1565,7 @@ export const demoData: DemoBundle = {
       "total": 5445.7,
       "status": "cancelado",
       "payment_method": "Pix",
-      "created_at": "2026-10-06T11:35:57.368000"
+      "created_at": "2026-10-06T12:44:43.787000"
     },
     {
       "id": "sal-015",
@@ -1581,7 +1599,7 @@ export const demoData: DemoBundle = {
       "total": 939.6,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-10-05T11:32:57.368000"
+      "created_at": "2026-10-05T12:41:43.787000"
     },
     {
       "id": "sal-045",
@@ -1615,7 +1633,7 @@ export const demoData: DemoBundle = {
       "total": 2617.6,
       "status": "cancelado",
       "payment_method": "Dinheiro",
-      "created_at": "2026-09-30T18:44:57.368000"
+      "created_at": "2026-09-30T19:53:43.787000"
     },
     {
       "id": "sal-036",
@@ -1635,7 +1653,7 @@ export const demoData: DemoBundle = {
       "total": 49.9,
       "status": "pendente",
       "payment_method": "Dinheiro",
-      "created_at": "2026-09-29T16:20:57.368000"
+      "created_at": "2026-09-29T17:29:43.787000"
     },
     {
       "id": "sal-033",
@@ -1662,7 +1680,7 @@ export const demoData: DemoBundle = {
       "total": 829.5,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-09-24T10:39:57.368000"
+      "created_at": "2026-09-24T11:48:43.787000"
     },
     {
       "id": "sal-021",
@@ -1696,7 +1714,7 @@ export const demoData: DemoBundle = {
       "total": 1958.6,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-09-22T10:54:57.368000"
+      "created_at": "2026-09-22T12:03:43.787000"
     },
     {
       "id": "sal-034",
@@ -1730,7 +1748,7 @@ export const demoData: DemoBundle = {
       "total": 769.6,
       "status": "pago",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-09-21T18:13:57.368000"
+      "created_at": "2026-09-21T19:22:43.787000"
     },
     {
       "id": "sal-024",
@@ -1757,7 +1775,7 @@ export const demoData: DemoBundle = {
       "total": 1108.8,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-09-15T12:24:57.368000"
+      "created_at": "2026-09-15T13:33:43.787000"
     },
     {
       "id": "sal-018",
@@ -1777,7 +1795,7 @@ export const demoData: DemoBundle = {
       "total": 479.7,
       "status": "cancelado",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-09-08T14:17:57.368000"
+      "created_at": "2026-09-08T15:26:43.787000"
     },
     {
       "id": "sal-041",
@@ -1797,7 +1815,7 @@ export const demoData: DemoBundle = {
       "total": 579.8,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-09-08T13:16:57.368000"
+      "created_at": "2026-09-08T14:25:43.787000"
     },
     {
       "id": "sal-016",
@@ -1817,7 +1835,7 @@ export const demoData: DemoBundle = {
       "total": 579.8,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-09-07T16:15:57.368000"
+      "created_at": "2026-09-07T17:24:43.787000"
     },
     {
       "id": "sal-039",
@@ -1837,7 +1855,7 @@ export const demoData: DemoBundle = {
       "total": 269.7,
       "status": "pendente",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-09-06T13:51:57.368000"
+      "created_at": "2026-09-06T15:00:43.787000"
     },
     {
       "id": "sal-038",
@@ -1871,7 +1889,7 @@ export const demoData: DemoBundle = {
       "total": 2087.7,
       "status": "pago",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-09-04T19:33:57.368000"
+      "created_at": "2026-09-04T20:42:43.787000"
     },
     {
       "id": "sal-037",
@@ -1898,7 +1916,7 @@ export const demoData: DemoBundle = {
       "total": 4933.9,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-08-28T17:56:57.368000"
+      "created_at": "2026-08-28T19:05:43.787000"
     },
     {
       "id": "sal-017",
@@ -1918,7 +1936,7 @@ export const demoData: DemoBundle = {
       "total": 1149.0,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-08-21T11:41:57.368000"
+      "created_at": "2026-08-21T12:50:43.787000"
     },
     {
       "id": "sal-026",
@@ -1938,7 +1956,7 @@ export const demoData: DemoBundle = {
       "total": 1299.0,
       "status": "pendente",
       "payment_method": "Transferência",
-      "created_at": "2026-08-19T15:31:57.368000"
+      "created_at": "2026-08-19T16:40:43.787000"
     },
     {
       "id": "sal-009",
@@ -1972,7 +1990,7 @@ export const demoData: DemoBundle = {
       "total": 1109.4,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-08-17T12:16:57.368000"
+      "created_at": "2026-08-17T13:25:43.787000"
     }
   ],
   "transactions": [
@@ -2058,7 +2076,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-12-02",
       "paid": false,
       "method": "Boleto",
-      "created_at": "2026-11-07T05:30:57.368000"
+      "created_at": "2026-11-07T06:39:43.787000"
     },
     {
       "id": "trx-078",
@@ -2070,7 +2088,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-11-27",
       "paid": false,
       "method": "Pix",
-      "created_at": "2026-11-07T05:30:57.368000"
+      "created_at": "2026-11-07T06:39:43.787000"
     },
     {
       "id": "trx-067",
@@ -2094,7 +2112,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-11-19",
       "paid": false,
       "method": "Boleto",
-      "created_at": "2026-11-07T05:30:57.368000"
+      "created_at": "2026-11-07T06:39:43.787000"
     },
     {
       "id": "trx-066",
@@ -2154,7 +2172,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-11-06",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-11-06T16:15:57.368000"
+      "created_at": "2026-11-06T17:24:43.787000"
     },
     {
       "id": "trx-038",
@@ -2166,7 +2184,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-11-05",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-11-05T17:16:57.368000"
+      "created_at": "2026-11-05T18:25:43.787000"
     },
     {
       "id": "trx-062",
@@ -2190,7 +2208,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-11-04",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-11-04T17:02:57.368000"
+      "created_at": "2026-11-04T18:11:43.787000"
     },
     {
       "id": "trx-036",
@@ -2202,7 +2220,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-11-03",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-11-03T16:21:57.368000"
+      "created_at": "2026-11-03T17:30:43.787000"
     },
     {
       "id": "trx-035",
@@ -2214,7 +2232,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-11-02",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-11-02T14:36:57.368000"
+      "created_at": "2026-11-02T15:45:43.787000"
     },
     {
       "id": "trx-033",
@@ -2226,7 +2244,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-30",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-10-30T17:05:57.368000"
+      "created_at": "2026-10-30T18:14:43.787000"
     },
     {
       "id": "trx-034",
@@ -2238,7 +2256,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-30",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-10-30T18:33:57.368000"
+      "created_at": "2026-10-30T19:42:43.787000"
     },
     {
       "id": "trx-032",
@@ -2250,7 +2268,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-28",
       "paid": true,
       "method": "Cartão de Crédito",
-      "created_at": "2026-10-28T19:35:57.368000"
+      "created_at": "2026-10-28T20:44:43.787000"
     },
     {
       "id": "trx-031",
@@ -2262,7 +2280,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-27",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-10-27T14:25:57.368000"
+      "created_at": "2026-10-27T15:34:43.787000"
     },
     {
       "id": "trx-076",
@@ -2286,7 +2304,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-25",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-10-25T13:00:57.368000"
+      "created_at": "2026-10-25T14:09:43.787000"
     },
     {
       "id": "trx-028",
@@ -2298,7 +2316,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-24",
       "paid": false,
       "method": "Boleto",
-      "created_at": "2026-10-24T15:13:57.368000"
+      "created_at": "2026-10-24T16:22:43.787000"
     },
     {
       "id": "trx-029",
@@ -2310,7 +2328,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-24",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-10-24T16:28:57.368000"
+      "created_at": "2026-10-24T17:37:43.787000"
     },
     {
       "id": "trx-043",
@@ -2322,7 +2340,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-24",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-11-07T05:30:57.368000"
+      "created_at": "2026-11-07T06:39:43.787000"
     },
     {
       "id": "trx-027",
@@ -2334,7 +2352,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-22",
       "paid": false,
       "method": "Pix",
-      "created_at": "2026-10-22T16:25:57.368000"
+      "created_at": "2026-10-22T17:34:43.787000"
     },
     {
       "id": "trx-023",
@@ -2346,7 +2364,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-21",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-10-21T11:56:57.368000"
+      "created_at": "2026-10-21T13:05:43.787000"
     },
     {
       "id": "trx-024",
@@ -2358,7 +2376,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-21",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-10-21T14:30:57.368000"
+      "created_at": "2026-10-21T15:39:43.787000"
     },
     {
       "id": "trx-025",
@@ -2370,7 +2388,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-21",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-10-21T16:56:57.368000"
+      "created_at": "2026-10-21T18:05:43.787000"
     },
     {
       "id": "trx-026",
@@ -2382,7 +2400,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-21",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-10-21T20:25:57.368000"
+      "created_at": "2026-10-21T21:34:43.787000"
     },
     {
       "id": "trx-061",
@@ -2406,7 +2424,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-19",
       "paid": false,
       "method": "Pix",
-      "created_at": "2026-10-19T19:53:57.368000"
+      "created_at": "2026-10-19T21:02:43.787000"
     },
     {
       "id": "trx-021",
@@ -2418,7 +2436,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-18",
       "paid": false,
       "method": "Pix",
-      "created_at": "2026-10-18T14:31:57.368000"
+      "created_at": "2026-10-18T15:40:43.787000"
     },
     {
       "id": "trx-060",
@@ -2454,7 +2472,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-12",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-10-12T14:04:57.368000"
+      "created_at": "2026-10-12T15:13:43.787000"
     },
     {
       "id": "trx-058",
@@ -2478,7 +2496,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-10",
       "paid": false,
       "method": "Dinheiro",
-      "created_at": "2026-10-10T15:58:57.368000"
+      "created_at": "2026-10-10T17:07:43.787000"
     },
     {
       "id": "trx-019",
@@ -2490,7 +2508,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-10",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-10-10T17:16:57.368000"
+      "created_at": "2026-10-10T18:25:43.787000"
     },
     {
       "id": "trx-057",
@@ -2514,7 +2532,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-08",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-11-07T05:30:57.368000"
+      "created_at": "2026-11-07T06:39:43.787000"
     },
     {
       "id": "trx-016",
@@ -2526,7 +2544,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-07",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-10-07T12:20:57.368000"
+      "created_at": "2026-10-07T13:29:43.787000"
     },
     {
       "id": "trx-017",
@@ -2538,7 +2556,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-07",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-10-07T17:31:57.368000"
+      "created_at": "2026-10-07T18:40:43.787000"
     },
     {
       "id": "trx-015",
@@ -2550,7 +2568,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-06",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-10-06T16:17:57.368000"
+      "created_at": "2026-10-06T17:26:43.787000"
     },
     {
       "id": "trx-014",
@@ -2562,7 +2580,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-05",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-10-05T11:32:57.368000"
+      "created_at": "2026-10-05T12:41:43.787000"
     },
     {
       "id": "trx-056",
@@ -2586,7 +2604,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-04",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-11-07T05:30:57.368000"
+      "created_at": "2026-11-07T06:39:43.787000"
     },
     {
       "id": "trx-074",
@@ -2610,7 +2628,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-29",
       "paid": false,
       "method": "Dinheiro",
-      "created_at": "2026-09-29T16:20:57.368000"
+      "created_at": "2026-09-29T17:29:43.787000"
     },
     {
       "id": "trx-012",
@@ -2622,7 +2640,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-24",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-09-24T10:39:57.368000"
+      "created_at": "2026-09-24T11:48:43.787000"
     },
     {
       "id": "trx-011",
@@ -2634,7 +2652,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-22",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-09-22T10:54:57.368000"
+      "created_at": "2026-09-22T12:03:43.787000"
     },
     {
       "id": "trx-010",
@@ -2646,7 +2664,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-21",
       "paid": true,
       "method": "Cartão de Crédito",
-      "created_at": "2026-09-21T18:13:57.368000"
+      "created_at": "2026-09-21T19:22:43.787000"
     },
     {
       "id": "trx-055",
@@ -2682,7 +2700,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-15",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-09-15T12:24:57.368000"
+      "created_at": "2026-09-15T13:33:43.787000"
     },
     {
       "id": "trx-053",
@@ -2706,7 +2724,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-13",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-11-07T05:30:57.368000"
+      "created_at": "2026-11-07T06:39:43.787000"
     },
     {
       "id": "trx-052",
@@ -2742,7 +2760,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-08",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-09-08T13:16:57.368000"
+      "created_at": "2026-09-08T14:25:43.787000"
     },
     {
       "id": "trx-075",
@@ -2766,7 +2784,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-07",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-09-07T16:15:57.368000"
+      "created_at": "2026-09-07T17:24:43.787000"
     },
     {
       "id": "trx-006",
@@ -2778,7 +2796,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-06",
       "paid": false,
       "method": "Cartão de Crédito",
-      "created_at": "2026-09-06T13:51:57.368000"
+      "created_at": "2026-09-06T15:00:43.787000"
     },
     {
       "id": "trx-050",
@@ -2802,7 +2820,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-04",
       "paid": true,
       "method": "Cartão de Crédito",
-      "created_at": "2026-09-04T19:33:57.368000"
+      "created_at": "2026-09-04T20:42:43.787000"
     },
     {
       "id": "trx-004",
@@ -2814,7 +2832,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-08-28",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-08-28T17:56:57.368000"
+      "created_at": "2026-08-28T19:05:43.787000"
     },
     {
       "id": "trx-003",
@@ -2826,7 +2844,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-08-21",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-08-21T11:41:57.368000"
+      "created_at": "2026-08-21T12:50:43.787000"
     },
     {
       "id": "trx-049",
@@ -2850,7 +2868,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-08-19",
       "paid": false,
       "method": "Transferência",
-      "created_at": "2026-08-19T15:31:57.368000"
+      "created_at": "2026-08-19T16:40:43.787000"
     },
     {
       "id": "trx-048",
@@ -2874,7 +2892,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-08-17",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-08-17T12:16:57.368000"
+      "created_at": "2026-08-17T13:25:43.787000"
     },
     {
       "id": "trx-047",

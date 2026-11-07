@@ -4,6 +4,7 @@ import AppShell from "@/components/layout/AppShell";
 import Landing from "@/pages/Landing";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
+import { RecuperarSenha, RedefinirSenha } from "@/pages/SenhaRecuperacao";
 import Dashboard from "@/pages/Dashboard";
 import Produtos from "@/pages/Produtos";
 import Vendas from "@/pages/Vendas";
@@ -22,6 +23,8 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Register />} />
+        <Route path="/recuperar-senha" element={<RecuperarSenha />} />
+        <Route path="/redefinir-senha" element={<RedefinirSenha />} />
         <Route path="/app" element={<AppShell />}>
           <Route index element={<Dashboard />} />
           <Route path="produtos" element={<Produtos />} />

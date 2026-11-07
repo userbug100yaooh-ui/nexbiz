@@ -6,7 +6,7 @@ from fastapi import APIRouter, HTTPException
 
 from lib.db import db
 from models.entities import Transaction, TransactionIn
-from routers.common import clean, get_company
+from routers.common import clean, get_company, require_role
 
 router = APIRouter()
 
@@ -50,6 +50,7 @@ async def update_transaction(id: str, body: TransactionIn) -> Transaction:
 
 @router.delete("/transactions/{id}", response_model=Transaction)
 async def delete_transaction(id: str) -> Transaction:
+    require_role("admin", "gerente")
     company = await get_company()
     doc = await db.transactions.find_one_and_delete({"id": id, "company_id": company.id})
     if not doc:

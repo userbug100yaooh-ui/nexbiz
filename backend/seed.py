@@ -80,7 +80,7 @@ SERVICE_ROWS = [
 def build_users(company_id: str) -> List[AppUser]:
     created = NOW - timedelta(days=200)
     return [
-        AppUser(id="usr-001", company_id=company_id, name="Administrador NEXBIZ", email="pintopinto.yaooh@gmail.com", role="admin", created_at=created),
+        AppUser(id="usr-001", company_id=company_id, name="Administrador Demo", email="demo@nexbiz.com.br", role="admin", created_at=created),
         AppUser(id="usr-002", company_id=company_id, name="Carlos Lima", email="carlos@nexbiz.com.br", role="gerente", created_at=created),
         AppUser(id="usr-003", company_id=company_id, name="Marina Costa", email="marina@nexbiz.com.br", role="vendedor", created_at=created),
     ]
@@ -282,9 +282,11 @@ def build_transactions(company_id: str, sales: List[Sale], orders: List[ServiceO
 
 
 async def seed() -> None:
-    for name in ("companies", "users", "products", "clients", "services", "service_orders", "sales", "transactions"):
-        await db.drop_collection(name)
-    await ensure_indexes()  # o drop descarta índices — recria
+    # Reset RESTRITO à empresa demo — empresas reais cadastradas nunca são tocadas.
+    await ensure_indexes()
+    await db.companies.delete_many({"id": COMPANY_ID})
+    for name in ("users", "products", "clients", "services", "service_orders", "sales", "transactions"):
+        await db[name].delete_many({"company_id": COMPANY_ID})
 
     company = Company(
         id=COMPANY_ID,
@@ -327,7 +329,8 @@ async def seed() -> None:
 
     print("Seed NEXBIZ concluído:")
     for name in ("companies", "users", "products", "clients", "services", "service_orders", "sales", "transactions"):
-        print(f"  {name}: {await db[name].count_documents({})}")
+        query = {"id": COMPANY_ID} if name == "companies" else {"company_id": COMPANY_ID}
+        print(f"  {name} (demo): {await db[name].count_documents(query)}")
 
 
 def main() -> None:

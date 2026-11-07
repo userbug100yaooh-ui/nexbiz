@@ -61,6 +61,8 @@ async def create_sale(body: SaleIn) -> Sale:
         if not prod_doc:
             raise HTTPException(status_code=404, detail="Produto não encontrado.")
         product = Product(**clean(prod_doc))
+        if item.qty > product.stock:
+            raise HTTPException(status_code=422, detail=f"Estoque insuficiente para {product.name} (disponível: {product.stock}).")
         line_total = round(product.price * item.qty, 2)
         items.append(
             SaleItem(product_id=product.id, name=product.name, qty=item.qty, price=product.price, total=line_total)

@@ -8,7 +8,7 @@ from lib.db import db
 from lib.dates import today_iso
 from models.entities import Client, Service, Transaction
 from models.service_orders import ServiceOrder, ServiceOrderIn, ServiceOrderUpdate
-from routers.common import clean, get_company
+from routers.common import clean, get_company, require_role
 
 router = APIRouter()
 
@@ -107,6 +107,7 @@ async def update_service_order(id: str, body: ServiceOrderUpdate) -> ServiceOrde
 
 @router.delete("/service-orders/{id}", response_model=ServiceOrder)
 async def delete_service_order(id: str) -> ServiceOrder:
+    require_role("admin", "gerente")
     company = await get_company()
     doc = await db.service_orders.find_one_and_delete({"id": id, "company_id": company.id})
     if not doc:

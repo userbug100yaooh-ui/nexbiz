@@ -13,7 +13,7 @@ import { ApiError } from "@/lib/api";
 import { demoData } from "@/lib/demo-data";
 import { errMessage, useDemoMutation, useRegisterMutation } from "@/lib/queries";
 import { signIn, useSession } from "@/lib/session";
-import type { AppUser, Company, RegisterInput } from "@/lib/types";
+import type { RegisterInput } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 const SEGMENTS = ["Comércio", "Serviços", "Alimentação", "Saúde", "Educação", "Tecnologia", "Indústria", "Outro"];
@@ -86,13 +86,6 @@ export default function Register() {
     return false;
   };
 
-  const localSession = () => {
-    // Sem backend (preview estático): cria a sessão localmente para explorar o painel.
-    const company: Company = { ...demoData.company, id: "emp-local", name: form.company_name.trim() || "Minha Empresa", segment: form.segment, cnpj: form.cnpj, email: form.email.trim().toLowerCase(), phone: form.phone, city: form.city, state: form.state, plan: "trial" };
-    const user: AppUser = { ...demoData.users[0], id: "usr-local", company_id: company.id, name: form.name.trim() || "Proprietário", email: form.email.trim().toLowerCase(), role: "admin" };
-    return { user, company };
-  };
-
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!form.company_name.trim()) return fail("Informe o nome da empresa.");
@@ -112,9 +105,7 @@ export default function Register() {
           toast.error(errMessage(err));
           return;
         }
-        signIn({ ...localSession(), mode: "offline" });
-        toast.success("Conta criada em modo demonstração!");
-        navigate("/app");
+        toast.error("Sem conexão com o servidor — não foi possível criar a conta. Tente novamente.");
       },
     });
   };

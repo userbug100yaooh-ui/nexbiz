@@ -5,6 +5,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { ApiError, apiDelete, apiGet, apiPost, apiPut, apiUpload } from "@/lib/api";
 import { demoData } from "@/lib/demo-data";
+import { getSession } from "@/lib/session";
 import type {
   AppUser,
   AuthOut,
@@ -28,13 +29,13 @@ import type {
   TransactionInput,
 } from "@/lib/types";
 
-/** GET /api/... com fallback: erro de rede (sem backend) devolve os dados demo;
- *  erro HTTP real (4xx/5xx) é lançado para não mascarar problemas. */
+/** GET /api/... com fallback: erro de rede (sem backend) devolve os dados demo SOMENTE
+ *  na conta demo/offline — uma conta real nunca vê dados fictícios; erro HTTP é lançado. */
 export async function withFallback<T>(path: string, fallback: T): Promise<T> {
   try {
     return await apiGet<T>(path);
   } catch (e) {
-    if (e instanceof ApiError) throw e;
+    if (e instanceof ApiError || getSession()?.mode === "supabase") throw e;
     return fallback;
   }
 }
@@ -310,6 +311,25 @@ export function useLoginMutation() {
 
 export function useDemoMutation() {
   return useMutation({ mutationFn: () => apiPost<AuthOut>("/auth/demo") });
+}
+
+/** Troca os tokens do link do e-mail (#access_token=…) por cookies httpOnly. */
+export function useOpenSessionMutation() {
+  return useMutation({
+    mutationFn: (body: { access_token: string; refresh_token: string }) => apiPost<AuthOut>("/auth/session", body),
+  });
+}
+
+export function useForgotMutation() {
+  return useMutation({ mutationFn: (email: string) => apiPost<{ detail: string }>("/auth/forgot", { email }) });
+}
+
+export function useResendMutation() {
+  return useMutation({ mutationFn: (email: string) => apiPost<{ detail: string }>("/auth/resend", { email }) });
+}
+
+export function usePasswordMutation() {
+  return useMutation({ mutationFn: (password: string) => apiPost<void>("/auth/password", { password }) });
 }
 
 /** Revalida a sessão do cookie no backend (401 = expirada). */

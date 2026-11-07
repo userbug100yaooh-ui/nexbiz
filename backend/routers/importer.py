@@ -18,6 +18,9 @@ from routers.common import get_company
 
 router = APIRouter()
 
+MAX_BYTES = 5 * 1024 * 1024
+MAX_ROWS = 5000
+
 PRODUCT_COLUMNS: Dict[str, str] = {
     "nome": "name",
     "produto": "name",
@@ -102,7 +105,12 @@ async def import_rows(entity: str, file: UploadFile = File(...)) -> ImportOut:
     if entity not in {"products", "clients"}:
         raise HTTPException(status_code=404, detail="Entidade de importação desconhecida.")
 
-    frame = _read_frame(await file.read(), file.filename or "arquivo.csv")
+    content = await file.read()
+    if len(content) > MAX_BYTES:
+        raise HTTPException(status_code=413, detail="Arquivo muito grande — limite de 5 MB.")
+    frame = _read_frame(content, file.filename or "arquivo.csv")
+    if len(frame) > MAX_ROWS:
+        raise HTTPException(status_code=422, detail=f"Planilha com mais de {MAX_ROWS} linhas — divida em arquivos menores.")
     mapping = PRODUCT_COLUMNS if entity == "products" else CLIENT_COLUMNS
     cols = {_norm(c): str(c) for c in frame.columns if _norm(c) in mapping}
 
