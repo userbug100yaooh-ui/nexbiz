@@ -1,0 +1,2756 @@
+// AUTO-GERADO por backend/export_demo.py — não editar à mão.
+// Espelho offline do seed: alimenta o modo demonstração quando o backend não responde.
+import type { DemoBundle } from "./types";
+
+export const demoData: DemoBundle = {
+  "company": {
+    "id": "emp-nexbiz-001",
+    "name": "NEXBIZ Comercial Ltda.",
+    "legal_name": "NexBiz Comércio e Serviços Ltda.",
+    "cnpj": "12.345.678/0001-90",
+    "segment": "Comércio & Serviços",
+    "email": "contato@nexbiz.com.br",
+    "phone": "(11) 4002-8922",
+    "address": "Av. Paulista, 1000 — Sala 42",
+    "city": "São Paulo",
+    "state": "SP",
+    "plan": "profissional",
+    "created_at": "2026-11-07T04:51:40.042000"
+  },
+  "users": [
+    {
+      "id": "usr-001",
+      "company_id": "emp-nexbiz-001",
+      "name": "Ana Souza",
+      "email": "ana@nexbiz.com.br",
+      "role": "admin",
+      "created_at": "2026-04-21T04:51:39.692000"
+    },
+    {
+      "id": "usr-002",
+      "company_id": "emp-nexbiz-001",
+      "name": "Carlos Lima",
+      "email": "carlos@nexbiz.com.br",
+      "role": "gerente",
+      "created_at": "2026-04-21T04:51:39.692000"
+    },
+    {
+      "id": "usr-003",
+      "company_id": "emp-nexbiz-001",
+      "name": "Marina Costa",
+      "email": "marina@nexbiz.com.br",
+      "role": "vendedor",
+      "created_at": "2026-04-21T04:51:39.692000"
+    }
+  ],
+  "products": [
+    {
+      "id": "prd-011",
+      "company_id": "emp-nexbiz-001",
+      "name": "Cabo HDMI 2.1 2m",
+      "sku": "CAB-H21",
+      "category": "Acessórios",
+      "unit": "un",
+      "price": 49.9,
+      "cost": 18.0,
+      "stock": 60,
+      "min_stock": 20,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-013",
+      "company_id": "emp-nexbiz-001",
+      "name": "Cadeira Ergonômica Diretor",
+      "sku": "CAD-DIR",
+      "category": "Mobiliário",
+      "unit": "un",
+      "price": 1299.0,
+      "cost": 890.0,
+      "stock": 5,
+      "min_stock": 2,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-010",
+      "company_id": "emp-nexbiz-001",
+      "name": "Carregador Turbo 65W GaN",
+      "sku": "CAR-65W",
+      "category": "Acessórios",
+      "unit": "un",
+      "price": 129.9,
+      "cost": 62.0,
+      "stock": 4,
+      "min_stock": 8,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-015",
+      "company_id": "emp-nexbiz-001",
+      "name": "Gaveteiro Mobile 3 Gavetas",
+      "sku": "GAV-M03",
+      "category": "Mobiliário",
+      "unit": "un",
+      "price": 449.0,
+      "cost": 290.0,
+      "stock": 9,
+      "min_stock": 3,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-005",
+      "company_id": "emp-nexbiz-001",
+      "name": "Headset Corporativo USB",
+      "sku": "HED-USB",
+      "category": "Periféricos",
+      "unit": "un",
+      "price": 219.9,
+      "cost": 130.0,
+      "stock": 15,
+      "min_stock": 6,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-009",
+      "company_id": "emp-nexbiz-001",
+      "name": "Hub USB-C 7 em 1",
+      "sku": "HUB-7P1",
+      "category": "Acessórios",
+      "unit": "un",
+      "price": 159.9,
+      "cost": 84.0,
+      "stock": 30,
+      "min_stock": 10,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-016",
+      "company_id": "emp-nexbiz-001",
+      "name": "Impressora Multifuncional Laser",
+      "sku": "IMP-LAS",
+      "category": "Escritório",
+      "unit": "un",
+      "price": 1149.0,
+      "cost": 870.0,
+      "stock": 6,
+      "min_stock": 2,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-008",
+      "company_id": "emp-nexbiz-001",
+      "name": "Memória RAM 16GB DDR4",
+      "sku": "RAM-16G",
+      "category": "Hardware",
+      "unit": "un",
+      "price": 329.9,
+      "cost": 215.0,
+      "stock": 22,
+      "min_stock": 8,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-014",
+      "company_id": "emp-nexbiz-001",
+      "name": "Mesa Escritório 1.60m",
+      "sku": "MES-160",
+      "category": "Mobiliário",
+      "unit": "un",
+      "price": 899.0,
+      "cost": 610.0,
+      "stock": 3,
+      "min_stock": 3,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-002",
+      "company_id": "emp-nexbiz-001",
+      "name": "Monitor LED 27 4K",
+      "sku": "MON-0027",
+      "category": "Informática",
+      "unit": "un",
+      "price": 1899.0,
+      "cost": 1450.0,
+      "stock": 12,
+      "min_stock": 4,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-003",
+      "company_id": "emp-nexbiz-001",
+      "name": "Mouse Sem Fio MX Master",
+      "sku": "MOU-MX2",
+      "category": "Periféricos",
+      "unit": "un",
+      "price": 349.9,
+      "cost": 210.0,
+      "stock": 25,
+      "min_stock": 8,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-001",
+      "company_id": "emp-nexbiz-001",
+      "name": "Notebook Pro 15 i7 16GB",
+      "sku": "NB-0015",
+      "category": "Informática",
+      "unit": "un",
+      "price": 4899.0,
+      "cost": 3900.0,
+      "stock": 8,
+      "min_stock": 3,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-018",
+      "company_id": "emp-nexbiz-001",
+      "name": "Organizador de Gavetas",
+      "sku": "ORG-GAV",
+      "category": "Escritório",
+      "unit": "un",
+      "price": 34.9,
+      "cost": 12.0,
+      "stock": 2,
+      "min_stock": 10,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-017",
+      "company_id": "emp-nexbiz-001",
+      "name": "Papel A4 Sulfite 75g (Caixa 5)",
+      "sku": "PAP-A45",
+      "category": "Escritório",
+      "unit": "un",
+      "price": 129.9,
+      "cost": 89.0,
+      "stock": 40,
+      "min_stock": 15,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-007",
+      "company_id": "emp-nexbiz-001",
+      "name": "SSD NVMe 1TB",
+      "sku": "SSD-1TB",
+      "category": "Hardware",
+      "unit": "un",
+      "price": 549.9,
+      "cost": 380.0,
+      "stock": 18,
+      "min_stock": 6,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-012",
+      "company_id": "emp-nexbiz-001",
+      "name": "Suporte de Notebook Ajustável",
+      "sku": "SUP-NB1",
+      "category": "Acessórios",
+      "unit": "un",
+      "price": 89.9,
+      "cost": 41.0,
+      "stock": 14,
+      "min_stock": 5,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-004",
+      "company_id": "emp-nexbiz-001",
+      "name": "Teclado Mecânico ABNT2",
+      "sku": "TEC-AB2",
+      "category": "Periféricos",
+      "unit": "un",
+      "price": 289.9,
+      "cost": 175.0,
+      "stock": 6,
+      "min_stock": 10,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "prd-006",
+      "company_id": "emp-nexbiz-001",
+      "name": "Webcam Full HD 1080p",
+      "sku": "WEB-1080",
+      "category": "Periféricos",
+      "unit": "un",
+      "price": 189.9,
+      "cost": 98.0,
+      "stock": 0,
+      "min_stock": 5,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    }
+  ],
+  "clients": [
+    {
+      "id": "cli-011",
+      "company_id": "emp-nexbiz-001",
+      "name": "Ana Beatriz Costa",
+      "kind": "PF",
+      "document": "567.891.234-33",
+      "email": "ana.costa@email.com",
+      "phone": "(11) 95555-4455",
+      "city": "Osasco",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-005",
+      "company_id": "emp-nexbiz-001",
+      "name": "Auto Peças Menezes",
+      "kind": "PJ",
+      "document": "44.128.730/0001-54",
+      "email": "menezes@autopecas.com.br",
+      "phone": "(41) 3025-8877",
+      "city": "Curitiba",
+      "state": "PR",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-004",
+      "company_id": "emp-nexbiz-001",
+      "name": "Clínica Vida Plena",
+      "kind": "PJ",
+      "document": "31.704.568/0001-91",
+      "email": "admin@vidaplena.com.br",
+      "phone": "(31) 3344-5566",
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-003",
+      "company_id": "emp-nexbiz-001",
+      "name": "Construtora Almeida S.A.",
+      "kind": "PJ",
+      "document": "05.932.481/0001-08",
+      "email": "compras@almeida.com.br",
+      "phone": "(21) 2255-3322",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-006",
+      "company_id": "emp-nexbiz-001",
+      "name": "Educa Mais Cursos LTDA",
+      "kind": "PJ",
+      "document": "27.563.904/0001-16",
+      "email": "pedidos@educamais.com.br",
+      "phone": "(11) 3777-2020",
+      "city": "Campinas",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-008",
+      "company_id": "emp-nexbiz-001",
+      "name": "João Ferreira",
+      "kind": "PF",
+      "document": "321.654.987-00",
+      "email": "joao.ferreira@email.com",
+      "phone": "(11) 98888-1122",
+      "city": "São Paulo",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-013",
+      "company_id": "emp-nexbiz-001",
+      "name": "Juliana Paiva",
+      "kind": "PF",
+      "document": "789.123.456-55",
+      "email": "juliana.paiva@email.com",
+      "phone": "(11) 93333-6677",
+      "city": "São Bernardo do Campo",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-014",
+      "company_id": "emp-nexbiz-001",
+      "name": "Marcos Antônio Lima",
+      "kind": "PF",
+      "document": "891.234.567-66",
+      "email": "marcos.lima@email.com",
+      "phone": "(11) 92222-7788",
+      "city": "Diadema",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-009",
+      "company_id": "emp-nexbiz-001",
+      "name": "Maria Oliveira",
+      "kind": "PF",
+      "document": "234.567.890-11",
+      "email": "maria.oliveira@email.com",
+      "phone": "(11) 97777-2233",
+      "city": "Guarulhos",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-002",
+      "company_id": "emp-nexbiz-001",
+      "name": "Padaria Pão de Ouro LTDA",
+      "kind": "PJ",
+      "document": "22.847.105/0001-37",
+      "email": "financeiro@paodeouro.com.br",
+      "phone": "(11) 3244-7890",
+      "city": "Santo André",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-010",
+      "company_id": "emp-nexbiz-001",
+      "name": "Pedro Santos",
+      "kind": "PF",
+      "document": "456.789.123-22",
+      "email": "pedro.santos@email.com",
+      "phone": "(19) 96666-3344",
+      "city": "Campinas",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-012",
+      "company_id": "emp-nexbiz-001",
+      "name": "Rafael Mendes",
+      "kind": "PF",
+      "document": "678.912.345-44",
+      "email": "rafael.mendes@email.com",
+      "phone": "(13) 94444-5566",
+      "city": "Santos",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-007",
+      "company_id": "emp-nexbiz-001",
+      "name": "Restaurante Sabor & Arte",
+      "kind": "PJ",
+      "document": "39.810.642/0001-73",
+      "email": "contato@saborearte.com.br",
+      "phone": "(11) 3811-4433",
+      "city": "São Paulo",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "cli-001",
+      "company_id": "emp-nexbiz-001",
+      "name": "Tech Solutions Integradora LTDA",
+      "kind": "PJ",
+      "document": "18.254.930/0001-22",
+      "email": "contato@techsolutions.com.br",
+      "phone": "(11) 3555-1010",
+      "city": "São Paulo",
+      "state": "SP",
+      "notes": "",
+      "created_at": "2026-11-07T04:51:40.044000"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-006",
+      "company_id": "emp-nexbiz-001",
+      "name": "Backup Gerenciado em Nuvem",
+      "description": "Backup diário automático, monitoramento e restauração assistida.",
+      "category": "Nuvem",
+      "pricing": "fixo",
+      "price": 320.0,
+      "estimated_hours": 0.0,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "srv-007",
+      "company_id": "emp-nexbiz-001",
+      "name": "Configuração de Servidor Local",
+      "description": "Instalação e configuração de servidor de arquivos e domínio local.",
+      "category": "Infraestrutura",
+      "pricing": "fixo",
+      "price": 1500.0,
+      "estimated_hours": 12.0,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "srv-003",
+      "company_id": "emp-nexbiz-001",
+      "name": "Consultoria em TI",
+      "description": "Planejamento de tecnologia, escolha de sistemas e redução de custos operacionais.",
+      "category": "Consultoria",
+      "pricing": "hora",
+      "price": 250.0,
+      "estimated_hours": 6.0,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "srv-004",
+      "company_id": "emp-nexbiz-001",
+      "name": "Criação de Sites Institucionais",
+      "description": "Site responsivo com até 5 páginas, formulário de contato e SEO básico.",
+      "category": "Desenvolvimento",
+      "pricing": "fixo",
+      "price": 3500.0,
+      "estimated_hours": 40.0,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "srv-001",
+      "company_id": "emp-nexbiz-001",
+      "name": "Instalação de Redes e Wi-Fi",
+      "description": "Projeto, cabeamento e configuração de rede completa para escritórios e lojas.",
+      "category": "Infraestrutura",
+      "pricing": "fixo",
+      "price": 800.0,
+      "estimated_hours": 8.0,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "srv-002",
+      "company_id": "emp-nexbiz-001",
+      "name": "Manutenção de Computadores",
+      "description": "Diagnóstico, limpeza, upgrades e correção de falhas em desktops e notebooks.",
+      "category": "Suporte técnico",
+      "pricing": "hora",
+      "price": 120.0,
+      "estimated_hours": 3.0,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "srv-005",
+      "company_id": "emp-nexbiz-001",
+      "name": "Suporte Técnico Mensal",
+      "description": "Pacote recorrente de suporte remoto e presencial para até 10 máquinas.",
+      "category": "Suporte técnico",
+      "pricing": "fixo",
+      "price": 990.0,
+      "estimated_hours": 0.0,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    },
+    {
+      "id": "srv-008",
+      "company_id": "emp-nexbiz-001",
+      "name": "Treinamento de Equipe em Sistemas",
+      "description": "Capacitação prática da equipe no uso dos sistemas de gestão.",
+      "category": "Treinamento",
+      "pricing": "hora",
+      "price": 180.0,
+      "estimated_hours": 4.0,
+      "active": true,
+      "created_at": "2026-11-07T04:51:40.044000"
+    }
+  ],
+  "sales": [
+    {
+      "id": "sal-039",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0046",
+      "client_id": "cli-014",
+      "client_name": "Marcos Antônio Lima",
+      "items": [
+        {
+          "product_id": "prd-006",
+          "name": "Webcam Full HD 1080p",
+          "qty": 2,
+          "price": 189.9,
+          "total": 379.8
+        }
+      ],
+      "total": 379.8,
+      "status": "cancelado",
+      "payment_method": "Cartão de Crédito",
+      "created_at": "2026-11-02T14:01:39.692000"
+    },
+    {
+      "id": "sal-019",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0045",
+      "client_id": "cli-010",
+      "client_name": "Pedro Santos",
+      "items": [
+        {
+          "product_id": "prd-008",
+          "name": "Memória RAM 16GB DDR4",
+          "qty": 1,
+          "price": 329.9,
+          "total": 329.9
+        },
+        {
+          "product_id": "prd-018",
+          "name": "Organizador de Gavetas",
+          "qty": 3,
+          "price": 34.9,
+          "total": 104.7
+        },
+        {
+          "product_id": "prd-001",
+          "name": "Notebook Pro 15 i7 16GB",
+          "qty": 3,
+          "price": 4899.0,
+          "total": 14697.0
+        }
+      ],
+      "total": 15131.6,
+      "status": "pago",
+      "payment_method": "Boleto",
+      "created_at": "2026-10-30T17:54:39.692000"
+    },
+    {
+      "id": "sal-028",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0044",
+      "client_id": "cli-002",
+      "client_name": "Padaria Pão de Ouro LTDA",
+      "items": [
+        {
+          "product_id": "prd-003",
+          "name": "Mouse Sem Fio MX Master",
+          "qty": 3,
+          "price": 349.9,
+          "total": 1049.7
+        }
+      ],
+      "total": 1049.7,
+      "status": "pago",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-10-30T16:26:39.692000"
+    },
+    {
+      "id": "sal-011",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0043",
+      "client_id": "cli-007",
+      "client_name": "Restaurante Sabor & Arte",
+      "items": [
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 1,
+          "price": 1299.0,
+          "total": 1299.0
+        },
+        {
+          "product_id": "prd-012",
+          "name": "Suporte de Notebook Ajustável",
+          "qty": 3,
+          "price": 89.9,
+          "total": 269.7
+        },
+        {
+          "product_id": "prd-008",
+          "name": "Memória RAM 16GB DDR4",
+          "qty": 2,
+          "price": 329.9,
+          "total": 659.8
+        }
+      ],
+      "total": 2228.5,
+      "status": "pago",
+      "payment_method": "Cartão de Crédito",
+      "created_at": "2026-10-28T18:56:39.692000"
+    },
+    {
+      "id": "sal-004",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0042",
+      "client_id": "cli-006",
+      "client_name": "Educa Mais Cursos LTDA",
+      "items": [
+        {
+          "product_id": "prd-005",
+          "name": "Headset Corporativo USB",
+          "qty": 2,
+          "price": 219.9,
+          "total": 439.8
+        },
+        {
+          "product_id": "prd-007",
+          "name": "SSD NVMe 1TB",
+          "qty": 1,
+          "price": 549.9,
+          "total": 549.9
+        }
+      ],
+      "total": 989.7,
+      "status": "pendente",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-10-28T18:29:39.692000"
+    },
+    {
+      "id": "sal-005",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0041",
+      "client_id": "cli-005",
+      "client_name": "Auto Peças Menezes",
+      "items": [
+        {
+          "product_id": "prd-015",
+          "name": "Gaveteiro Mobile 3 Gavetas",
+          "qty": 3,
+          "price": 449.0,
+          "total": 1347.0
+        }
+      ],
+      "total": 1347.0,
+      "status": "pago",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-10-27T13:46:39.692000"
+    },
+    {
+      "id": "sal-045",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0040",
+      "client_id": "cli-005",
+      "client_name": "Auto Peças Menezes",
+      "items": [
+        {
+          "product_id": "prd-014",
+          "name": "Mesa Escritório 1.60m",
+          "qty": 3,
+          "price": 899.0,
+          "total": 2697.0
+        },
+        {
+          "product_id": "prd-011",
+          "name": "Cabo HDMI 2.1 2m",
+          "qty": 2,
+          "price": 49.9,
+          "total": 99.8
+        },
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 3,
+          "price": 1299.0,
+          "total": 3897.0
+        }
+      ],
+      "total": 6693.8,
+      "status": "cancelado",
+      "payment_method": "Cartão de Crédito",
+      "created_at": "2026-10-27T13:09:39.692000"
+    },
+    {
+      "id": "sal-024",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0039",
+      "client_id": "cli-014",
+      "client_name": "Marcos Antônio Lima",
+      "items": [
+        {
+          "product_id": "prd-003",
+          "name": "Mouse Sem Fio MX Master",
+          "qty": 1,
+          "price": 349.9,
+          "total": 349.9
+        }
+      ],
+      "total": 349.9,
+      "status": "pago",
+      "payment_method": "Transferência",
+      "created_at": "2026-10-25T12:21:39.692000"
+    },
+    {
+      "id": "sal-042",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0038",
+      "client_id": "cli-006",
+      "client_name": "Educa Mais Cursos LTDA",
+      "items": [
+        {
+          "product_id": "prd-017",
+          "name": "Papel A4 Sulfite 75g (Caixa 5)",
+          "qty": 1,
+          "price": 129.9,
+          "total": 129.9
+        },
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 1,
+          "price": 1299.0,
+          "total": 1299.0
+        },
+        {
+          "product_id": "prd-011",
+          "name": "Cabo HDMI 2.1 2m",
+          "qty": 2,
+          "price": 49.9,
+          "total": 99.8
+        }
+      ],
+      "total": 1528.7,
+      "status": "pago",
+      "payment_method": "Transferência",
+      "created_at": "2026-10-24T15:49:39.692000"
+    },
+    {
+      "id": "sal-041",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0037",
+      "client_id": "cli-006",
+      "client_name": "Educa Mais Cursos LTDA",
+      "items": [
+        {
+          "product_id": "prd-008",
+          "name": "Memória RAM 16GB DDR4",
+          "qty": 1,
+          "price": 329.9,
+          "total": 329.9
+        },
+        {
+          "product_id": "prd-018",
+          "name": "Organizador de Gavetas",
+          "qty": 3,
+          "price": 34.9,
+          "total": 104.7
+        }
+      ],
+      "total": 434.6,
+      "status": "pendente",
+      "payment_method": "Boleto",
+      "created_at": "2026-10-24T14:34:39.692000"
+    },
+    {
+      "id": "sal-006",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0036",
+      "client_id": "cli-014",
+      "client_name": "Marcos Antônio Lima",
+      "items": [
+        {
+          "product_id": "prd-007",
+          "name": "SSD NVMe 1TB",
+          "qty": 1,
+          "price": 549.9,
+          "total": 549.9
+        },
+        {
+          "product_id": "prd-003",
+          "name": "Mouse Sem Fio MX Master",
+          "qty": 3,
+          "price": 349.9,
+          "total": 1049.7
+        }
+      ],
+      "total": 1599.6,
+      "status": "pendente",
+      "payment_method": "Pix",
+      "created_at": "2026-10-22T15:46:39.692000"
+    },
+    {
+      "id": "sal-034",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0035",
+      "client_id": "cli-012",
+      "client_name": "Rafael Mendes",
+      "items": [
+        {
+          "product_id": "prd-007",
+          "name": "SSD NVMe 1TB",
+          "qty": 3,
+          "price": 549.9,
+          "total": 1649.7
+        },
+        {
+          "product_id": "prd-009",
+          "name": "Hub USB-C 7 em 1",
+          "qty": 2,
+          "price": 159.9,
+          "total": 319.8
+        }
+      ],
+      "total": 1969.5,
+      "status": "pago",
+      "payment_method": "Boleto",
+      "created_at": "2026-10-21T19:46:39.692000"
+    },
+    {
+      "id": "sal-022",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0034",
+      "client_id": "cli-011",
+      "client_name": "Ana Beatriz Costa",
+      "items": [
+        {
+          "product_id": "prd-004",
+          "name": "Teclado Mecânico ABNT2",
+          "qty": 3,
+          "price": 289.9,
+          "total": 869.7
+        },
+        {
+          "product_id": "prd-002",
+          "name": "Monitor LED 27 4K",
+          "qty": 2,
+          "price": 1899.0,
+          "total": 3798.0
+        },
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 1,
+          "price": 1299.0,
+          "total": 1299.0
+        }
+      ],
+      "total": 5966.7,
+      "status": "pago",
+      "payment_method": "Transferência",
+      "created_at": "2026-10-21T16:17:39.692000"
+    },
+    {
+      "id": "sal-043",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0033",
+      "client_id": "cli-006",
+      "client_name": "Educa Mais Cursos LTDA",
+      "items": [
+        {
+          "product_id": "prd-011",
+          "name": "Cabo HDMI 2.1 2m",
+          "qty": 2,
+          "price": 49.9,
+          "total": 99.8
+        },
+        {
+          "product_id": "prd-014",
+          "name": "Mesa Escritório 1.60m",
+          "qty": 3,
+          "price": 899.0,
+          "total": 2697.0
+        },
+        {
+          "product_id": "prd-004",
+          "name": "Teclado Mecânico ABNT2",
+          "qty": 1,
+          "price": 289.9,
+          "total": 289.9
+        }
+      ],
+      "total": 3086.7,
+      "status": "pago",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-10-21T13:51:39.692000"
+    },
+    {
+      "id": "sal-010",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0032",
+      "client_id": "cli-004",
+      "client_name": "Clínica Vida Plena",
+      "items": [
+        {
+          "product_id": "prd-016",
+          "name": "Impressora Multifuncional Laser",
+          "qty": 1,
+          "price": 1149.0,
+          "total": 1149.0
+        },
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 2,
+          "price": 1299.0,
+          "total": 2598.0
+        },
+        {
+          "product_id": "prd-015",
+          "name": "Gaveteiro Mobile 3 Gavetas",
+          "qty": 1,
+          "price": 449.0,
+          "total": 449.0
+        }
+      ],
+      "total": 4196.0,
+      "status": "pago",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-10-21T11:17:39.692000"
+    },
+    {
+      "id": "sal-003",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0031",
+      "client_id": "cli-007",
+      "client_name": "Restaurante Sabor & Arte",
+      "items": [
+        {
+          "product_id": "prd-015",
+          "name": "Gaveteiro Mobile 3 Gavetas",
+          "qty": 3,
+          "price": 449.0,
+          "total": 1347.0
+        }
+      ],
+      "total": 1347.0,
+      "status": "pendente",
+      "payment_method": "Transferência",
+      "created_at": "2026-10-20T19:03:39.692000"
+    },
+    {
+      "id": "sal-001",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0030",
+      "client_id": "cli-011",
+      "client_name": "Ana Beatriz Costa",
+      "items": [
+        {
+          "product_id": "prd-001",
+          "name": "Notebook Pro 15 i7 16GB",
+          "qty": 3,
+          "price": 4899.0,
+          "total": 14697.0
+        }
+      ],
+      "total": 14697.0,
+      "status": "pendente",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-10-20T16:43:39.692000"
+    },
+    {
+      "id": "sal-009",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0029",
+      "client_id": "cli-004",
+      "client_name": "Clínica Vida Plena",
+      "items": [
+        {
+          "product_id": "prd-011",
+          "name": "Cabo HDMI 2.1 2m",
+          "qty": 2,
+          "price": 49.9,
+          "total": 99.8
+        }
+      ],
+      "total": 99.8,
+      "status": "cancelado",
+      "payment_method": "Boleto",
+      "created_at": "2026-10-20T15:53:39.692000"
+    },
+    {
+      "id": "sal-026",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0028",
+      "client_id": "cli-005",
+      "client_name": "Auto Peças Menezes",
+      "items": [
+        {
+          "product_id": "prd-018",
+          "name": "Organizador de Gavetas",
+          "qty": 1,
+          "price": 34.9,
+          "total": 34.9
+        },
+        {
+          "product_id": "prd-016",
+          "name": "Impressora Multifuncional Laser",
+          "qty": 1,
+          "price": 1149.0,
+          "total": 1149.0
+        }
+      ],
+      "total": 1183.9,
+      "status": "pendente",
+      "payment_method": "Pix",
+      "created_at": "2026-10-19T19:14:39.692000"
+    },
+    {
+      "id": "sal-030",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0027",
+      "client_id": "cli-004",
+      "client_name": "Clínica Vida Plena",
+      "items": [
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 3,
+          "price": 1299.0,
+          "total": 3897.0
+        },
+        {
+          "product_id": "prd-005",
+          "name": "Headset Corporativo USB",
+          "qty": 3,
+          "price": 219.9,
+          "total": 659.7
+        }
+      ],
+      "total": 4556.7,
+      "status": "pendente",
+      "payment_method": "Pix",
+      "created_at": "2026-10-18T13:52:39.692000"
+    },
+    {
+      "id": "sal-007",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0026",
+      "client_id": "cli-007",
+      "client_name": "Restaurante Sabor & Arte",
+      "items": [
+        {
+          "product_id": "prd-015",
+          "name": "Gaveteiro Mobile 3 Gavetas",
+          "qty": 1,
+          "price": 449.0,
+          "total": 449.0
+        },
+        {
+          "product_id": "prd-012",
+          "name": "Suporte de Notebook Ajustável",
+          "qty": 2,
+          "price": 89.9,
+          "total": 179.8
+        }
+      ],
+      "total": 628.8,
+      "status": "cancelado",
+      "payment_method": "Pix",
+      "created_at": "2026-10-16T15:07:39.692000"
+    },
+    {
+      "id": "sal-021",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0025",
+      "client_id": "cli-013",
+      "client_name": "Juliana Paiva",
+      "items": [
+        {
+          "product_id": "prd-007",
+          "name": "SSD NVMe 1TB",
+          "qty": 1,
+          "price": 549.9,
+          "total": 549.9
+        },
+        {
+          "product_id": "prd-004",
+          "name": "Teclado Mecânico ABNT2",
+          "qty": 3,
+          "price": 289.9,
+          "total": 869.7
+        }
+      ],
+      "total": 1419.6,
+      "status": "pago",
+      "payment_method": "Pix",
+      "created_at": "2026-10-12T13:25:39.692000"
+    },
+    {
+      "id": "sal-046",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0024",
+      "client_id": "cli-010",
+      "client_name": "Pedro Santos",
+      "items": [
+        {
+          "product_id": "prd-010",
+          "name": "Carregador Turbo 65W GaN",
+          "qty": 2,
+          "price": 129.9,
+          "total": 259.8
+        },
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 2,
+          "price": 1299.0,
+          "total": 2598.0
+        },
+        {
+          "product_id": "prd-001",
+          "name": "Notebook Pro 15 i7 16GB",
+          "qty": 1,
+          "price": 4899.0,
+          "total": 4899.0
+        }
+      ],
+      "total": 7756.8,
+      "status": "pago",
+      "payment_method": "Transferência",
+      "created_at": "2026-10-12T10:13:39.692000"
+    },
+    {
+      "id": "sal-018",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0023",
+      "client_id": "cli-012",
+      "client_name": "Rafael Mendes",
+      "items": [
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 2,
+          "price": 1299.0,
+          "total": 2598.0
+        },
+        {
+          "product_id": "prd-012",
+          "name": "Suporte de Notebook Ajustável",
+          "qty": 3,
+          "price": 89.9,
+          "total": 269.7
+        }
+      ],
+      "total": 2867.7,
+      "status": "pago",
+      "payment_method": "Pix",
+      "created_at": "2026-10-10T16:37:39.692000"
+    },
+    {
+      "id": "sal-013",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0022",
+      "client_id": "cli-011",
+      "client_name": "Ana Beatriz Costa",
+      "items": [
+        {
+          "product_id": "prd-009",
+          "name": "Hub USB-C 7 em 1",
+          "qty": 2,
+          "price": 159.9,
+          "total": 319.8
+        },
+        {
+          "product_id": "prd-011",
+          "name": "Cabo HDMI 2.1 2m",
+          "qty": 2,
+          "price": 49.9,
+          "total": 99.8
+        },
+        {
+          "product_id": "prd-004",
+          "name": "Teclado Mecânico ABNT2",
+          "qty": 1,
+          "price": 289.9,
+          "total": 289.9
+        }
+      ],
+      "total": 709.5,
+      "status": "pendente",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-10-10T15:19:39.692000"
+    },
+    {
+      "id": "sal-002",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0021",
+      "client_id": "cli-002",
+      "client_name": "Padaria Pão de Ouro LTDA",
+      "items": [
+        {
+          "product_id": "prd-014",
+          "name": "Mesa Escritório 1.60m",
+          "qty": 1,
+          "price": 899.0,
+          "total": 899.0
+        },
+        {
+          "product_id": "prd-002",
+          "name": "Monitor LED 27 4K",
+          "qty": 1,
+          "price": 1899.0,
+          "total": 1899.0
+        },
+        {
+          "product_id": "prd-001",
+          "name": "Notebook Pro 15 i7 16GB",
+          "qty": 1,
+          "price": 4899.0,
+          "total": 4899.0
+        }
+      ],
+      "total": 7697.0,
+      "status": "pago",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-10-07T19:16:39.692000"
+    },
+    {
+      "id": "sal-031",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0020",
+      "client_id": "cli-001",
+      "client_name": "Tech Solutions Integradora LTDA",
+      "items": [
+        {
+          "product_id": "prd-004",
+          "name": "Teclado Mecânico ABNT2",
+          "qty": 3,
+          "price": 289.9,
+          "total": 869.7
+        },
+        {
+          "product_id": "prd-003",
+          "name": "Mouse Sem Fio MX Master",
+          "qty": 1,
+          "price": 349.9,
+          "total": 349.9
+        }
+      ],
+      "total": 1219.6,
+      "status": "pago",
+      "payment_method": "Pix",
+      "created_at": "2026-10-07T16:52:39.692000"
+    },
+    {
+      "id": "sal-027",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0019",
+      "client_id": "cli-012",
+      "client_name": "Rafael Mendes",
+      "items": [
+        {
+          "product_id": "prd-002",
+          "name": "Monitor LED 27 4K",
+          "qty": 3,
+          "price": 1899.0,
+          "total": 5697.0
+        },
+        {
+          "product_id": "prd-018",
+          "name": "Organizador de Gavetas",
+          "qty": 2,
+          "price": 34.9,
+          "total": 69.8
+        }
+      ],
+      "total": 5766.8,
+      "status": "pago",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-10-07T11:41:39.692000"
+    },
+    {
+      "id": "sal-029",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0018",
+      "client_id": "cli-004",
+      "client_name": "Clínica Vida Plena",
+      "items": [
+        {
+          "product_id": "prd-002",
+          "name": "Monitor LED 27 4K",
+          "qty": 3,
+          "price": 1899.0,
+          "total": 5697.0
+        },
+        {
+          "product_id": "prd-003",
+          "name": "Mouse Sem Fio MX Master",
+          "qty": 3,
+          "price": 349.9,
+          "total": 1049.7
+        },
+        {
+          "product_id": "prd-014",
+          "name": "Mesa Escritório 1.60m",
+          "qty": 3,
+          "price": 899.0,
+          "total": 2697.0
+        }
+      ],
+      "total": 9443.7,
+      "status": "pago",
+      "payment_method": "Boleto",
+      "created_at": "2026-10-06T15:38:39.692000"
+    },
+    {
+      "id": "sal-012",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0017",
+      "client_id": "cli-013",
+      "client_name": "Juliana Paiva",
+      "items": [
+        {
+          "product_id": "prd-014",
+          "name": "Mesa Escritório 1.60m",
+          "qty": 2,
+          "price": 899.0,
+          "total": 1798.0
+        },
+        {
+          "product_id": "prd-003",
+          "name": "Mouse Sem Fio MX Master",
+          "qty": 3,
+          "price": 349.9,
+          "total": 1049.7
+        },
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 2,
+          "price": 1299.0,
+          "total": 2598.0
+        }
+      ],
+      "total": 5445.7,
+      "status": "cancelado",
+      "payment_method": "Pix",
+      "created_at": "2026-10-06T10:56:39.692000"
+    },
+    {
+      "id": "sal-014",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0016",
+      "client_id": "cli-002",
+      "client_name": "Padaria Pão de Ouro LTDA",
+      "items": [
+        {
+          "product_id": "prd-010",
+          "name": "Carregador Turbo 65W GaN",
+          "qty": 1,
+          "price": 129.9,
+          "total": 129.9
+        },
+        {
+          "product_id": "prd-017",
+          "name": "Papel A4 Sulfite 75g (Caixa 5)",
+          "qty": 2,
+          "price": 129.9,
+          "total": 259.8
+        },
+        {
+          "product_id": "prd-007",
+          "name": "SSD NVMe 1TB",
+          "qty": 1,
+          "price": 549.9,
+          "total": 549.9
+        }
+      ],
+      "total": 939.6,
+      "status": "pago",
+      "payment_method": "Boleto",
+      "created_at": "2026-10-05T10:53:39.692000"
+    },
+    {
+      "id": "sal-044",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0015",
+      "client_id": "cli-011",
+      "client_name": "Ana Beatriz Costa",
+      "items": [
+        {
+          "product_id": "prd-007",
+          "name": "SSD NVMe 1TB",
+          "qty": 1,
+          "price": 549.9,
+          "total": 549.9
+        },
+        {
+          "product_id": "prd-012",
+          "name": "Suporte de Notebook Ajustável",
+          "qty": 3,
+          "price": 89.9,
+          "total": 269.7
+        },
+        {
+          "product_id": "prd-014",
+          "name": "Mesa Escritório 1.60m",
+          "qty": 2,
+          "price": 899.0,
+          "total": 1798.0
+        }
+      ],
+      "total": 2617.6,
+      "status": "cancelado",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-09-30T18:05:39.692000"
+    },
+    {
+      "id": "sal-035",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0014",
+      "client_id": "cli-001",
+      "client_name": "Tech Solutions Integradora LTDA",
+      "items": [
+        {
+          "product_id": "prd-011",
+          "name": "Cabo HDMI 2.1 2m",
+          "qty": 1,
+          "price": 49.9,
+          "total": 49.9
+        }
+      ],
+      "total": 49.9,
+      "status": "pendente",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-09-29T15:41:39.692000"
+    },
+    {
+      "id": "sal-032",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0013",
+      "client_id": "cli-004",
+      "client_name": "Clínica Vida Plena",
+      "items": [
+        {
+          "product_id": "prd-010",
+          "name": "Carregador Turbo 65W GaN",
+          "qty": 2,
+          "price": 129.9,
+          "total": 259.8
+        },
+        {
+          "product_id": "prd-006",
+          "name": "Webcam Full HD 1080p",
+          "qty": 3,
+          "price": 189.9,
+          "total": 569.7
+        }
+      ],
+      "total": 829.5,
+      "status": "pago",
+      "payment_method": "Pix",
+      "created_at": "2026-09-24T10:00:39.692000"
+    },
+    {
+      "id": "sal-020",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0012",
+      "client_id": "cli-002",
+      "client_name": "Padaria Pão de Ouro LTDA",
+      "items": [
+        {
+          "product_id": "prd-008",
+          "name": "Memória RAM 16GB DDR4",
+          "qty": 1,
+          "price": 329.9,
+          "total": 329.9
+        },
+        {
+          "product_id": "prd-009",
+          "name": "Hub USB-C 7 em 1",
+          "qty": 3,
+          "price": 159.9,
+          "total": 479.7
+        },
+        {
+          "product_id": "prd-016",
+          "name": "Impressora Multifuncional Laser",
+          "qty": 1,
+          "price": 1149.0,
+          "total": 1149.0
+        }
+      ],
+      "total": 1958.6,
+      "status": "pago",
+      "payment_method": "Transferência",
+      "created_at": "2026-09-22T10:15:39.692000"
+    },
+    {
+      "id": "sal-033",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0011",
+      "client_id": "cli-011",
+      "client_name": "Ana Beatriz Costa",
+      "items": [
+        {
+          "product_id": "prd-010",
+          "name": "Carregador Turbo 65W GaN",
+          "qty": 2,
+          "price": 129.9,
+          "total": 259.8
+        },
+        {
+          "product_id": "prd-004",
+          "name": "Teclado Mecânico ABNT2",
+          "qty": 1,
+          "price": 289.9,
+          "total": 289.9
+        },
+        {
+          "product_id": "prd-005",
+          "name": "Headset Corporativo USB",
+          "qty": 1,
+          "price": 219.9,
+          "total": 219.9
+        }
+      ],
+      "total": 769.6,
+      "status": "pago",
+      "payment_method": "Cartão de Crédito",
+      "created_at": "2026-09-21T17:34:39.692000"
+    },
+    {
+      "id": "sal-023",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0010",
+      "client_id": "cli-003",
+      "client_name": "Construtora Almeida S.A.",
+      "items": [
+        {
+          "product_id": "prd-015",
+          "name": "Gaveteiro Mobile 3 Gavetas",
+          "qty": 1,
+          "price": 449.0,
+          "total": 449.0
+        },
+        {
+          "product_id": "prd-008",
+          "name": "Memória RAM 16GB DDR4",
+          "qty": 2,
+          "price": 329.9,
+          "total": 659.8
+        }
+      ],
+      "total": 1108.8,
+      "status": "pago",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-09-15T11:45:39.692000"
+    },
+    {
+      "id": "sal-017",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0009",
+      "client_id": "cli-009",
+      "client_name": "Maria Oliveira",
+      "items": [
+        {
+          "product_id": "prd-009",
+          "name": "Hub USB-C 7 em 1",
+          "qty": 3,
+          "price": 159.9,
+          "total": 479.7
+        }
+      ],
+      "total": 479.7,
+      "status": "cancelado",
+      "payment_method": "Cartão de Crédito",
+      "created_at": "2026-09-08T13:38:39.692000"
+    },
+    {
+      "id": "sal-040",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0008",
+      "client_id": "cli-005",
+      "client_name": "Auto Peças Menezes",
+      "items": [
+        {
+          "product_id": "prd-004",
+          "name": "Teclado Mecânico ABNT2",
+          "qty": 2,
+          "price": 289.9,
+          "total": 579.8
+        }
+      ],
+      "total": 579.8,
+      "status": "pago",
+      "payment_method": "Transferência",
+      "created_at": "2026-09-08T12:37:39.692000"
+    },
+    {
+      "id": "sal-015",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0007",
+      "client_id": "cli-008",
+      "client_name": "João Ferreira",
+      "items": [
+        {
+          "product_id": "prd-004",
+          "name": "Teclado Mecânico ABNT2",
+          "qty": 2,
+          "price": 289.9,
+          "total": 579.8
+        }
+      ],
+      "total": 579.8,
+      "status": "pago",
+      "payment_method": "Dinheiro",
+      "created_at": "2026-09-07T15:36:39.692000"
+    },
+    {
+      "id": "sal-038",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0006",
+      "client_id": "cli-011",
+      "client_name": "Ana Beatriz Costa",
+      "items": [
+        {
+          "product_id": "prd-012",
+          "name": "Suporte de Notebook Ajustável",
+          "qty": 3,
+          "price": 89.9,
+          "total": 269.7
+        }
+      ],
+      "total": 269.7,
+      "status": "pendente",
+      "payment_method": "Cartão de Crédito",
+      "created_at": "2026-09-06T13:12:39.692000"
+    },
+    {
+      "id": "sal-037",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0005",
+      "client_id": "cli-010",
+      "client_name": "Pedro Santos",
+      "items": [
+        {
+          "product_id": "prd-005",
+          "name": "Headset Corporativo USB",
+          "qty": 1,
+          "price": 219.9,
+          "total": 219.9
+        },
+        {
+          "product_id": "prd-014",
+          "name": "Mesa Escritório 1.60m",
+          "qty": 2,
+          "price": 899.0,
+          "total": 1798.0
+        },
+        {
+          "product_id": "prd-018",
+          "name": "Organizador de Gavetas",
+          "qty": 2,
+          "price": 34.9,
+          "total": 69.8
+        }
+      ],
+      "total": 2087.7,
+      "status": "pago",
+      "payment_method": "Cartão de Crédito",
+      "created_at": "2026-09-04T18:54:39.692000"
+    },
+    {
+      "id": "sal-036",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0004",
+      "client_id": "cli-012",
+      "client_name": "Rafael Mendes",
+      "items": [
+        {
+          "product_id": "prd-018",
+          "name": "Organizador de Gavetas",
+          "qty": 1,
+          "price": 34.9,
+          "total": 34.9
+        },
+        {
+          "product_id": "prd-001",
+          "name": "Notebook Pro 15 i7 16GB",
+          "qty": 1,
+          "price": 4899.0,
+          "total": 4899.0
+        }
+      ],
+      "total": 4933.9,
+      "status": "pago",
+      "payment_method": "Boleto",
+      "created_at": "2026-08-28T17:17:39.692000"
+    },
+    {
+      "id": "sal-016",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0003",
+      "client_id": "cli-002",
+      "client_name": "Padaria Pão de Ouro LTDA",
+      "items": [
+        {
+          "product_id": "prd-016",
+          "name": "Impressora Multifuncional Laser",
+          "qty": 1,
+          "price": 1149.0,
+          "total": 1149.0
+        }
+      ],
+      "total": 1149.0,
+      "status": "pago",
+      "payment_method": "Transferência",
+      "created_at": "2026-08-21T11:02:39.692000"
+    },
+    {
+      "id": "sal-025",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0002",
+      "client_id": "cli-001",
+      "client_name": "Tech Solutions Integradora LTDA",
+      "items": [
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 1,
+          "price": 1299.0,
+          "total": 1299.0
+        }
+      ],
+      "total": 1299.0,
+      "status": "pendente",
+      "payment_method": "Transferência",
+      "created_at": "2026-08-19T14:52:39.692000"
+    },
+    {
+      "id": "sal-008",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0001",
+      "client_id": "cli-010",
+      "client_name": "Pedro Santos",
+      "items": [
+        {
+          "product_id": "prd-006",
+          "name": "Webcam Full HD 1080p",
+          "qty": 2,
+          "price": 189.9,
+          "total": 379.8
+        },
+        {
+          "product_id": "prd-008",
+          "name": "Memória RAM 16GB DDR4",
+          "qty": 2,
+          "price": 329.9,
+          "total": 659.8
+        },
+        {
+          "product_id": "prd-018",
+          "name": "Organizador de Gavetas",
+          "qty": 2,
+          "price": 34.9,
+          "total": 69.8
+        }
+      ],
+      "total": 1109.4,
+      "status": "pago",
+      "payment_method": "Pix",
+      "created_at": "2026-08-17T11:37:39.692000"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "trx-069",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Reposição de fornecedores",
+      "category": "Fornecedores",
+      "amount": 2987.22,
+      "due_date": "2026-12-20",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-12-20T00:00:00"
+    },
+    {
+      "id": "trx-068",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Impostos (Simples Nacional)",
+      "category": "Impostos",
+      "amount": 1158.65,
+      "due_date": "2026-12-18",
+      "paid": false,
+      "method": "Pix",
+      "created_at": "2026-12-18T00:00:00"
+    },
+    {
+      "id": "trx-067",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Internet dedicada",
+      "category": "Internet",
+      "amount": 129.9,
+      "due_date": "2026-12-15",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-12-15T00:00:00"
+    },
+    {
+      "id": "trx-066",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Energia elétrica",
+      "category": "Energia",
+      "amount": 352.88,
+      "due_date": "2026-12-12",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-12-12T00:00:00"
+    },
+    {
+      "id": "trx-065",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Folha de pagamento",
+      "category": "Folha de pagamento",
+      "amount": 8450.0,
+      "due_date": "2026-12-10",
+      "paid": false,
+      "method": "Transferência",
+      "created_at": "2026-12-10T00:00:00"
+    },
+    {
+      "id": "trx-064",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Aluguel do escritório",
+      "category": "Aluguel",
+      "amount": 3200.0,
+      "due_date": "2026-12-05",
+      "paid": false,
+      "method": "Transferência",
+      "created_at": "2026-12-05T00:00:00"
+    },
+    {
+      "id": "trx-075",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Locação de equipamentos — Construtora Almeida",
+      "category": "Outros",
+      "amount": 760.0,
+      "due_date": "2026-12-02",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-11-07T04:51:39.692000"
+    },
+    {
+      "id": "trx-074",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Projeto de site — Educa Mais Cursos",
+      "category": "Serviços",
+      "amount": 3500.0,
+      "due_date": "2026-11-27",
+      "paid": false,
+      "method": "Pix",
+      "created_at": "2026-11-07T04:51:39.692000"
+    },
+    {
+      "id": "trx-063",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Reposição de fornecedores",
+      "category": "Fornecedores",
+      "amount": 3147.2,
+      "due_date": "2026-11-20",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-11-20T00:00:00"
+    },
+    {
+      "id": "trx-073",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Contrato de manutenção — Tech Solutions Integradora",
+      "category": "Serviços",
+      "amount": 1980.0,
+      "due_date": "2026-11-19",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-11-07T04:51:39.692000"
+    },
+    {
+      "id": "trx-062",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Impostos (Simples Nacional)",
+      "category": "Impostos",
+      "amount": 1082.69,
+      "due_date": "2026-11-18",
+      "paid": false,
+      "method": "Pix",
+      "created_at": "2026-11-18T00:00:00"
+    },
+    {
+      "id": "trx-061",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Internet dedicada",
+      "category": "Internet",
+      "amount": 129.9,
+      "due_date": "2026-11-15",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-11-15T00:00:00"
+    },
+    {
+      "id": "trx-060",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Energia elétrica",
+      "category": "Energia",
+      "amount": 406.7,
+      "due_date": "2026-11-12",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-11-12T00:00:00"
+    },
+    {
+      "id": "trx-059",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Folha de pagamento",
+      "category": "Folha de pagamento",
+      "amount": 8450.0,
+      "due_date": "2026-11-10",
+      "paid": false,
+      "method": "Transferência",
+      "created_at": "2026-11-10T00:00:00"
+    },
+    {
+      "id": "trx-058",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Aluguel do escritório",
+      "category": "Aluguel",
+      "amount": 3200.0,
+      "due_date": "2026-11-05",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-11-05T00:00:00"
+    },
+    {
+      "id": "trx-038",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0044",
+      "category": "Vendas",
+      "amount": 1049.7,
+      "due_date": "2026-10-30",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-10-30T16:26:39.692000"
+    },
+    {
+      "id": "trx-039",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0045",
+      "category": "Vendas",
+      "amount": 15131.6,
+      "due_date": "2026-10-30",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-10-30T17:54:39.692000"
+    },
+    {
+      "id": "trx-036",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0042",
+      "category": "Vendas",
+      "amount": 989.7,
+      "due_date": "2026-10-28",
+      "paid": false,
+      "method": "Dinheiro",
+      "created_at": "2026-10-28T18:29:39.692000"
+    },
+    {
+      "id": "trx-037",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0043",
+      "category": "Vendas",
+      "amount": 2228.5,
+      "due_date": "2026-10-28",
+      "paid": true,
+      "method": "Cartão de Crédito",
+      "created_at": "2026-10-28T18:56:39.692000"
+    },
+    {
+      "id": "trx-035",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0041",
+      "category": "Vendas",
+      "amount": 1347.0,
+      "due_date": "2026-10-27",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-10-27T13:46:39.692000"
+    },
+    {
+      "id": "trx-072",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Café e copa para a equipe",
+      "category": "Outros",
+      "amount": 187.4,
+      "due_date": "2026-10-26",
+      "paid": true,
+      "method": "Cartão de Crédito",
+      "created_at": "2026-10-26T00:00:00"
+    },
+    {
+      "id": "trx-034",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0039",
+      "category": "Vendas",
+      "amount": 349.9,
+      "due_date": "2026-10-25",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-10-25T12:21:39.692000"
+    },
+    {
+      "id": "trx-032",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0037",
+      "category": "Vendas",
+      "amount": 434.6,
+      "due_date": "2026-10-24",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-10-24T14:34:39.692000"
+    },
+    {
+      "id": "trx-033",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0038",
+      "category": "Vendas",
+      "amount": 1528.7,
+      "due_date": "2026-10-24",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-10-24T15:49:39.692000"
+    },
+    {
+      "id": "trx-031",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0036",
+      "category": "Vendas",
+      "amount": 1599.6,
+      "due_date": "2026-10-22",
+      "paid": false,
+      "method": "Pix",
+      "created_at": "2026-10-22T15:46:39.692000"
+    },
+    {
+      "id": "trx-027",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0032",
+      "category": "Vendas",
+      "amount": 4196.0,
+      "due_date": "2026-10-21",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-10-21T11:17:39.692000"
+    },
+    {
+      "id": "trx-028",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0033",
+      "category": "Vendas",
+      "amount": 3086.7,
+      "due_date": "2026-10-21",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-10-21T13:51:39.692000"
+    },
+    {
+      "id": "trx-029",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0034",
+      "category": "Vendas",
+      "amount": 5966.7,
+      "due_date": "2026-10-21",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-10-21T16:17:39.692000"
+    },
+    {
+      "id": "trx-030",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0035",
+      "category": "Vendas",
+      "amount": 1969.5,
+      "due_date": "2026-10-21",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-10-21T19:46:39.692000"
+    },
+    {
+      "id": "trx-025",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0030",
+      "category": "Vendas",
+      "amount": 14697.0,
+      "due_date": "2026-10-20",
+      "paid": false,
+      "method": "Dinheiro",
+      "created_at": "2026-10-20T16:43:39.692000"
+    },
+    {
+      "id": "trx-026",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0031",
+      "category": "Vendas",
+      "amount": 1347.0,
+      "due_date": "2026-10-20",
+      "paid": false,
+      "method": "Transferência",
+      "created_at": "2026-10-20T19:03:39.692000"
+    },
+    {
+      "id": "trx-057",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Reposição de fornecedores",
+      "category": "Fornecedores",
+      "amount": 2830.24,
+      "due_date": "2026-10-20",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-10-20T00:00:00"
+    },
+    {
+      "id": "trx-024",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0028",
+      "category": "Vendas",
+      "amount": 1183.9,
+      "due_date": "2026-10-19",
+      "paid": false,
+      "method": "Pix",
+      "created_at": "2026-10-19T19:14:39.692000"
+    },
+    {
+      "id": "trx-023",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0027",
+      "category": "Vendas",
+      "amount": 4556.7,
+      "due_date": "2026-10-18",
+      "paid": false,
+      "method": "Pix",
+      "created_at": "2026-10-18T13:52:39.692000"
+    },
+    {
+      "id": "trx-056",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Impostos (Simples Nacional)",
+      "category": "Impostos",
+      "amount": 1149.33,
+      "due_date": "2026-10-18",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-10-18T00:00:00"
+    },
+    {
+      "id": "trx-055",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Internet dedicada",
+      "category": "Internet",
+      "amount": 129.9,
+      "due_date": "2026-10-15",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-10-15T00:00:00"
+    },
+    {
+      "id": "trx-021",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0024",
+      "category": "Vendas",
+      "amount": 7756.8,
+      "due_date": "2026-10-12",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-10-12T10:13:39.692000"
+    },
+    {
+      "id": "trx-022",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0025",
+      "category": "Vendas",
+      "amount": 1419.6,
+      "due_date": "2026-10-12",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-10-12T13:25:39.692000"
+    },
+    {
+      "id": "trx-054",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Energia elétrica",
+      "category": "Energia",
+      "amount": 412.24,
+      "due_date": "2026-10-12",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-10-12T00:00:00"
+    },
+    {
+      "id": "trx-019",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0022",
+      "category": "Vendas",
+      "amount": 709.5,
+      "due_date": "2026-10-10",
+      "paid": false,
+      "method": "Dinheiro",
+      "created_at": "2026-10-10T15:19:39.692000"
+    },
+    {
+      "id": "trx-020",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0023",
+      "category": "Vendas",
+      "amount": 2867.7,
+      "due_date": "2026-10-10",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-10-10T16:37:39.692000"
+    },
+    {
+      "id": "trx-053",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Folha de pagamento",
+      "category": "Folha de pagamento",
+      "amount": 8450.0,
+      "due_date": "2026-10-10",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-10-10T00:00:00"
+    },
+    {
+      "id": "trx-016",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0019",
+      "category": "Vendas",
+      "amount": 5766.8,
+      "due_date": "2026-10-07",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-10-07T11:41:39.692000"
+    },
+    {
+      "id": "trx-017",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0020",
+      "category": "Vendas",
+      "amount": 1219.6,
+      "due_date": "2026-10-07",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-10-07T16:52:39.692000"
+    },
+    {
+      "id": "trx-018",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0021",
+      "category": "Vendas",
+      "amount": 7697.0,
+      "due_date": "2026-10-07",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-10-07T19:16:39.692000"
+    },
+    {
+      "id": "trx-015",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0018",
+      "category": "Vendas",
+      "amount": 9443.7,
+      "due_date": "2026-10-06",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-10-06T15:38:39.692000"
+    },
+    {
+      "id": "trx-014",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0016",
+      "category": "Vendas",
+      "amount": 939.6,
+      "due_date": "2026-10-05",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-10-05T10:53:39.692000"
+    },
+    {
+      "id": "trx-052",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Aluguel do escritório",
+      "category": "Aluguel",
+      "amount": 3200.0,
+      "due_date": "2026-10-05",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-10-05T00:00:00"
+    },
+    {
+      "id": "trx-070",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Impulso de marketing digital",
+      "category": "Marketing",
+      "amount": 980.0,
+      "due_date": "2026-10-04",
+      "paid": true,
+      "method": "Cartão de Crédito",
+      "created_at": "2026-10-04T00:00:00"
+    },
+    {
+      "id": "trx-013",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0014",
+      "category": "Vendas",
+      "amount": 49.9,
+      "due_date": "2026-09-29",
+      "paid": false,
+      "method": "Dinheiro",
+      "created_at": "2026-09-29T15:41:39.692000"
+    },
+    {
+      "id": "trx-012",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0013",
+      "category": "Vendas",
+      "amount": 829.5,
+      "due_date": "2026-09-24",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-09-24T10:00:39.692000"
+    },
+    {
+      "id": "trx-011",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0012",
+      "category": "Vendas",
+      "amount": 1958.6,
+      "due_date": "2026-09-22",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-09-22T10:15:39.692000"
+    },
+    {
+      "id": "trx-010",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0011",
+      "category": "Vendas",
+      "amount": 769.6,
+      "due_date": "2026-09-21",
+      "paid": true,
+      "method": "Cartão de Crédito",
+      "created_at": "2026-09-21T17:34:39.692000"
+    },
+    {
+      "id": "trx-051",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Reposição de fornecedores",
+      "category": "Fornecedores",
+      "amount": 2909.56,
+      "due_date": "2026-09-20",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-09-20T00:00:00"
+    },
+    {
+      "id": "trx-050",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Impostos (Simples Nacional)",
+      "category": "Impostos",
+      "amount": 1385.94,
+      "due_date": "2026-09-18",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-09-18T00:00:00"
+    },
+    {
+      "id": "trx-009",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0010",
+      "category": "Vendas",
+      "amount": 1108.8,
+      "due_date": "2026-09-15",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-09-15T11:45:39.692000"
+    },
+    {
+      "id": "trx-049",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Internet dedicada",
+      "category": "Internet",
+      "amount": 129.9,
+      "due_date": "2026-09-15",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-09-15T00:00:00"
+    },
+    {
+      "id": "trx-048",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Energia elétrica",
+      "category": "Energia",
+      "amount": 431.12,
+      "due_date": "2026-09-12",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-09-12T00:00:00"
+    },
+    {
+      "id": "trx-047",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Folha de pagamento",
+      "category": "Folha de pagamento",
+      "amount": 8450.0,
+      "due_date": "2026-09-10",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-09-10T00:00:00"
+    },
+    {
+      "id": "trx-008",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0008",
+      "category": "Vendas",
+      "amount": 579.8,
+      "due_date": "2026-09-08",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-09-08T12:37:39.692000"
+    },
+    {
+      "id": "trx-071",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Licenças de software (anual)",
+      "category": "Software",
+      "amount": 2400.0,
+      "due_date": "2026-09-08",
+      "paid": true,
+      "method": "Cartão de Crédito",
+      "created_at": "2026-09-08T00:00:00"
+    },
+    {
+      "id": "trx-007",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0007",
+      "category": "Vendas",
+      "amount": 579.8,
+      "due_date": "2026-09-07",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-09-07T15:36:39.692000"
+    },
+    {
+      "id": "trx-006",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0006",
+      "category": "Vendas",
+      "amount": 269.7,
+      "due_date": "2026-09-06",
+      "paid": false,
+      "method": "Cartão de Crédito",
+      "created_at": "2026-09-06T13:12:39.692000"
+    },
+    {
+      "id": "trx-046",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Aluguel do escritório",
+      "category": "Aluguel",
+      "amount": 3200.0,
+      "due_date": "2026-09-05",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-09-05T00:00:00"
+    },
+    {
+      "id": "trx-005",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0005",
+      "category": "Vendas",
+      "amount": 2087.7,
+      "due_date": "2026-09-04",
+      "paid": true,
+      "method": "Cartão de Crédito",
+      "created_at": "2026-09-04T18:54:39.692000"
+    },
+    {
+      "id": "trx-004",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0004",
+      "category": "Vendas",
+      "amount": 4933.9,
+      "due_date": "2026-08-28",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-08-28T17:17:39.692000"
+    },
+    {
+      "id": "trx-003",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0003",
+      "category": "Vendas",
+      "amount": 1149.0,
+      "due_date": "2026-08-21",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-08-21T11:02:39.692000"
+    },
+    {
+      "id": "trx-045",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Reposição de fornecedores",
+      "category": "Fornecedores",
+      "amount": 2662.29,
+      "due_date": "2026-08-20",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-08-20T00:00:00"
+    },
+    {
+      "id": "trx-002",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0002",
+      "category": "Vendas",
+      "amount": 1299.0,
+      "due_date": "2026-08-19",
+      "paid": false,
+      "method": "Transferência",
+      "created_at": "2026-08-19T14:52:39.692000"
+    },
+    {
+      "id": "trx-044",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Impostos (Simples Nacional)",
+      "category": "Impostos",
+      "amount": 1286.47,
+      "due_date": "2026-08-18",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-08-18T00:00:00"
+    },
+    {
+      "id": "trx-001",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0001",
+      "category": "Vendas",
+      "amount": 1109.4,
+      "due_date": "2026-08-17",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-08-17T11:37:39.692000"
+    },
+    {
+      "id": "trx-043",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Internet dedicada",
+      "category": "Internet",
+      "amount": 129.9,
+      "due_date": "2026-08-15",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-08-15T00:00:00"
+    },
+    {
+      "id": "trx-042",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Energia elétrica",
+      "category": "Energia",
+      "amount": 381.85,
+      "due_date": "2026-08-12",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-08-12T00:00:00"
+    },
+    {
+      "id": "trx-041",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Folha de pagamento",
+      "category": "Folha de pagamento",
+      "amount": 8450.0,
+      "due_date": "2026-08-10",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-08-10T00:00:00"
+    },
+    {
+      "id": "trx-040",
+      "company_id": "emp-nexbiz-001",
+      "kind": "despesa",
+      "description": "Aluguel do escritório",
+      "category": "Aluguel",
+      "amount": 3200.0,
+      "due_date": "2026-08-05",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-08-05T00:00:00"
+    }
+  ]
+};

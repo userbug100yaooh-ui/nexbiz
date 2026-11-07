@@ -1,0 +1,266 @@
+{
+  "project_name": "NEXBIZ",
+  "app_type": "saas_app",
+  "locale": "pt-BR",
+  "currency": "BRL",
+  "currency_symbol": "R$",
+  "theme_strategy": {
+    "default_mode": "light",
+    "support_dark_mode": true,
+    "description": "Professional SaaS corporate palette anchored in Deep Navy (#0F172A / #1E293B), Crisp Pure White (#FFFFFF), Clean Light Surface (#F8FAFC), with Cobalt/Electric Royal Blue accents (#2563EB / #3B82F6) and vibrant status cues."
+  },
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#F8FAFC",
+        "on_bg": "#0F172A",
+        "on_bg_muted": "#475569",
+        "roles": {
+          "link": "#2563EB",
+          "error": "#DC2626",
+          "success": "#16A34A",
+          "warning": "#D97706",
+          "border": "#E2E8F0"
+        }
+      },
+      {
+        "name": "panel",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#0F172A",
+        "on_bg_muted": "#64748B",
+        "roles": {
+          "link": "#2563EB",
+          "error": "#DC2626",
+          "success": "#16A34A",
+          "warning": "#D97706",
+          "border": "#E2E8F0"
+        }
+      },
+      {
+        "name": "sidebar_dark_navy",
+        "kind": "solid",
+        "bg": "#0B132B",
+        "on_bg": "#F8FAFC",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "link": "#60A5FA",
+          "active_item": "#3B82F6",
+          "border": "#1E293B"
+        }
+      },
+      {
+        "name": "card_metric",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#0F172A",
+        "on_bg_muted": "#64748B",
+        "roles": {
+          "trend_up": "#16A34A",
+          "trend_down": "#DC2626",
+          "badge_bg": "#EFF6FF",
+          "badge_text": "#1D4ED8"
+        }
+      },
+      {
+        "name": "hero",
+        "kind": "solid",
+        "bg": "#0B132B",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "link": "#60A5FA",
+          "cta_primary_bg": "#2563EB",
+          "cta_primary_text": "#FFFFFF",
+          "highlight": "#38BDF8"
+        }
+      },
+      {
+        "name": "inverse",
+        "kind": "solid",
+        "bg": "#0F172A",
+        "on_bg": "#F8FAFC",
+        "on_bg_muted": "#94A3B8"
+      }
+    ],
+    "accent": "#2563EB",
+    "on_accent": "#FFFFFF",
+    "accent_subtle": "#EFF6FF",
+    "navy_dark": "#0B132B",
+    "navy_mid": "#1E293B",
+    "status": {
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "info": "#0284C7"
+    }
+  },
+  "typography": {
+    "font_family_heading": "Plus Jakarta Sans Variable, sans-serif",
+    "font_family_sans": "Plus Jakarta Sans Variable, sans-serif",
+    "font_family_mono": "IBM Plex Mono, monospace",
+    "import_directive": "@import \"@fontsource-variable/plus-jakarta-sans\"; @import \"@fontsource/ibm-plex-mono\";",
+    "scale_px": {
+      "display": 56,
+      "h1": 40,
+      "h2": 30,
+      "h3": 22,
+      "h4": 18,
+      "body": 16,
+      "caption": 14
+    },
+    "letter_spacing": {
+      "headings": "-0.025em",
+      "labels": "0.05em",
+      "body": "normal"
+    }
+  },
+  "entry_surfaces": {
+    "/": "split hero — brand value proposition + demo CTA left, interactive live KPI preview card right",
+    "/login": "branded split login — company positioning & live metrics preview left, authentication demo form right",
+    "/register": "multi-step onboarding card — user & company registration with progress tracker"
+  },
+  "routes_and_pages": [
+    {
+      "path": "/",
+      "name": "Landing Page",
+      "purpose": "Apresentação da plataforma NEXBIZ para PMEs, recursos, planos, prova social e acesso rápido à demonstração",
+      "is_public": true
+    },
+    {
+      "path": "/login",
+      "name": "Login",
+      "purpose": "Acesso seguro à plataforma com botão de entrada rápida 'Entrar com Conta Demo (Admin)'",
+      "is_public": true
+    },
+    {
+      "path": "/register",
+      "name": "Cadastro de Usuário e Empresa",
+      "purpose": "Fluxo guiado de onboarding em 2 passos (Dados Pessoais + Dados do Negócio e Segmento)",
+      "is_public": true
+    },
+    {
+      "path": "/app",
+      "name": "Dashboard Geral",
+      "purpose": "Visão executiva com faturamento mensal, ticket médio, fluxo de caixa, pedidos recentes e alertas de estoque baixo",
+      "is_public": false
+    },
+    {
+      "path": "/app/produtos",
+      "name": "Produtos e Estoque",
+      "purpose": "Gestão completa de catálogo, controle de estoque mínimo/máximo, movimentações e alertas de reposição",
+      "is_public": false
+    },
+    {
+      "path": "/app/vendas",
+      "name": "Vendas & Pedidos",
+      "purpose": "PDV / Gestão de pedidos de venda, emissão de orçamentos, status de pagamento e histórico",
+      "is_public": false
+    },
+    {
+      "path": "/app/financeiro",
+      "name": "Gestão Financeira",
+      "purpose": "Contas a pagar/receber, DRE simplificado, fluxo de caixa previsto vs realizado e categorização",
+      "is_public": false
+    },
+    {
+      "path": "/app/clientes",
+      "name": "Clientes & CRM",
+      "purpose": "Base de clientes (PF/PJ com CPF/CNPJ), histórico de compras, saldo em aberto e contato rápido",
+      "is_public": false
+    },
+    {
+      "path": "/app/servicos",
+      "name": "Catálogo de Serviços",
+      "purpose": "Tabela de serviços prestados, precificação por hora/fixo, ordens de serviço e prazos",
+      "is_public": false
+    },
+    {
+      "path": "/app/relatorios",
+      "name": "Relatórios & BI",
+      "purpose": "Relatórios consolidados de vendas por período, produtos mais vendidos, margem de lucro e exportação",
+      "is_public": false
+    },
+    {
+      "path": "/app/configuracoes",
+      "name": "Configurações da Empresa",
+      "purpose": "Dados cadastrais da empresa (CNPJ, IE, Razão Social), preferências de notificações, multiempresa e usuários",
+      "is_public": false
+    }
+  ],
+  "layout_and_navigation": {
+    "mobile_first_rules": "No mobile, a navegação principal utiliza uma barra superior compacta com botão hamburger que abre um Drawer/Sheet do Shadcn contendo todo o menu lateral navy, além de acesso rápido no rodapé se necessário. Em telas grandes (md/lg), exibe a Sidebar fixa lateral com visual Deep Navy e logotipo NEXBIZ.",
+    "sidebar_design": {
+      "theme": "Deep Navy (#0B132B) com itens em Slate 300 e item ativo com background Royal Blue (#2563EB) e texto branco.",
+      "sections": [
+        "PRINCIPAL: Dashboard, Vendas, Clientes",
+        "OPERAÇÃO: Produtos & Estoque, Serviços",
+        "GESTÃO: Financeiro, Relatórios",
+        "SISTEMA: Configurações, Trocar Empresa"
+      ]
+    },
+    "topbar_design": {
+      "elements": [
+        "Seletor de Empresa / Filial ativa (Badge com nome)",
+        "Busca global rápida (Cmd+K modal mock)",
+        "Notificações com badge de contagem",
+        "Menu de Perfil com dados do usuário e logout"
+      ]
+    }
+  },
+  "visual_enhancers": {
+    "texture": "Subtle 1px border grid hierarchy (border-slate-200/80) com elevação leve em hover (shadow-sm to shadow-md)",
+    "kpi_cards": "Card com ícone contextual em container azul claro (bg-blue-50 text-blue-600), valor em destaque (text-2xl font-bold font-sans), e tag de variação percentual comparada ao mês anterior",
+    "data_tables": "Tabelas limpas com paginação, filtros por status, busca por texto em tempo real e ações rápidas (editar, excluir, visualizar detalhes)",
+    "modals_and_drawers": "Formulários de criação e edição abrem em Dialogs ou Sheets do Shadcn com validação clara e feedback Sonner Toast"
+  },
+  "image_urls": {
+    "hero_business_meeting": {
+      "url": "https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMG93bmVyJTIwbWVldGluZyUyMGxhcHRvcHxlbnwwfHx8fDE3OTQwMjY2Mzd8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Gestores analisando métricas da empresa no NEXBIZ",
+      "placement": "Landing page hero section e painel lateral do login/registro"
+    },
+    "dashboard_analytics_mock": {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBkYXNoYm9hcmQlMjB0YWJsZXR8ZW58MHx8fHwxNzk0MDI2NjM3fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Interface de gráficos e indicadores em tempo real",
+      "placement": "Landing page seção de recursos e demonstração de relatórios"
+    },
+    "tablet_finance_analysis": {
+      "url": "https://images.unsplash.com/photo-1748609160056-7b95f30041f0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBvZmZpY2UlMjBkYXNoYm9hcmQlMjB0YWJsZXR8ZW58MHx8fHwxNzk0MDI2NjM3fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Controle financeiro e fluxo de caixa na palma da mão",
+      "placement": "Landing page seção de gestão financeira e mobile responsiveness showcase"
+    }
+  },
+  "motion": {
+    "library": "motion/react (bundled)",
+    "rules": [
+      "Staggered entrance for KPI metric cards (0.05s delay per card)",
+      "Smooth slide-in drawer for mobile sidebar",
+      "Tab switching with layout animations",
+      "Hover scale-102 with smooth transition for primary action buttons"
+    ]
+  },
+  "accessibility": {
+    "wcag_level": "WCAG AA (4.5:1 for body and normal copy)",
+    "contrast_verification": {
+      "primary_navy_on_light": "Contrast ratio 12.8:1 (#0F172A on #F8FAFC) - PASS",
+      "white_on_primary_blue": "Contrast ratio 4.6:1 (#FFFFFF on #2563EB) - PASS",
+      "white_on_deep_navy": "Contrast ratio 17.5:1 (#FFFFFF on #0B132B) - PASS",
+      "muted_text_on_light": "Contrast ratio 5.1:1 (#475569 on #F8FAFC) - PASS"
+    },
+    "data_testid_convention": "All interactive buttons, links, inputs, tables, rows, filters and summary cards MUST have descriptive kebab-case data-testid tags (e.g., data-testid='sidebar-nav-vendas', data-testid='btn-novo-produto', data-testid='table-pedidos-venda')."
+  },
+  "instructions_to_main_agent": [
+    "1. Adotar a identidade visual com Azul-Marinho Profundo (#0B132B / #0F172A), Branco Puro e Destaques em Azul Royal (#2563EB).",
+    "2. Implementar as 11 telas/páginas completas com rotas correspondentes no App.tsx.",
+    "3. Criar dados mock ricos e realistas em pt-BR com valores em formato de Real (R$), datas brasileiras (DD/MM/AAAA) e empresas fictícias do mercado brasileiro (ex: 'NEXBIZ Comercial Ltda', 'Studio Design & Tech').",
+    "4. Garantir total funcionalidade interativa com CRUD simulado no estado local/TanStack Query para: Produtos, Vendas, Clientes, Serviços e Lançamentos Financeiros.",
+    "5. Na tela de Login, incluir um botão de destaque 'Entrar com Conta Demo' para facilitar a avaliação imediata sem necessidade de digitação.",
+    "6. No mobile, utilizar Sheet (Drawer) do Shadcn para o menu lateral completo, com botão hamburger acessível e barra de topo fixa.",
+    "7. Utilizar Recharts para gráficos de faturamento mensal, comparativo de despesas/receitas, top produtos e curva ABC de vendas.",
+    "8. Adicionar Toaster com 'sonner' no rodapé inferior direito para feedback de ações (ex: 'Produto cadastrado com sucesso!', 'Venda concluída!').",
+    "9. Garantir que todas as ações e botões possuam data-testid para testes automatizados."
+  ]
+}
