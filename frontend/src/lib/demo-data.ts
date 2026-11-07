@@ -15,16 +15,17 @@ export const demoData: DemoBundle = {
     "city": "São Paulo",
     "state": "SP",
     "plan": "profissional",
-    "created_at": "2026-11-07T04:51:40.042000"
+    "created_at": "2026-11-07T05:30:57.807000"
   },
   "users": [
     {
       "id": "usr-001",
       "company_id": "emp-nexbiz-001",
-      "name": "Ana Souza",
-      "email": "ana@nexbiz.com.br",
+      "name": "Administrador NEXBIZ",
+      "email": "pintopinto.yaooh@gmail.com",
       "role": "admin",
-      "created_at": "2026-04-21T04:51:39.692000"
+      "supabase_user_id": "",
+      "created_at": "2026-04-21T05:30:57.368000"
     },
     {
       "id": "usr-002",
@@ -32,7 +33,8 @@ export const demoData: DemoBundle = {
       "name": "Carlos Lima",
       "email": "carlos@nexbiz.com.br",
       "role": "gerente",
-      "created_at": "2026-04-21T04:51:39.692000"
+      "supabase_user_id": "",
+      "created_at": "2026-04-21T05:30:57.368000"
     },
     {
       "id": "usr-003",
@@ -40,7 +42,8 @@ export const demoData: DemoBundle = {
       "name": "Marina Costa",
       "email": "marina@nexbiz.com.br",
       "role": "vendedor",
-      "created_at": "2026-04-21T04:51:39.692000"
+      "supabase_user_id": "",
+      "created_at": "2026-04-21T05:30:57.368000"
     }
   ],
   "products": [
@@ -56,7 +59,7 @@ export const demoData: DemoBundle = {
       "stock": 60,
       "min_stock": 20,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-013",
@@ -70,7 +73,7 @@ export const demoData: DemoBundle = {
       "stock": 5,
       "min_stock": 2,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-010",
@@ -84,7 +87,7 @@ export const demoData: DemoBundle = {
       "stock": 4,
       "min_stock": 8,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-015",
@@ -98,7 +101,7 @@ export const demoData: DemoBundle = {
       "stock": 9,
       "min_stock": 3,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-005",
@@ -112,7 +115,7 @@ export const demoData: DemoBundle = {
       "stock": 15,
       "min_stock": 6,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-009",
@@ -126,7 +129,7 @@ export const demoData: DemoBundle = {
       "stock": 30,
       "min_stock": 10,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-016",
@@ -140,7 +143,7 @@ export const demoData: DemoBundle = {
       "stock": 6,
       "min_stock": 2,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-008",
@@ -154,7 +157,7 @@ export const demoData: DemoBundle = {
       "stock": 22,
       "min_stock": 8,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-014",
@@ -168,7 +171,7 @@ export const demoData: DemoBundle = {
       "stock": 3,
       "min_stock": 3,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-002",
@@ -182,7 +185,7 @@ export const demoData: DemoBundle = {
       "stock": 12,
       "min_stock": 4,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-003",
@@ -196,7 +199,7 @@ export const demoData: DemoBundle = {
       "stock": 25,
       "min_stock": 8,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-001",
@@ -210,7 +213,7 @@ export const demoData: DemoBundle = {
       "stock": 8,
       "min_stock": 3,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-018",
@@ -224,7 +227,7 @@ export const demoData: DemoBundle = {
       "stock": 2,
       "min_stock": 10,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-017",
@@ -238,7 +241,7 @@ export const demoData: DemoBundle = {
       "stock": 40,
       "min_stock": 15,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-007",
@@ -252,7 +255,7 @@ export const demoData: DemoBundle = {
       "stock": 18,
       "min_stock": 6,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-012",
@@ -266,7 +269,7 @@ export const demoData: DemoBundle = {
       "stock": 14,
       "min_stock": 5,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-004",
@@ -280,7 +283,7 @@ export const demoData: DemoBundle = {
       "stock": 6,
       "min_stock": 10,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "prd-006",
@@ -294,7 +297,7 @@ export const demoData: DemoBundle = {
       "stock": 0,
       "min_stock": 5,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     }
   ],
   "clients": [
@@ -309,7 +312,7 @@ export const demoData: DemoBundle = {
       "city": "Osasco",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-005",
@@ -322,7 +325,7 @@ export const demoData: DemoBundle = {
       "city": "Curitiba",
       "state": "PR",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-004",
@@ -335,7 +338,7 @@ export const demoData: DemoBundle = {
       "city": "Belo Horizonte",
       "state": "MG",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-003",
@@ -348,7 +351,7 @@ export const demoData: DemoBundle = {
       "city": "Rio de Janeiro",
       "state": "RJ",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-006",
@@ -361,7 +364,7 @@ export const demoData: DemoBundle = {
       "city": "Campinas",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-008",
@@ -374,7 +377,7 @@ export const demoData: DemoBundle = {
       "city": "São Paulo",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-013",
@@ -387,7 +390,7 @@ export const demoData: DemoBundle = {
       "city": "São Bernardo do Campo",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-014",
@@ -400,7 +403,7 @@ export const demoData: DemoBundle = {
       "city": "Diadema",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-009",
@@ -413,7 +416,7 @@ export const demoData: DemoBundle = {
       "city": "Guarulhos",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-002",
@@ -426,7 +429,7 @@ export const demoData: DemoBundle = {
       "city": "Santo André",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-010",
@@ -439,7 +442,7 @@ export const demoData: DemoBundle = {
       "city": "Campinas",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-012",
@@ -452,7 +455,7 @@ export const demoData: DemoBundle = {
       "city": "Santos",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-007",
@@ -465,7 +468,7 @@ export const demoData: DemoBundle = {
       "city": "São Paulo",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "cli-001",
@@ -478,7 +481,7 @@ export const demoData: DemoBundle = {
       "city": "São Paulo",
       "state": "SP",
       "notes": "",
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     }
   ],
   "services": [
@@ -492,7 +495,7 @@ export const demoData: DemoBundle = {
       "price": 320.0,
       "estimated_hours": 0.0,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "srv-007",
@@ -504,7 +507,7 @@ export const demoData: DemoBundle = {
       "price": 1500.0,
       "estimated_hours": 12.0,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "srv-003",
@@ -516,7 +519,7 @@ export const demoData: DemoBundle = {
       "price": 250.0,
       "estimated_hours": 6.0,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "srv-004",
@@ -528,7 +531,7 @@ export const demoData: DemoBundle = {
       "price": 3500.0,
       "estimated_hours": 40.0,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "srv-001",
@@ -540,7 +543,7 @@ export const demoData: DemoBundle = {
       "price": 800.0,
       "estimated_hours": 8.0,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "srv-002",
@@ -552,7 +555,7 @@ export const demoData: DemoBundle = {
       "price": 120.0,
       "estimated_hours": 3.0,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "srv-005",
@@ -564,7 +567,7 @@ export const demoData: DemoBundle = {
       "price": 990.0,
       "estimated_hours": 0.0,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
     },
     {
       "id": "srv-008",
@@ -576,14 +579,250 @@ export const demoData: DemoBundle = {
       "price": 180.0,
       "estimated_hours": 4.0,
       "active": true,
-      "created_at": "2026-11-07T04:51:40.044000"
+      "created_at": "2026-11-07T05:30:57.807000"
+    }
+  ],
+  "service_orders": [
+    {
+      "id": "os-001",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0001",
+      "client_id": "cli-010",
+      "client_name": "Pedro Santos",
+      "service_id": "srv-005",
+      "service_name": "Suporte Técnico Mensal",
+      "status": "concluida",
+      "scheduled_date": "2026-10-08",
+      "price": 990.0,
+      "notes": "Serviço executado e aprovado pelo cliente.",
+      "created_at": "2026-11-07T05:30:57.808000"
+    },
+    {
+      "id": "os-002",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0002",
+      "client_id": "cli-009",
+      "client_name": "Maria Oliveira",
+      "service_id": "srv-001",
+      "service_name": "Instalação de Redes e Wi-Fi",
+      "status": "aberta",
+      "scheduled_date": "2026-11-18",
+      "price": 800.0,
+      "notes": "Aguardando agendamento com o cliente.",
+      "created_at": "2026-11-07T05:30:57.808000"
+    },
+    {
+      "id": "os-003",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0003",
+      "client_id": "cli-005",
+      "client_name": "Auto Peças Menezes",
+      "service_id": "srv-004",
+      "service_name": "Criação de Sites Institucionais",
+      "status": "em_andamento",
+      "scheduled_date": "2026-11-22",
+      "price": 3500.0,
+      "notes": "Execução em andamento pela equipe técnica.",
+      "created_at": "2026-11-07T05:30:57.808000"
+    },
+    {
+      "id": "os-004",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0004",
+      "client_id": "cli-013",
+      "client_name": "Juliana Paiva",
+      "service_id": "srv-006",
+      "service_name": "Backup Gerenciado em Nuvem",
+      "status": "concluida",
+      "scheduled_date": "2026-10-04",
+      "price": 320.0,
+      "notes": "Serviço executado e aprovado pelo cliente.",
+      "created_at": "2026-11-07T05:30:57.808000"
+    },
+    {
+      "id": "os-005",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0005",
+      "client_id": "cli-008",
+      "client_name": "João Ferreira",
+      "service_id": "srv-008",
+      "service_name": "Treinamento de Equipe em Sistemas",
+      "status": "aberta",
+      "scheduled_date": "2026-11-15",
+      "price": 180.0,
+      "notes": "Aguardando agendamento com o cliente.",
+      "created_at": "2026-11-07T05:30:57.808000"
+    },
+    {
+      "id": "os-006",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0006",
+      "client_id": "cli-009",
+      "client_name": "Maria Oliveira",
+      "service_id": "srv-008",
+      "service_name": "Treinamento de Equipe em Sistemas",
+      "status": "concluida",
+      "scheduled_date": "2026-09-13",
+      "price": 180.0,
+      "notes": "Serviço executado e aprovado pelo cliente.",
+      "created_at": "2026-11-07T05:30:57.808000"
+    },
+    {
+      "id": "os-007",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0007",
+      "client_id": "cli-013",
+      "client_name": "Juliana Paiva",
+      "service_id": "srv-003",
+      "service_name": "Consultoria em TI",
+      "status": "em_andamento",
+      "scheduled_date": "2026-11-11",
+      "price": 250.0,
+      "notes": "Execução em andamento pela equipe técnica.",
+      "created_at": "2026-11-07T05:30:57.808000"
+    },
+    {
+      "id": "os-008",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0008",
+      "client_id": "cli-005",
+      "client_name": "Auto Peças Menezes",
+      "service_id": "srv-006",
+      "service_name": "Backup Gerenciado em Nuvem",
+      "status": "cancelada",
+      "scheduled_date": "2026-10-28",
+      "price": 320.0,
+      "notes": "Cancelada a pedido do cliente.",
+      "created_at": "2026-11-07T05:30:57.808000"
+    },
+    {
+      "id": "os-009",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0009",
+      "client_id": "cli-014",
+      "client_name": "Marcos Antônio Lima",
+      "service_id": "srv-004",
+      "service_name": "Criação de Sites Institucionais",
+      "status": "aberta",
+      "scheduled_date": "2026-11-18",
+      "price": 3500.0,
+      "notes": "Aguardando agendamento com o cliente.",
+      "created_at": "2026-11-07T05:30:57.808000"
+    },
+    {
+      "id": "os-010",
+      "company_id": "emp-nexbiz-001",
+      "code": "OS-0010",
+      "client_id": "cli-004",
+      "client_name": "Clínica Vida Plena",
+      "service_id": "srv-004",
+      "service_name": "Criação de Sites Institucionais",
+      "status": "concluida",
+      "scheduled_date": "2026-10-24",
+      "price": 3500.0,
+      "notes": "Serviço executado e aprovado pelo cliente.",
+      "created_at": "2026-11-07T05:30:57.808000"
     }
   ],
   "sales": [
     {
-      "id": "sal-039",
+      "id": "sal-001",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0046",
+      "client_id": "cli-011",
+      "client_name": "Ana Beatriz Costa",
+      "items": [
+        {
+          "product_id": "prd-001",
+          "name": "Notebook Pro 15 i7 16GB",
+          "qty": 3,
+          "price": 4899.0,
+          "total": 14697.0
+        }
+      ],
+      "total": 14697.0,
+      "status": "pago",
+      "payment_method": "Pix",
+      "created_at": "2026-11-06T16:15:57.368000"
+    },
+    {
+      "id": "sal-002",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0045",
+      "client_id": "cli-011",
+      "client_name": "Ana Beatriz Costa",
+      "items": [
+        {
+          "product_id": "prd-018",
+          "name": "Organizador de Gavetas",
+          "qty": 1,
+          "price": 34.9,
+          "total": 34.9
+        },
+        {
+          "product_id": "prd-003",
+          "name": "Mouse Sem Fio MX Master",
+          "qty": 1,
+          "price": 349.9,
+          "total": 349.9
+        },
+        {
+          "product_id": "prd-014",
+          "name": "Mesa Escritório 1.60m",
+          "qty": 1,
+          "price": 899.0,
+          "total": 899.0
+        }
+      ],
+      "total": 1283.8,
+      "status": "pago",
+      "payment_method": "Pix",
+      "created_at": "2026-11-05T17:16:57.368000"
+    },
+    {
+      "id": "sal-003",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0044",
+      "client_id": "cli-009",
+      "client_name": "Maria Oliveira",
+      "items": [
+        {
+          "product_id": "prd-018",
+          "name": "Organizador de Gavetas",
+          "qty": 2,
+          "price": 34.9,
+          "total": 69.8
+        }
+      ],
+      "total": 69.8,
+      "status": "pago",
+      "payment_method": "Pix",
+      "created_at": "2026-11-04T17:02:57.368000"
+    },
+    {
+      "id": "sal-004",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0043",
+      "client_id": "cli-013",
+      "client_name": "Juliana Paiva",
+      "items": [
+        {
+          "product_id": "prd-014",
+          "name": "Mesa Escritório 1.60m",
+          "qty": 2,
+          "price": 899.0,
+          "total": 1798.0
+        }
+      ],
+      "total": 1798.0,
+      "status": "pago",
+      "payment_method": "Boleto",
+      "created_at": "2026-11-03T16:21:57.368000"
+    },
+    {
+      "id": "sal-040",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0042",
       "client_id": "cli-014",
       "client_name": "Marcos Antônio Lima",
       "items": [
@@ -598,12 +837,32 @@ export const demoData: DemoBundle = {
       "total": 379.8,
       "status": "cancelado",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-11-02T14:01:39.692000"
+      "created_at": "2026-11-02T14:40:57.368000"
     },
     {
-      "id": "sal-019",
+      "id": "sal-005",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0045",
+      "code": "VND-0041",
+      "client_id": "cli-002",
+      "client_name": "Padaria Pão de Ouro LTDA",
+      "items": [
+        {
+          "product_id": "prd-013",
+          "name": "Cadeira Ergonômica Diretor",
+          "qty": 1,
+          "price": 1299.0,
+          "total": 1299.0
+        }
+      ],
+      "total": 1299.0,
+      "status": "pago",
+      "payment_method": "Boleto",
+      "created_at": "2026-11-02T14:36:57.368000"
+    },
+    {
+      "id": "sal-020",
+      "company_id": "emp-nexbiz-001",
+      "code": "VND-0040",
       "client_id": "cli-010",
       "client_name": "Pedro Santos",
       "items": [
@@ -632,12 +891,12 @@ export const demoData: DemoBundle = {
       "total": 15131.6,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-10-30T17:54:39.692000"
+      "created_at": "2026-10-30T18:33:57.368000"
     },
     {
-      "id": "sal-028",
+      "id": "sal-029",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0044",
+      "code": "VND-0039",
       "client_id": "cli-002",
       "client_name": "Padaria Pão de Ouro LTDA",
       "items": [
@@ -652,12 +911,12 @@ export const demoData: DemoBundle = {
       "total": 1049.7,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-30T16:26:39.692000"
+      "created_at": "2026-10-30T17:05:57.368000"
     },
     {
-      "id": "sal-011",
+      "id": "sal-012",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0043",
+      "code": "VND-0038",
       "client_id": "cli-007",
       "client_name": "Restaurante Sabor & Arte",
       "items": [
@@ -686,41 +945,14 @@ export const demoData: DemoBundle = {
       "total": 2228.5,
       "status": "pago",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-10-28T18:56:39.692000"
+      "created_at": "2026-10-28T19:35:57.368000"
     },
     {
-      "id": "sal-004",
+      "id": "sal-006",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0042",
-      "client_id": "cli-006",
-      "client_name": "Educa Mais Cursos LTDA",
-      "items": [
-        {
-          "product_id": "prd-005",
-          "name": "Headset Corporativo USB",
-          "qty": 2,
-          "price": 219.9,
-          "total": 439.8
-        },
-        {
-          "product_id": "prd-007",
-          "name": "SSD NVMe 1TB",
-          "qty": 1,
-          "price": 549.9,
-          "total": 549.9
-        }
-      ],
-      "total": 989.7,
-      "status": "pendente",
-      "payment_method": "Dinheiro",
-      "created_at": "2026-10-28T18:29:39.692000"
-    },
-    {
-      "id": "sal-005",
-      "company_id": "emp-nexbiz-001",
-      "code": "VND-0041",
-      "client_id": "cli-005",
-      "client_name": "Auto Peças Menezes",
+      "code": "VND-0037",
+      "client_id": "cli-013",
+      "client_name": "Juliana Paiva",
       "items": [
         {
           "product_id": "prd-015",
@@ -733,12 +965,12 @@ export const demoData: DemoBundle = {
       "total": 1347.0,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-27T13:46:39.692000"
+      "created_at": "2026-10-27T14:25:57.368000"
     },
     {
-      "id": "sal-045",
+      "id": "sal-046",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0040",
+      "code": "VND-0036",
       "client_id": "cli-005",
       "client_name": "Auto Peças Menezes",
       "items": [
@@ -767,12 +999,12 @@ export const demoData: DemoBundle = {
       "total": 6693.8,
       "status": "cancelado",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-10-27T13:09:39.692000"
+      "created_at": "2026-10-27T13:48:57.368000"
     },
     {
-      "id": "sal-024",
+      "id": "sal-025",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0039",
+      "code": "VND-0035",
       "client_id": "cli-014",
       "client_name": "Marcos Antônio Lima",
       "items": [
@@ -787,12 +1019,12 @@ export const demoData: DemoBundle = {
       "total": 349.9,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-10-25T12:21:39.692000"
+      "created_at": "2026-10-25T13:00:57.368000"
     },
     {
-      "id": "sal-042",
+      "id": "sal-043",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0038",
+      "code": "VND-0034",
       "client_id": "cli-006",
       "client_name": "Educa Mais Cursos LTDA",
       "items": [
@@ -821,12 +1053,12 @@ export const demoData: DemoBundle = {
       "total": 1528.7,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-10-24T15:49:39.692000"
+      "created_at": "2026-10-24T16:28:57.368000"
     },
     {
-      "id": "sal-041",
+      "id": "sal-042",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0037",
+      "code": "VND-0033",
       "client_id": "cli-006",
       "client_name": "Educa Mais Cursos LTDA",
       "items": [
@@ -848,12 +1080,12 @@ export const demoData: DemoBundle = {
       "total": 434.6,
       "status": "pendente",
       "payment_method": "Boleto",
-      "created_at": "2026-10-24T14:34:39.692000"
+      "created_at": "2026-10-24T15:13:57.368000"
     },
     {
-      "id": "sal-006",
+      "id": "sal-007",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0036",
+      "code": "VND-0032",
       "client_id": "cli-014",
       "client_name": "Marcos Antônio Lima",
       "items": [
@@ -875,12 +1107,12 @@ export const demoData: DemoBundle = {
       "total": 1599.6,
       "status": "pendente",
       "payment_method": "Pix",
-      "created_at": "2026-10-22T15:46:39.692000"
+      "created_at": "2026-10-22T16:25:57.368000"
     },
     {
-      "id": "sal-034",
+      "id": "sal-035",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0035",
+      "code": "VND-0031",
       "client_id": "cli-012",
       "client_name": "Rafael Mendes",
       "items": [
@@ -902,12 +1134,12 @@ export const demoData: DemoBundle = {
       "total": 1969.5,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-10-21T19:46:39.692000"
+      "created_at": "2026-10-21T20:25:57.368000"
     },
     {
-      "id": "sal-022",
+      "id": "sal-023",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0034",
+      "code": "VND-0030",
       "client_id": "cli-011",
       "client_name": "Ana Beatriz Costa",
       "items": [
@@ -936,12 +1168,12 @@ export const demoData: DemoBundle = {
       "total": 5966.7,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-10-21T16:17:39.692000"
+      "created_at": "2026-10-21T16:56:57.368000"
     },
     {
-      "id": "sal-043",
+      "id": "sal-044",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0033",
+      "code": "VND-0029",
       "client_id": "cli-006",
       "client_name": "Educa Mais Cursos LTDA",
       "items": [
@@ -970,12 +1202,12 @@ export const demoData: DemoBundle = {
       "total": 3086.7,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-21T13:51:39.692000"
+      "created_at": "2026-10-21T14:30:57.368000"
     },
     {
-      "id": "sal-010",
+      "id": "sal-011",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0032",
+      "code": "VND-0028",
       "client_id": "cli-004",
       "client_name": "Clínica Vida Plena",
       "items": [
@@ -1004,52 +1236,12 @@ export const demoData: DemoBundle = {
       "total": 4196.0,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-21T11:17:39.692000"
+      "created_at": "2026-10-21T11:56:57.368000"
     },
     {
-      "id": "sal-003",
+      "id": "sal-010",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0031",
-      "client_id": "cli-007",
-      "client_name": "Restaurante Sabor & Arte",
-      "items": [
-        {
-          "product_id": "prd-015",
-          "name": "Gaveteiro Mobile 3 Gavetas",
-          "qty": 3,
-          "price": 449.0,
-          "total": 1347.0
-        }
-      ],
-      "total": 1347.0,
-      "status": "pendente",
-      "payment_method": "Transferência",
-      "created_at": "2026-10-20T19:03:39.692000"
-    },
-    {
-      "id": "sal-001",
-      "company_id": "emp-nexbiz-001",
-      "code": "VND-0030",
-      "client_id": "cli-011",
-      "client_name": "Ana Beatriz Costa",
-      "items": [
-        {
-          "product_id": "prd-001",
-          "name": "Notebook Pro 15 i7 16GB",
-          "qty": 3,
-          "price": 4899.0,
-          "total": 14697.0
-        }
-      ],
-      "total": 14697.0,
-      "status": "pendente",
-      "payment_method": "Dinheiro",
-      "created_at": "2026-10-20T16:43:39.692000"
-    },
-    {
-      "id": "sal-009",
-      "company_id": "emp-nexbiz-001",
-      "code": "VND-0029",
+      "code": "VND-0027",
       "client_id": "cli-004",
       "client_name": "Clínica Vida Plena",
       "items": [
@@ -1064,12 +1256,12 @@ export const demoData: DemoBundle = {
       "total": 99.8,
       "status": "cancelado",
       "payment_method": "Boleto",
-      "created_at": "2026-10-20T15:53:39.692000"
+      "created_at": "2026-10-20T16:32:57.368000"
     },
     {
-      "id": "sal-026",
+      "id": "sal-027",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0028",
+      "code": "VND-0026",
       "client_id": "cli-005",
       "client_name": "Auto Peças Menezes",
       "items": [
@@ -1091,12 +1283,12 @@ export const demoData: DemoBundle = {
       "total": 1183.9,
       "status": "pendente",
       "payment_method": "Pix",
-      "created_at": "2026-10-19T19:14:39.692000"
+      "created_at": "2026-10-19T19:53:57.368000"
     },
     {
-      "id": "sal-030",
+      "id": "sal-031",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0027",
+      "code": "VND-0025",
       "client_id": "cli-004",
       "client_name": "Clínica Vida Plena",
       "items": [
@@ -1118,12 +1310,12 @@ export const demoData: DemoBundle = {
       "total": 4556.7,
       "status": "pendente",
       "payment_method": "Pix",
-      "created_at": "2026-10-18T13:52:39.692000"
+      "created_at": "2026-10-18T14:31:57.368000"
     },
     {
-      "id": "sal-007",
+      "id": "sal-008",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0026",
+      "code": "VND-0024",
       "client_id": "cli-007",
       "client_name": "Restaurante Sabor & Arte",
       "items": [
@@ -1145,12 +1337,12 @@ export const demoData: DemoBundle = {
       "total": 628.8,
       "status": "cancelado",
       "payment_method": "Pix",
-      "created_at": "2026-10-16T15:07:39.692000"
+      "created_at": "2026-10-16T15:46:57.368000"
     },
     {
-      "id": "sal-021",
+      "id": "sal-022",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0025",
+      "code": "VND-0023",
       "client_id": "cli-013",
       "client_name": "Juliana Paiva",
       "items": [
@@ -1172,46 +1364,12 @@ export const demoData: DemoBundle = {
       "total": 1419.6,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-10-12T13:25:39.692000"
+      "created_at": "2026-10-12T14:04:57.368000"
     },
     {
-      "id": "sal-046",
+      "id": "sal-019",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0024",
-      "client_id": "cli-010",
-      "client_name": "Pedro Santos",
-      "items": [
-        {
-          "product_id": "prd-010",
-          "name": "Carregador Turbo 65W GaN",
-          "qty": 2,
-          "price": 129.9,
-          "total": 259.8
-        },
-        {
-          "product_id": "prd-013",
-          "name": "Cadeira Ergonômica Diretor",
-          "qty": 2,
-          "price": 1299.0,
-          "total": 2598.0
-        },
-        {
-          "product_id": "prd-001",
-          "name": "Notebook Pro 15 i7 16GB",
-          "qty": 1,
-          "price": 4899.0,
-          "total": 4899.0
-        }
-      ],
-      "total": 7756.8,
-      "status": "pago",
-      "payment_method": "Transferência",
-      "created_at": "2026-10-12T10:13:39.692000"
-    },
-    {
-      "id": "sal-018",
-      "company_id": "emp-nexbiz-001",
-      "code": "VND-0023",
+      "code": "VND-0022",
       "client_id": "cli-012",
       "client_name": "Rafael Mendes",
       "items": [
@@ -1233,12 +1391,12 @@ export const demoData: DemoBundle = {
       "total": 2867.7,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-10-10T16:37:39.692000"
+      "created_at": "2026-10-10T17:16:57.368000"
     },
     {
-      "id": "sal-013",
+      "id": "sal-014",
       "company_id": "emp-nexbiz-001",
-      "code": "VND-0022",
+      "code": "VND-0021",
       "client_id": "cli-011",
       "client_name": "Ana Beatriz Costa",
       "items": [
@@ -1267,44 +1425,10 @@ export const demoData: DemoBundle = {
       "total": 709.5,
       "status": "pendente",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-10T15:19:39.692000"
+      "created_at": "2026-10-10T15:58:57.368000"
     },
     {
-      "id": "sal-002",
-      "company_id": "emp-nexbiz-001",
-      "code": "VND-0021",
-      "client_id": "cli-002",
-      "client_name": "Padaria Pão de Ouro LTDA",
-      "items": [
-        {
-          "product_id": "prd-014",
-          "name": "Mesa Escritório 1.60m",
-          "qty": 1,
-          "price": 899.0,
-          "total": 899.0
-        },
-        {
-          "product_id": "prd-002",
-          "name": "Monitor LED 27 4K",
-          "qty": 1,
-          "price": 1899.0,
-          "total": 1899.0
-        },
-        {
-          "product_id": "prd-001",
-          "name": "Notebook Pro 15 i7 16GB",
-          "qty": 1,
-          "price": 4899.0,
-          "total": 4899.0
-        }
-      ],
-      "total": 7697.0,
-      "status": "pago",
-      "payment_method": "Dinheiro",
-      "created_at": "2026-10-07T19:16:39.692000"
-    },
-    {
-      "id": "sal-031",
+      "id": "sal-032",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0020",
       "client_id": "cli-001",
@@ -1328,10 +1452,10 @@ export const demoData: DemoBundle = {
       "total": 1219.6,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-10-07T16:52:39.692000"
+      "created_at": "2026-10-07T17:31:57.368000"
     },
     {
-      "id": "sal-027",
+      "id": "sal-028",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0019",
       "client_id": "cli-012",
@@ -1355,10 +1479,10 @@ export const demoData: DemoBundle = {
       "total": 5766.8,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-10-07T11:41:39.692000"
+      "created_at": "2026-10-07T12:20:57.368000"
     },
     {
-      "id": "sal-029",
+      "id": "sal-030",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0018",
       "client_id": "cli-004",
@@ -1389,10 +1513,10 @@ export const demoData: DemoBundle = {
       "total": 9443.7,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-10-06T15:38:39.692000"
+      "created_at": "2026-10-06T16:17:57.368000"
     },
     {
-      "id": "sal-012",
+      "id": "sal-013",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0017",
       "client_id": "cli-013",
@@ -1423,10 +1547,10 @@ export const demoData: DemoBundle = {
       "total": 5445.7,
       "status": "cancelado",
       "payment_method": "Pix",
-      "created_at": "2026-10-06T10:56:39.692000"
+      "created_at": "2026-10-06T11:35:57.368000"
     },
     {
-      "id": "sal-014",
+      "id": "sal-015",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0016",
       "client_id": "cli-002",
@@ -1457,10 +1581,10 @@ export const demoData: DemoBundle = {
       "total": 939.6,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-10-05T10:53:39.692000"
+      "created_at": "2026-10-05T11:32:57.368000"
     },
     {
-      "id": "sal-044",
+      "id": "sal-045",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0015",
       "client_id": "cli-011",
@@ -1491,10 +1615,10 @@ export const demoData: DemoBundle = {
       "total": 2617.6,
       "status": "cancelado",
       "payment_method": "Dinheiro",
-      "created_at": "2026-09-30T18:05:39.692000"
+      "created_at": "2026-09-30T18:44:57.368000"
     },
     {
-      "id": "sal-035",
+      "id": "sal-036",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0014",
       "client_id": "cli-001",
@@ -1511,10 +1635,10 @@ export const demoData: DemoBundle = {
       "total": 49.9,
       "status": "pendente",
       "payment_method": "Dinheiro",
-      "created_at": "2026-09-29T15:41:39.692000"
+      "created_at": "2026-09-29T16:20:57.368000"
     },
     {
-      "id": "sal-032",
+      "id": "sal-033",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0013",
       "client_id": "cli-004",
@@ -1538,10 +1662,10 @@ export const demoData: DemoBundle = {
       "total": 829.5,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-09-24T10:00:39.692000"
+      "created_at": "2026-09-24T10:39:57.368000"
     },
     {
-      "id": "sal-020",
+      "id": "sal-021",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0012",
       "client_id": "cli-002",
@@ -1572,10 +1696,10 @@ export const demoData: DemoBundle = {
       "total": 1958.6,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-09-22T10:15:39.692000"
+      "created_at": "2026-09-22T10:54:57.368000"
     },
     {
-      "id": "sal-033",
+      "id": "sal-034",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0011",
       "client_id": "cli-011",
@@ -1606,10 +1730,10 @@ export const demoData: DemoBundle = {
       "total": 769.6,
       "status": "pago",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-09-21T17:34:39.692000"
+      "created_at": "2026-09-21T18:13:57.368000"
     },
     {
-      "id": "sal-023",
+      "id": "sal-024",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0010",
       "client_id": "cli-003",
@@ -1633,10 +1757,10 @@ export const demoData: DemoBundle = {
       "total": 1108.8,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-09-15T11:45:39.692000"
+      "created_at": "2026-09-15T12:24:57.368000"
     },
     {
-      "id": "sal-017",
+      "id": "sal-018",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0009",
       "client_id": "cli-009",
@@ -1653,10 +1777,10 @@ export const demoData: DemoBundle = {
       "total": 479.7,
       "status": "cancelado",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-09-08T13:38:39.692000"
+      "created_at": "2026-09-08T14:17:57.368000"
     },
     {
-      "id": "sal-040",
+      "id": "sal-041",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0008",
       "client_id": "cli-005",
@@ -1673,10 +1797,10 @@ export const demoData: DemoBundle = {
       "total": 579.8,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-09-08T12:37:39.692000"
+      "created_at": "2026-09-08T13:16:57.368000"
     },
     {
-      "id": "sal-015",
+      "id": "sal-016",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0007",
       "client_id": "cli-008",
@@ -1693,10 +1817,10 @@ export const demoData: DemoBundle = {
       "total": 579.8,
       "status": "pago",
       "payment_method": "Dinheiro",
-      "created_at": "2026-09-07T15:36:39.692000"
+      "created_at": "2026-09-07T16:15:57.368000"
     },
     {
-      "id": "sal-038",
+      "id": "sal-039",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0006",
       "client_id": "cli-011",
@@ -1713,10 +1837,10 @@ export const demoData: DemoBundle = {
       "total": 269.7,
       "status": "pendente",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-09-06T13:12:39.692000"
+      "created_at": "2026-09-06T13:51:57.368000"
     },
     {
-      "id": "sal-037",
+      "id": "sal-038",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0005",
       "client_id": "cli-010",
@@ -1747,10 +1871,10 @@ export const demoData: DemoBundle = {
       "total": 2087.7,
       "status": "pago",
       "payment_method": "Cartão de Crédito",
-      "created_at": "2026-09-04T18:54:39.692000"
+      "created_at": "2026-09-04T19:33:57.368000"
     },
     {
-      "id": "sal-036",
+      "id": "sal-037",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0004",
       "client_id": "cli-012",
@@ -1774,10 +1898,10 @@ export const demoData: DemoBundle = {
       "total": 4933.9,
       "status": "pago",
       "payment_method": "Boleto",
-      "created_at": "2026-08-28T17:17:39.692000"
+      "created_at": "2026-08-28T17:56:57.368000"
     },
     {
-      "id": "sal-016",
+      "id": "sal-017",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0003",
       "client_id": "cli-002",
@@ -1794,10 +1918,10 @@ export const demoData: DemoBundle = {
       "total": 1149.0,
       "status": "pago",
       "payment_method": "Transferência",
-      "created_at": "2026-08-21T11:02:39.692000"
+      "created_at": "2026-08-21T11:41:57.368000"
     },
     {
-      "id": "sal-025",
+      "id": "sal-026",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0002",
       "client_id": "cli-001",
@@ -1814,10 +1938,10 @@ export const demoData: DemoBundle = {
       "total": 1299.0,
       "status": "pendente",
       "payment_method": "Transferência",
-      "created_at": "2026-08-19T14:52:39.692000"
+      "created_at": "2026-08-19T15:31:57.368000"
     },
     {
-      "id": "sal-008",
+      "id": "sal-009",
       "company_id": "emp-nexbiz-001",
       "code": "VND-0001",
       "client_id": "cli-010",
@@ -1848,36 +1972,36 @@ export const demoData: DemoBundle = {
       "total": 1109.4,
       "status": "pago",
       "payment_method": "Pix",
-      "created_at": "2026-08-17T11:37:39.692000"
+      "created_at": "2026-08-17T12:16:57.368000"
     }
   ],
   "transactions": [
     {
-      "id": "trx-069",
+      "id": "trx-073",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Reposição de fornecedores",
       "category": "Fornecedores",
-      "amount": 2987.22,
+      "amount": 2947.05,
       "due_date": "2026-12-20",
       "paid": false,
       "method": "Boleto",
       "created_at": "2026-12-20T00:00:00"
     },
     {
-      "id": "trx-068",
+      "id": "trx-072",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Impostos (Simples Nacional)",
       "category": "Impostos",
-      "amount": 1158.65,
+      "amount": 1312.84,
       "due_date": "2026-12-18",
       "paid": false,
       "method": "Pix",
       "created_at": "2026-12-18T00:00:00"
     },
     {
-      "id": "trx-067",
+      "id": "trx-071",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Internet dedicada",
@@ -1889,19 +2013,19 @@ export const demoData: DemoBundle = {
       "created_at": "2026-12-15T00:00:00"
     },
     {
-      "id": "trx-066",
+      "id": "trx-070",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Energia elétrica",
       "category": "Energia",
-      "amount": 352.88,
+      "amount": 320.78,
       "due_date": "2026-12-12",
       "paid": false,
       "method": "Boleto",
       "created_at": "2026-12-12T00:00:00"
     },
     {
-      "id": "trx-065",
+      "id": "trx-069",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Folha de pagamento",
@@ -1913,7 +2037,7 @@ export const demoData: DemoBundle = {
       "created_at": "2026-12-10T00:00:00"
     },
     {
-      "id": "trx-064",
+      "id": "trx-068",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Aluguel do escritório",
@@ -1925,7 +2049,7 @@ export const demoData: DemoBundle = {
       "created_at": "2026-12-05T00:00:00"
     },
     {
-      "id": "trx-075",
+      "id": "trx-079",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
       "description": "Locação de equipamentos — Construtora Almeida",
@@ -1934,10 +2058,10 @@ export const demoData: DemoBundle = {
       "due_date": "2026-12-02",
       "paid": false,
       "method": "Boleto",
-      "created_at": "2026-11-07T04:51:39.692000"
+      "created_at": "2026-11-07T05:30:57.368000"
     },
     {
-      "id": "trx-074",
+      "id": "trx-078",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
       "description": "Projeto de site — Educa Mais Cursos",
@@ -1946,22 +2070,22 @@ export const demoData: DemoBundle = {
       "due_date": "2026-11-27",
       "paid": false,
       "method": "Pix",
-      "created_at": "2026-11-07T04:51:39.692000"
+      "created_at": "2026-11-07T05:30:57.368000"
     },
     {
-      "id": "trx-063",
+      "id": "trx-067",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Reposição de fornecedores",
       "category": "Fornecedores",
-      "amount": 3147.2,
+      "amount": 2821.66,
       "due_date": "2026-11-20",
       "paid": false,
       "method": "Boleto",
       "created_at": "2026-11-20T00:00:00"
     },
     {
-      "id": "trx-073",
+      "id": "trx-077",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
       "description": "Contrato de manutenção — Tech Solutions Integradora",
@@ -1970,22 +2094,22 @@ export const demoData: DemoBundle = {
       "due_date": "2026-11-19",
       "paid": false,
       "method": "Boleto",
-      "created_at": "2026-11-07T04:51:39.692000"
+      "created_at": "2026-11-07T05:30:57.368000"
     },
     {
-      "id": "trx-062",
+      "id": "trx-066",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Impostos (Simples Nacional)",
       "category": "Impostos",
-      "amount": 1082.69,
+      "amount": 1135.39,
       "due_date": "2026-11-18",
       "paid": false,
       "method": "Pix",
       "created_at": "2026-11-18T00:00:00"
     },
     {
-      "id": "trx-061",
+      "id": "trx-065",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Internet dedicada",
@@ -1997,19 +2121,19 @@ export const demoData: DemoBundle = {
       "created_at": "2026-11-15T00:00:00"
     },
     {
-      "id": "trx-060",
+      "id": "trx-064",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Energia elétrica",
       "category": "Energia",
-      "amount": 406.7,
+      "amount": 389.21,
       "due_date": "2026-11-12",
       "paid": false,
       "method": "Boleto",
       "created_at": "2026-11-12T00:00:00"
     },
     {
-      "id": "trx-059",
+      "id": "trx-063",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Folha de pagamento",
@@ -2021,7 +2145,31 @@ export const demoData: DemoBundle = {
       "created_at": "2026-11-10T00:00:00"
     },
     {
-      "id": "trx-058",
+      "id": "trx-039",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0046",
+      "category": "Vendas",
+      "amount": 14697.0,
+      "due_date": "2026-11-06",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-11-06T16:15:57.368000"
+    },
+    {
+      "id": "trx-038",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0045",
+      "category": "Vendas",
+      "amount": 1283.8,
+      "due_date": "2026-11-05",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-11-05T17:16:57.368000"
+    },
+    {
+      "id": "trx-062",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Aluguel do escritório",
@@ -2033,52 +2181,28 @@ export const demoData: DemoBundle = {
       "created_at": "2026-11-05T00:00:00"
     },
     {
-      "id": "trx-038",
+      "id": "trx-037",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
       "description": "Venda VND-0044",
       "category": "Vendas",
-      "amount": 1049.7,
-      "due_date": "2026-10-30",
+      "amount": 69.8,
+      "due_date": "2026-11-04",
       "paid": true,
-      "method": "Dinheiro",
-      "created_at": "2026-10-30T16:26:39.692000"
-    },
-    {
-      "id": "trx-039",
-      "company_id": "emp-nexbiz-001",
-      "kind": "receita",
-      "description": "Venda VND-0045",
-      "category": "Vendas",
-      "amount": 15131.6,
-      "due_date": "2026-10-30",
-      "paid": true,
-      "method": "Boleto",
-      "created_at": "2026-10-30T17:54:39.692000"
+      "method": "Pix",
+      "created_at": "2026-11-04T17:02:57.368000"
     },
     {
       "id": "trx-036",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
-      "description": "Venda VND-0042",
-      "category": "Vendas",
-      "amount": 989.7,
-      "due_date": "2026-10-28",
-      "paid": false,
-      "method": "Dinheiro",
-      "created_at": "2026-10-28T18:29:39.692000"
-    },
-    {
-      "id": "trx-037",
-      "company_id": "emp-nexbiz-001",
-      "kind": "receita",
       "description": "Venda VND-0043",
       "category": "Vendas",
-      "amount": 2228.5,
-      "due_date": "2026-10-28",
+      "amount": 1798.0,
+      "due_date": "2026-11-03",
       "paid": true,
-      "method": "Cartão de Crédito",
-      "created_at": "2026-10-28T18:56:39.692000"
+      "method": "Boleto",
+      "created_at": "2026-11-03T16:21:57.368000"
     },
     {
       "id": "trx-035",
@@ -2086,14 +2210,62 @@ export const demoData: DemoBundle = {
       "kind": "receita",
       "description": "Venda VND-0041",
       "category": "Vendas",
+      "amount": 1299.0,
+      "due_date": "2026-11-02",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-11-02T14:36:57.368000"
+    },
+    {
+      "id": "trx-033",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0039",
+      "category": "Vendas",
+      "amount": 1049.7,
+      "due_date": "2026-10-30",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-10-30T17:05:57.368000"
+    },
+    {
+      "id": "trx-034",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0040",
+      "category": "Vendas",
+      "amount": 15131.6,
+      "due_date": "2026-10-30",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-10-30T18:33:57.368000"
+    },
+    {
+      "id": "trx-032",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0038",
+      "category": "Vendas",
+      "amount": 2228.5,
+      "due_date": "2026-10-28",
+      "paid": true,
+      "method": "Cartão de Crédito",
+      "created_at": "2026-10-28T19:35:57.368000"
+    },
+    {
+      "id": "trx-031",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0037",
+      "category": "Vendas",
       "amount": 1347.0,
       "due_date": "2026-10-27",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-10-27T13:46:39.692000"
+      "created_at": "2026-10-27T14:25:57.368000"
     },
     {
-      "id": "trx-072",
+      "id": "trx-076",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Café e copa para a equipe",
@@ -2105,64 +2277,16 @@ export const demoData: DemoBundle = {
       "created_at": "2026-10-26T00:00:00"
     },
     {
-      "id": "trx-034",
+      "id": "trx-030",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
-      "description": "Venda VND-0039",
+      "description": "Venda VND-0035",
       "category": "Vendas",
       "amount": 349.9,
       "due_date": "2026-10-25",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-10-25T12:21:39.692000"
-    },
-    {
-      "id": "trx-032",
-      "company_id": "emp-nexbiz-001",
-      "kind": "receita",
-      "description": "Venda VND-0037",
-      "category": "Vendas",
-      "amount": 434.6,
-      "due_date": "2026-10-24",
-      "paid": false,
-      "method": "Boleto",
-      "created_at": "2026-10-24T14:34:39.692000"
-    },
-    {
-      "id": "trx-033",
-      "company_id": "emp-nexbiz-001",
-      "kind": "receita",
-      "description": "Venda VND-0038",
-      "category": "Vendas",
-      "amount": 1528.7,
-      "due_date": "2026-10-24",
-      "paid": true,
-      "method": "Transferência",
-      "created_at": "2026-10-24T15:49:39.692000"
-    },
-    {
-      "id": "trx-031",
-      "company_id": "emp-nexbiz-001",
-      "kind": "receita",
-      "description": "Venda VND-0036",
-      "category": "Vendas",
-      "amount": 1599.6,
-      "due_date": "2026-10-22",
-      "paid": false,
-      "method": "Pix",
-      "created_at": "2026-10-22T15:46:39.692000"
-    },
-    {
-      "id": "trx-027",
-      "company_id": "emp-nexbiz-001",
-      "kind": "receita",
-      "description": "Venda VND-0032",
-      "category": "Vendas",
-      "amount": 4196.0,
-      "due_date": "2026-10-21",
-      "paid": true,
-      "method": "Dinheiro",
-      "created_at": "2026-10-21T11:17:39.692000"
+      "created_at": "2026-10-25T13:00:57.368000"
     },
     {
       "id": "trx-028",
@@ -2170,11 +2294,11 @@ export const demoData: DemoBundle = {
       "kind": "receita",
       "description": "Venda VND-0033",
       "category": "Vendas",
-      "amount": 3086.7,
-      "due_date": "2026-10-21",
-      "paid": true,
-      "method": "Dinheiro",
-      "created_at": "2026-10-21T13:51:39.692000"
+      "amount": 434.6,
+      "due_date": "2026-10-24",
+      "paid": false,
+      "method": "Boleto",
+      "created_at": "2026-10-24T15:13:57.368000"
     },
     {
       "id": "trx-029",
@@ -2182,23 +2306,59 @@ export const demoData: DemoBundle = {
       "kind": "receita",
       "description": "Venda VND-0034",
       "category": "Vendas",
-      "amount": 5966.7,
-      "due_date": "2026-10-21",
+      "amount": 1528.7,
+      "due_date": "2026-10-24",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-10-21T16:17:39.692000"
+      "created_at": "2026-10-24T16:28:57.368000"
     },
     {
-      "id": "trx-030",
+      "id": "trx-043",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
-      "description": "Venda VND-0035",
+      "description": "OS OS-0010",
+      "category": "Serviços",
+      "amount": 3500.0,
+      "due_date": "2026-10-24",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-11-07T05:30:57.368000"
+    },
+    {
+      "id": "trx-027",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0032",
       "category": "Vendas",
-      "amount": 1969.5,
+      "amount": 1599.6,
+      "due_date": "2026-10-22",
+      "paid": false,
+      "method": "Pix",
+      "created_at": "2026-10-22T16:25:57.368000"
+    },
+    {
+      "id": "trx-023",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0028",
+      "category": "Vendas",
+      "amount": 4196.0,
       "due_date": "2026-10-21",
       "paid": true,
-      "method": "Boleto",
-      "created_at": "2026-10-21T19:46:39.692000"
+      "method": "Dinheiro",
+      "created_at": "2026-10-21T11:56:57.368000"
+    },
+    {
+      "id": "trx-024",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0029",
+      "category": "Vendas",
+      "amount": 3086.7,
+      "due_date": "2026-10-21",
+      "paid": true,
+      "method": "Dinheiro",
+      "created_at": "2026-10-21T14:30:57.368000"
     },
     {
       "id": "trx-025",
@@ -2206,11 +2366,11 @@ export const demoData: DemoBundle = {
       "kind": "receita",
       "description": "Venda VND-0030",
       "category": "Vendas",
-      "amount": 14697.0,
-      "due_date": "2026-10-20",
-      "paid": false,
-      "method": "Dinheiro",
-      "created_at": "2026-10-20T16:43:39.692000"
+      "amount": 5966.7,
+      "due_date": "2026-10-21",
+      "paid": true,
+      "method": "Transferência",
+      "created_at": "2026-10-21T16:56:57.368000"
     },
     {
       "id": "trx-026",
@@ -2218,62 +2378,62 @@ export const demoData: DemoBundle = {
       "kind": "receita",
       "description": "Venda VND-0031",
       "category": "Vendas",
-      "amount": 1347.0,
-      "due_date": "2026-10-20",
-      "paid": false,
-      "method": "Transferência",
-      "created_at": "2026-10-20T19:03:39.692000"
+      "amount": 1969.5,
+      "due_date": "2026-10-21",
+      "paid": true,
+      "method": "Boleto",
+      "created_at": "2026-10-21T20:25:57.368000"
     },
     {
-      "id": "trx-057",
+      "id": "trx-061",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Reposição de fornecedores",
       "category": "Fornecedores",
-      "amount": 2830.24,
+      "amount": 2865.99,
       "due_date": "2026-10-20",
       "paid": true,
       "method": "Boleto",
       "created_at": "2026-10-20T00:00:00"
     },
     {
-      "id": "trx-024",
+      "id": "trx-022",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
-      "description": "Venda VND-0028",
+      "description": "Venda VND-0026",
       "category": "Vendas",
       "amount": 1183.9,
       "due_date": "2026-10-19",
       "paid": false,
       "method": "Pix",
-      "created_at": "2026-10-19T19:14:39.692000"
+      "created_at": "2026-10-19T19:53:57.368000"
     },
     {
-      "id": "trx-023",
+      "id": "trx-021",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
-      "description": "Venda VND-0027",
+      "description": "Venda VND-0025",
       "category": "Vendas",
       "amount": 4556.7,
       "due_date": "2026-10-18",
       "paid": false,
       "method": "Pix",
-      "created_at": "2026-10-18T13:52:39.692000"
+      "created_at": "2026-10-18T14:31:57.368000"
     },
     {
-      "id": "trx-056",
+      "id": "trx-060",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Impostos (Simples Nacional)",
       "category": "Impostos",
-      "amount": 1149.33,
+      "amount": 1118.05,
       "due_date": "2026-10-18",
       "paid": true,
       "method": "Pix",
       "created_at": "2026-10-18T00:00:00"
     },
     {
-      "id": "trx-055",
+      "id": "trx-059",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Internet dedicada",
@@ -2285,40 +2445,40 @@ export const demoData: DemoBundle = {
       "created_at": "2026-10-15T00:00:00"
     },
     {
-      "id": "trx-021",
+      "id": "trx-020",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
-      "description": "Venda VND-0024",
-      "category": "Vendas",
-      "amount": 7756.8,
-      "due_date": "2026-10-12",
-      "paid": true,
-      "method": "Transferência",
-      "created_at": "2026-10-12T10:13:39.692000"
-    },
-    {
-      "id": "trx-022",
-      "company_id": "emp-nexbiz-001",
-      "kind": "receita",
-      "description": "Venda VND-0025",
+      "description": "Venda VND-0023",
       "category": "Vendas",
       "amount": 1419.6,
       "due_date": "2026-10-12",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-10-12T13:25:39.692000"
+      "created_at": "2026-10-12T14:04:57.368000"
     },
     {
-      "id": "trx-054",
+      "id": "trx-058",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Energia elétrica",
       "category": "Energia",
-      "amount": 412.24,
+      "amount": 408.17,
       "due_date": "2026-10-12",
       "paid": true,
       "method": "Boleto",
       "created_at": "2026-10-12T00:00:00"
+    },
+    {
+      "id": "trx-018",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "Venda VND-0021",
+      "category": "Vendas",
+      "amount": 709.5,
+      "due_date": "2026-10-10",
+      "paid": false,
+      "method": "Dinheiro",
+      "created_at": "2026-10-10T15:58:57.368000"
     },
     {
       "id": "trx-019",
@@ -2326,26 +2486,14 @@ export const demoData: DemoBundle = {
       "kind": "receita",
       "description": "Venda VND-0022",
       "category": "Vendas",
-      "amount": 709.5,
-      "due_date": "2026-10-10",
-      "paid": false,
-      "method": "Dinheiro",
-      "created_at": "2026-10-10T15:19:39.692000"
-    },
-    {
-      "id": "trx-020",
-      "company_id": "emp-nexbiz-001",
-      "kind": "receita",
-      "description": "Venda VND-0023",
-      "category": "Vendas",
       "amount": 2867.7,
       "due_date": "2026-10-10",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-10-10T16:37:39.692000"
+      "created_at": "2026-10-10T17:16:57.368000"
     },
     {
-      "id": "trx-053",
+      "id": "trx-057",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Folha de pagamento",
@@ -2357,6 +2505,18 @@ export const demoData: DemoBundle = {
       "created_at": "2026-10-10T00:00:00"
     },
     {
+      "id": "trx-040",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "OS OS-0001",
+      "category": "Serviços",
+      "amount": 990.0,
+      "due_date": "2026-10-08",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-11-07T05:30:57.368000"
+    },
+    {
       "id": "trx-016",
       "company_id": "emp-nexbiz-001",
       "kind": "receita",
@@ -2366,7 +2526,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-07",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-10-07T11:41:39.692000"
+      "created_at": "2026-10-07T12:20:57.368000"
     },
     {
       "id": "trx-017",
@@ -2378,19 +2538,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-07",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-10-07T16:52:39.692000"
-    },
-    {
-      "id": "trx-018",
-      "company_id": "emp-nexbiz-001",
-      "kind": "receita",
-      "description": "Venda VND-0021",
-      "category": "Vendas",
-      "amount": 7697.0,
-      "due_date": "2026-10-07",
-      "paid": true,
-      "method": "Dinheiro",
-      "created_at": "2026-10-07T19:16:39.692000"
+      "created_at": "2026-10-07T17:31:57.368000"
     },
     {
       "id": "trx-015",
@@ -2402,7 +2550,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-06",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-10-06T15:38:39.692000"
+      "created_at": "2026-10-06T16:17:57.368000"
     },
     {
       "id": "trx-014",
@@ -2414,10 +2562,10 @@ export const demoData: DemoBundle = {
       "due_date": "2026-10-05",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-10-05T10:53:39.692000"
+      "created_at": "2026-10-05T11:32:57.368000"
     },
     {
-      "id": "trx-052",
+      "id": "trx-056",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Aluguel do escritório",
@@ -2429,7 +2577,19 @@ export const demoData: DemoBundle = {
       "created_at": "2026-10-05T00:00:00"
     },
     {
-      "id": "trx-070",
+      "id": "trx-041",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "OS OS-0004",
+      "category": "Serviços",
+      "amount": 320.0,
+      "due_date": "2026-10-04",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-11-07T05:30:57.368000"
+    },
+    {
+      "id": "trx-074",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Impulso de marketing digital",
@@ -2450,7 +2610,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-29",
       "paid": false,
       "method": "Dinheiro",
-      "created_at": "2026-09-29T15:41:39.692000"
+      "created_at": "2026-09-29T16:20:57.368000"
     },
     {
       "id": "trx-012",
@@ -2462,7 +2622,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-24",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-09-24T10:00:39.692000"
+      "created_at": "2026-09-24T10:39:57.368000"
     },
     {
       "id": "trx-011",
@@ -2474,7 +2634,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-22",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-09-22T10:15:39.692000"
+      "created_at": "2026-09-22T10:54:57.368000"
     },
     {
       "id": "trx-010",
@@ -2486,27 +2646,27 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-21",
       "paid": true,
       "method": "Cartão de Crédito",
-      "created_at": "2026-09-21T17:34:39.692000"
+      "created_at": "2026-09-21T18:13:57.368000"
     },
     {
-      "id": "trx-051",
+      "id": "trx-055",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Reposição de fornecedores",
       "category": "Fornecedores",
-      "amount": 2909.56,
+      "amount": 2555.89,
       "due_date": "2026-09-20",
       "paid": true,
       "method": "Boleto",
       "created_at": "2026-09-20T00:00:00"
     },
     {
-      "id": "trx-050",
+      "id": "trx-054",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Impostos (Simples Nacional)",
       "category": "Impostos",
-      "amount": 1385.94,
+      "amount": 1075.49,
       "due_date": "2026-09-18",
       "paid": true,
       "method": "Pix",
@@ -2522,10 +2682,10 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-15",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-09-15T11:45:39.692000"
+      "created_at": "2026-09-15T12:24:57.368000"
     },
     {
-      "id": "trx-049",
+      "id": "trx-053",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Internet dedicada",
@@ -2537,19 +2697,31 @@ export const demoData: DemoBundle = {
       "created_at": "2026-09-15T00:00:00"
     },
     {
-      "id": "trx-048",
+      "id": "trx-042",
+      "company_id": "emp-nexbiz-001",
+      "kind": "receita",
+      "description": "OS OS-0006",
+      "category": "Serviços",
+      "amount": 180.0,
+      "due_date": "2026-09-13",
+      "paid": true,
+      "method": "Pix",
+      "created_at": "2026-11-07T05:30:57.368000"
+    },
+    {
+      "id": "trx-052",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Energia elétrica",
       "category": "Energia",
-      "amount": 431.12,
+      "amount": 438.96,
       "due_date": "2026-09-12",
       "paid": true,
       "method": "Boleto",
       "created_at": "2026-09-12T00:00:00"
     },
     {
-      "id": "trx-047",
+      "id": "trx-051",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Folha de pagamento",
@@ -2570,10 +2742,10 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-08",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-09-08T12:37:39.692000"
+      "created_at": "2026-09-08T13:16:57.368000"
     },
     {
-      "id": "trx-071",
+      "id": "trx-075",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Licenças de software (anual)",
@@ -2594,7 +2766,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-07",
       "paid": true,
       "method": "Dinheiro",
-      "created_at": "2026-09-07T15:36:39.692000"
+      "created_at": "2026-09-07T16:15:57.368000"
     },
     {
       "id": "trx-006",
@@ -2606,10 +2778,10 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-06",
       "paid": false,
       "method": "Cartão de Crédito",
-      "created_at": "2026-09-06T13:12:39.692000"
+      "created_at": "2026-09-06T13:51:57.368000"
     },
     {
-      "id": "trx-046",
+      "id": "trx-050",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Aluguel do escritório",
@@ -2630,7 +2802,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-09-04",
       "paid": true,
       "method": "Cartão de Crédito",
-      "created_at": "2026-09-04T18:54:39.692000"
+      "created_at": "2026-09-04T19:33:57.368000"
     },
     {
       "id": "trx-004",
@@ -2642,7 +2814,7 @@ export const demoData: DemoBundle = {
       "due_date": "2026-08-28",
       "paid": true,
       "method": "Boleto",
-      "created_at": "2026-08-28T17:17:39.692000"
+      "created_at": "2026-08-28T17:56:57.368000"
     },
     {
       "id": "trx-003",
@@ -2654,15 +2826,15 @@ export const demoData: DemoBundle = {
       "due_date": "2026-08-21",
       "paid": true,
       "method": "Transferência",
-      "created_at": "2026-08-21T11:02:39.692000"
+      "created_at": "2026-08-21T11:41:57.368000"
     },
     {
-      "id": "trx-045",
+      "id": "trx-049",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Reposição de fornecedores",
       "category": "Fornecedores",
-      "amount": 2662.29,
+      "amount": 2622.65,
       "due_date": "2026-08-20",
       "paid": true,
       "method": "Boleto",
@@ -2678,15 +2850,15 @@ export const demoData: DemoBundle = {
       "due_date": "2026-08-19",
       "paid": false,
       "method": "Transferência",
-      "created_at": "2026-08-19T14:52:39.692000"
+      "created_at": "2026-08-19T15:31:57.368000"
     },
     {
-      "id": "trx-044",
+      "id": "trx-048",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Impostos (Simples Nacional)",
       "category": "Impostos",
-      "amount": 1286.47,
+      "amount": 1135.69,
       "due_date": "2026-08-18",
       "paid": true,
       "method": "Pix",
@@ -2702,10 +2874,10 @@ export const demoData: DemoBundle = {
       "due_date": "2026-08-17",
       "paid": true,
       "method": "Pix",
-      "created_at": "2026-08-17T11:37:39.692000"
+      "created_at": "2026-08-17T12:16:57.368000"
     },
     {
-      "id": "trx-043",
+      "id": "trx-047",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Internet dedicada",
@@ -2717,19 +2889,19 @@ export const demoData: DemoBundle = {
       "created_at": "2026-08-15T00:00:00"
     },
     {
-      "id": "trx-042",
+      "id": "trx-046",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Energia elétrica",
       "category": "Energia",
-      "amount": 381.85,
+      "amount": 323.42,
       "due_date": "2026-08-12",
       "paid": true,
       "method": "Boleto",
       "created_at": "2026-08-12T00:00:00"
     },
     {
-      "id": "trx-041",
+      "id": "trx-045",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Folha de pagamento",
@@ -2741,7 +2913,7 @@ export const demoData: DemoBundle = {
       "created_at": "2026-08-10T00:00:00"
     },
     {
-      "id": "trx-040",
+      "id": "trx-044",
       "company_id": "emp-nexbiz-001",
       "kind": "despesa",
       "description": "Aluguel do escritório",

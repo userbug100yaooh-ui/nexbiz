@@ -14,6 +14,7 @@ from typing import List
 
 from lib.db import client, db, ensure_indexes
 from models.entities import AppUser, Client, Company, Product, Sale, SaleItem, Service, Transaction
+from models.service_orders import ServiceOrder
 
 random.seed(42)
 
@@ -79,7 +80,7 @@ SERVICE_ROWS = [
 def build_users(company_id: str) -> List[AppUser]:
     created = NOW - timedelta(days=200)
     return [
-        AppUser(id="usr-001", company_id=company_id, name="Ana Souza", email="ana@nexbiz.com.br", role="admin", created_at=created),
+        AppUser(id="usr-001", company_id=company_id, name="Administrador NEXBIZ", email="pintopinto.yaooh@gmail.com", role="admin", created_at=created),
         AppUser(id="usr-002", company_id=company_id, name="Carlos Lima", email="carlos@nexbiz.com.br", role="gerente", created_at=created),
         AppUser(id="usr-003", company_id=company_id, name="Marina Costa", email="marina@nexbiz.com.br", role="vendedor", created_at=created),
     ]
@@ -96,7 +97,7 @@ def build_sales(company_id: str, clients: List[Client], products: List[Product])
                 SaleItem(product_id=product.id, name=product.name, qty=qty, price=product.price, total=round(product.price * qty, 2))
             )
         total = round(sum(i.total for i in items), 2)
-        days_ago = int(random.triangular(0, 90, 10))  # concentra nas semanas recentes
+        days_ago = i if i < 5 else int(random.triangular(0, 90, 10))  # garante vendas nos últimos dias
         created = NOW - timedelta(days=days_ago, hours=random.randint(9, 18), minutes=random.randint(0, 59))
         r = random.random()
         status = "pago" if r < 0.70 else ("pendente" if r < 0.90 else "cancelado")
@@ -120,12 +121,46 @@ def build_sales(company_id: str, clients: List[Client], products: List[Product])
     return sales
 
 
+def build_service_orders(company_id: str, clients: List[Client], services: List[Service]) -> List[ServiceOrder]:
+    orders: List[ServiceOrder] = []
+    statuses = ["concluida", "aberta", "em_andamento", "concluida", "aberta", "concluida", "em_andamento", "cancelada", "aberta", "concluida"]
+    notes_by_status = {
+        "concluida": "Serviço executado e aprovado pelo cliente.",
+        "em_andamento": "Execução em andamento pela equipe técnica.",
+        "aberta": "Aguardando agendamento com o cliente.",
+        "cancelada": "Cancelada a pedido do cliente.",
+    }
+    for i, status in enumerate(statuses):
+        cli = random.choice(clients)
+        svc = random.choice(services)
+        if status in {"concluida", "cancelada"}:
+            scheduled = TODAY - timedelta(days=random.randint(5, 60))
+        else:
+            scheduled = TODAY + timedelta(days=random.randint(2, 20))
+        orders.append(
+            ServiceOrder(
+                id=f"os-{i + 1:03d}",
+                company_id=company_id,
+                code=f"OS-{i + 1:04d}",
+                client_id=cli.id,
+                client_name=cli.name,
+                service_id=svc.id,
+                service_name=svc.name,
+                status=status,
+                scheduled_date=scheduled.isoformat(),
+                price=svc.price,
+                notes=notes_by_status[status],
+            )
+        )
+    return orders
+
+
 def month_shift(base: date, delta: int) -> date:
     total = base.year * 12 + (base.month - 1) + delta
     return date(total // 12, total % 12 + 1, 1)
 
 
-def build_transactions(company_id: str, sales: List[Sale]) -> List[Transaction]:
+def build_transactions(company_id: str, sales: List[Sale], orders: List[ServiceOrder]) -> List[Transaction]:
     out: List[Transaction] = []
     n = 0
 
@@ -145,6 +180,25 @@ def build_transactions(company_id: str, sales: List[Sale]) -> List[Transaction]:
                 paid=sale.status == "pago",
                 method=sale.payment_method,
                 created_at=sale.created_at,
+            )
+        )
+
+    for order in orders:  # receitas de serviços concluídos
+        if order.status != "concluida":
+            continue
+        n += 1
+        out.append(
+            Transaction(
+                id=f"trx-{n:03d}",
+                company_id=company_id,
+                kind="receita",
+                description=f"OS {order.code}",
+                category="Serviços",
+                amount=order.price,
+                due_date=order.scheduled_date,
+                paid=True,
+                method="Pix",
+                created_at=NOW,
             )
         )
 
@@ -228,7 +282,7 @@ def build_transactions(company_id: str, sales: List[Sale]) -> List[Transaction]:
 
 
 async def seed() -> None:
-    for name in ("companies", "users", "products", "clients", "services", "sales", "transactions"):
+    for name in ("companies", "users", "products", "clients", "services", "service_orders", "sales", "transactions"):
         await db.drop_collection(name)
     await ensure_indexes()  # o drop descarta índices — recria
 
@@ -259,18 +313,20 @@ async def seed() -> None:
         for i, (name, cat, pricing, price, hours, desc) in enumerate(SERVICE_ROWS, start=1)
     ]
     sales = build_sales(company.id, clients, products)
-    transactions = build_transactions(company.id, sales)
+    orders = build_service_orders(company.id, clients, services)
+    transactions = build_transactions(company.id, sales, orders)
 
     await db.companies.insert_one(company.model_dump())
     await db.users.insert_many([u.model_dump() for u in users])
     await db.products.insert_many([p.model_dump() for p in products])
     await db.clients.insert_many([c.model_dump() for c in clients])
     await db.services.insert_many([s.model_dump() for s in services])
+    await db.service_orders.insert_many([o.model_dump() for o in orders])
     await db.sales.insert_many([s.model_dump() for s in sales])
     await db.transactions.insert_many([t.model_dump() for t in transactions])
 
     print("Seed NEXBIZ concluído:")
-    for name in ("companies", "users", "products", "clients", "services", "sales", "transactions"):
+    for name in ("companies", "users", "products", "clients", "services", "service_orders", "sales", "transactions"):
         print(f"  {name}: {await db[name].count_documents({})}")
 
 

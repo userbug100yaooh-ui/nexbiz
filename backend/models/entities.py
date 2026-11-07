@@ -59,6 +59,7 @@ class AppUser(BaseModel):
     name: str
     email: str
     role: str = "admin"  # admin | gerente | vendedor
+    supabase_user_id: str = ""  # vínculo com a identidade Supabase ("" = usuário demo/seed)
     created_at: datetime = Field(default_factory=utcnow)
 
 
@@ -67,13 +68,13 @@ class AppUser(BaseModel):
 
 class LoginIn(BaseModel):
     email: str
-    password: str  # mock — nunca verificado nem armazenado
+    password: str  # verificado pelo Supabase; nunca armazenado no Mongo
 
 
 class RegisterIn(BaseModel):
     name: str
     email: str
-    password: str  # mock — aceito e descartado
+    password: str  # repassado ao Supabase; nunca armazenado no Mongo
     company_name: str
     segment: str = "Comércio"
     cnpj: str = ""
@@ -85,6 +86,8 @@ class RegisterIn(BaseModel):
 class AuthOut(BaseModel):
     user: AppUser
     company: Company
+    mode: str = "demo"  # demo | supabase
+    email_confirmation_required: bool = False
 
 
 # ---------------------------------------------------------------- produtos

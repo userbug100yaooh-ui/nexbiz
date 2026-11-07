@@ -3,6 +3,7 @@ import { MoreHorizontal, Package, PackageX, Pencil, Plus, Search, Trash2, Triang
 import { toast } from "sonner";
 import { ConfirmDialog } from "@/components/ConfirmDialog";
 import { EmptyState } from "@/components/EmptyState";
+import { ImportDialog } from "@/components/ImportDialog";
 import { Field } from "@/components/Field";
 import { PageHeader } from "@/components/PageHeader";
 import { StatCard } from "@/components/StatCard";
@@ -110,6 +111,7 @@ export default function Produtos() {
   return (
     <div data-testid="page-produtos">
       <PageHeader title="Produtos e Estoque" description="Catálogo, preços e controle de reposição.">
+        <ImportDialog entity="products" />
         <Button onClick={openCreate} data-testid="btn-novo-produto">
           <Plus className="size-4" /> Novo produto
         </Button>

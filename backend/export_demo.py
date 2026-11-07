@@ -38,6 +38,7 @@ async def bundle() -> Dict[str, Any]:
         "products": await docs("products", "name", 1),
         "clients": await docs("clients", "name", 1),
         "services": await docs("services", "name", 1),
+        "service_orders": await docs("service_orders", "created_at", -1),
         "sales": await docs("sales", "created_at", -1),
         "transactions": await docs("transactions", "due_date", -1),
     }

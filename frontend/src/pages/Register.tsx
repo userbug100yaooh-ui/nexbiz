@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ApiError } from "@/lib/api";
 import { demoData } from "@/lib/demo-data";
-import { errMessage, useRegisterMutation } from "@/lib/queries";
+import { errMessage, useDemoMutation, useRegisterMutation } from "@/lib/queries";
 import { signIn, useSession } from "@/lib/session";
 import type { AppUser, Company, RegisterInput } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -55,6 +55,7 @@ export default function Register() {
   const [step, setStep] = useState<1 | 2>(1);
   const [form, setForm] = useState<FormState>(INITIAL);
   const register = useRegisterMutation();
+  const demo = useDemoMutation();
 
   if (session) return <Navigate to="/app" replace />;
 
@@ -97,7 +98,12 @@ export default function Register() {
     if (!form.company_name.trim()) return fail("Informe o nome da empresa.");
     register.mutate(payload(), {
       onSuccess: (res) => {
-        signIn(res);
+        if (res.email_confirmation_required) {
+          toast.success("Conta criada! Confirme seu e-mail pelo link enviado e depois faça login.", { duration: 8000 });
+          navigate("/login");
+          return;
+        }
+        signIn({ user: res.user, company: res.company, mode: res.mode });
         toast.success("Conta e empresa criadas com sucesso!");
         navigate("/app");
       },
@@ -106,7 +112,7 @@ export default function Register() {
           toast.error(errMessage(err));
           return;
         }
-        signIn(localSession());
+        signIn({ ...localSession(), mode: "offline" });
         toast.success("Conta criada em modo demonstração!");
         navigate("/app");
       },
@@ -130,7 +136,7 @@ export default function Register() {
             Crie a sua conta e a da sua empresa em 2 passos.
           </h2>
           <ul className="mt-8 space-y-3.5">
-            {["Cadastro gratuito, sem cartão de crédito", "Painel pronto com dados demonstrativos", "Pronto para autenticação multiempresa (Supabase)"].map((b) => (
+            {["Cadastro gratuito, sem cartão de crédito", "Login seguro com Supabase", "Dados da sua empresa isolados das demais"].map((b) => (
               <li key={b} className="flex items-center gap-3 text-sm text-slate-300">
                 <span className="flex size-5 items-center justify-center rounded-full bg-blue-500/20 text-blue-300">
                   <Check className="size-3" />
@@ -255,11 +261,23 @@ export default function Register() {
             <Button
               variant="secondary"
               className="w-full gap-2"
-              onClick={() => {
-                signIn({ user: demoData.users[0], company: demoData.company });
-                toast.success("Bem-vindo à demonstração do NEXBIZ!");
-                navigate("/app");
-              }}
+              onClick={() =>
+                demo.mutate(undefined, {
+                  onSuccess: (res) => {
+                    signIn({ user: res.user, company: res.company, mode: "demo" });
+                    toast.success("Bem-vindo à demonstração do NEXBIZ!");
+                    navigate("/app");
+                  },
+                  onError: (err) => {
+                    if (err instanceof ApiError) {
+                      toast.error(errMessage(err));
+                      return;
+                    }
+                    signIn({ user: demoData.users[0], company: demoData.company, mode: "offline" });
+                    navigate("/app");
+                  },
+                })
+              }
               data-testid="btn-cadastro-demo"
             >
               <Sparkles className="size-4 text-primary" /> Explorar com conta demo

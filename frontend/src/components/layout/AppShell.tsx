@@ -4,6 +4,7 @@ import {
   BarChart3,
   Bell,
   Building2,
+  ClipboardList,
   LayoutDashboard,
   LogOut,
   Menu,
@@ -23,6 +24,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
@@ -33,7 +35,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { addDaysISO, formatDate, initials, todayISO } from "@/lib/format";
 import { stockStatus } from "@/lib/calc";
-import { useCompany, useProducts, useTransactions } from "@/lib/queries";
+import { useCompany, useMe, useProducts, useTransactions } from "@/lib/queries";
+import { ApiError } from "@/lib/api";
+import { toast } from "sonner";
 import { signOut, useSession } from "@/lib/session";
 import { cn } from "@/lib/utils";
 import { ROLE_LABELS } from "@/components/StatusBadge";
@@ -60,6 +64,7 @@ const NAV_SECTIONS: { label: string; items: NavItem[] }[] = [
     items: [
       { to: "/app/produtos", label: "Produtos e Estoque", icon: Package, slug: "produtos" },
       { to: "/app/servicos", label: "Serviços", icon: Wrench, slug: "servicos" },
+      { to: "/app/ordens-servico", label: "Ordens de Serviço", icon: ClipboardList, slug: "ordens-servico" },
     ],
   },
   {
@@ -124,6 +129,10 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
           </p>
           <p className="mt-1 text-[11px] text-slate-400">
             {session ? `${session.user.name} · ${ROLE_LABELS[session.user.role] ?? session.user.role}` : "Plano Profissional · Demo"}
+          </p>
+          <p className="mt-1.5 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-blue-300" data-testid="sidebar-modo-sessao">
+            <span className={cn("size-1.5 rounded-full", session?.mode === "supabase" ? "bg-emerald-400" : "bg-amber-400")} />
+            {session?.mode === "supabase" ? "Conta verificada" : "Modo demonstração"}
           </p>
         </div>
       </div>
@@ -222,12 +231,14 @@ function ProfileMenu({ onSignOut }: { onSignOut: () => void }) {
         </span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56" data-testid="menu-perfil">
-        <DropdownMenuLabel>
-          <p className="text-sm font-medium">{session?.user.name}</p>
-          <p className="text-xs font-normal text-muted-foreground">{session?.user.email}</p>
-        </DropdownMenuLabel>
+        <DropdownMenuGroup>
+          <DropdownMenuLabel>
+            <p className="text-sm font-medium">{session?.user.name}</p>
+            <p className="text-xs font-normal text-muted-foreground">{session?.user.email}</p>
+          </DropdownMenuLabel>
+        </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onSelect={onSignOut} data-testid="btn-sair">
+        <DropdownMenuItem onClick={onSignOut} data-testid="btn-sair">
           <LogOut className="size-4" /> Sair da conta
         </DropdownMenuItem>
       </DropdownMenuContent>
@@ -304,8 +315,7 @@ function Topbar() {
   }, []);
 
   const handleSignOut = () => {
-    signOut();
-    navigate("/login");
+    void signOut().then(() => navigate("/login"));
   };
 
   return (
@@ -371,6 +381,20 @@ function Topbar() {
 /** Layout autenticado: sidebar navy fixa no desktop, drawer no mobile + topo sticky. */
 export default function AppShell() {
   const session = useSession();
+  const navigate = useNavigate();
+  const me = useMe();
+  const expired = me.error instanceof ApiError && me.error.status === 401;
+
+  // Cookie expirado/ausente no backend → encerra o perfil local e volta ao login.
+  // (Erro de rede = preview estático sem backend: mantém o modo demonstração offline.)
+  useEffect(() => {
+    if (!expired || !session) return;
+    void signOut(false).then(() => {
+      toast.error("Sua sessão expirou — faça login novamente.");
+      navigate("/login", { replace: true });
+    });
+  }, [expired, session, navigate]);
+
   if (!session) return <Navigate to="/login" replace />;
   return (
     <div className="min-h-svh bg-background">

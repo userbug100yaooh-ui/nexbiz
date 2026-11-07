@@ -1,10 +1,11 @@
-"""Helpers compartilhados pelos routers do NEXBIZ — escopo de empresa única (demo)."""
+"""Helpers compartilhados pelos routers do NEXBIZ — escopo multiempresa por sessão."""
 
 from typing import Any, Dict
 
 from fastapi import HTTPException
 
 from lib.db import db
+from lib.tenant import current_ctx
 from models.entities import Company
 
 
@@ -16,12 +17,12 @@ def clean(doc: Dict[str, Any]) -> Dict[str, Any]:
 
 
 async def get_company() -> Company:
-    """A empresa demonstrativa. O modelo já é multiempresa (`company_id` em todos os
-    documentos); enquanto a autenticação é mock, todas as rotas escopam nesta empresa."""
-    doc = await db.companies.find_one()
+    """Empresa da sessão atual (resolvida pelo tenant_middleware a partir do cookie).
+    Toda rota de negócio filtra por company.id — usuários nunca veem dados de outra empresa."""
+    ctx = current_ctx.get()
+    if ctx is None:
+        raise HTTPException(status_code=401, detail="Sessão ausente ou expirada — faça login novamente.")
+    doc = await db.companies.find_one({"id": ctx.company_id})
     if not doc:
-        raise HTTPException(
-            status_code=404,
-            detail="Nenhuma empresa cadastrada — execute o seed (cd /app/backend && python seed.py).",
-        )
+        raise HTTPException(status_code=404, detail="Empresa da sessão não encontrada.")
     return Company(**clean(doc))

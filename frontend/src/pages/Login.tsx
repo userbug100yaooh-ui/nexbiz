@@ -10,7 +10,7 @@ import { Field } from "@/components/Field";
 import { Input } from "@/components/ui/input";
 import { ApiError } from "@/lib/api";
 import { demoData } from "@/lib/demo-data";
-import { errMessage, useLoginMutation } from "@/lib/queries";
+import { errMessage, useDemoMutation, useLoginMutation } from "@/lib/queries";
 import { signIn, useSession } from "@/lib/session";
 import type { AppUser, Company } from "@/lib/types";
 
@@ -26,11 +26,12 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const login = useLoginMutation();
+  const demo = useDemoMutation();
 
   if (session) return <Navigate to="/app" replace />;
 
-  const enter = (user: AppUser, company: Company, message: string) => {
-    signIn({ user, company });
+  const enter = (user: AppUser, company: Company, message: string, mode: string) => {
+    signIn({ user, company, mode });
     toast.success(message);
     navigate("/app");
   };
@@ -44,7 +45,7 @@ export default function Login() {
     login.mutate(
       { email: email.trim(), password },
       {
-        onSuccess: (res) => enter(res.user, res.company, "Bem-vindo de volta!"),
+        onSuccess: (res) => enter(res.user, res.company, "Bem-vindo de volta!", res.mode),
         onError: (err) => {
           if (err instanceof ApiError) {
             toast.error(errMessage(err));
@@ -53,13 +54,20 @@ export default function Login() {
           // Sem backend (preview estático): entra no modo demonstração.
           const user =
             demoData.users.find((u) => u.email.toLowerCase() === email.trim().toLowerCase()) ?? demoData.users[0];
-          enter(user, demoData.company, "Modo demonstração — bem-vindo!");
+          enter(user, demoData.company, "Sem conexão — modo demonstração offline.", "offline");
         },
       },
     );
   };
 
-  const enterDemo = () => enter(demoData.users[0], demoData.company, "Bem-vindo à demonstração do NEXBIZ!");
+  const enterDemo = () =>
+    demo.mutate(undefined, {
+      onSuccess: (res) => enter(res.user, res.company, "Bem-vindo à demonstração do NEXBIZ!", "demo"),
+      onError: (err) =>
+        err instanceof ApiError
+          ? toast.error(errMessage(err))
+          : enter(demoData.users[0], demoData.company, "Bem-vindo à demonstração do NEXBIZ!", "offline"),
+    });
 
   return (
     <div className="grid min-h-svh lg:grid-cols-2" data-testid="page-login">
@@ -89,7 +97,7 @@ export default function Login() {
           </ul>
         </div>
         <p className="relative text-xs text-slate-500">
-          Ambiente de demonstração · nenhuma senha é verificada · dados fictícios
+          Login protegido por Supabase · senhas nunca ficam no NEXBIZ · conta demo disponível
         </p>
       </aside>
 
@@ -148,7 +156,7 @@ export default function Login() {
               <Sparkles className="size-4 text-primary" /> Entrar com Conta Demo (Admin)
             </Button>
             <p className="mt-2 text-center text-xs text-muted-foreground">
-              Demonstração: qualquer e-mail e senha entram — nada é verificado.
+              Conta demo: entra na empresa de demonstração, sem senha, com dados fictícios.
             </p>
 
             <p className="mt-6 text-center text-sm text-muted-foreground">

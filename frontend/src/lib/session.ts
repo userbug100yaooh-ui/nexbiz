@@ -1,8 +1,10 @@
-// Sessão mock do NEXBIZ (escopo: "não simule autenticação real").
-// Guarda { user, company } no localStorage e notifica os ouvintes. Ao sair, limpa o
-// cache do react-query para os dados de uma conta nunca vazarem para o próximo login.
+// Sessão do NEXBIZ. A autenticação real vive em cookies httpOnly definidos pelo backend
+// (/api/auth/*) — o JavaScript nunca vê tokens. Aqui guardamos só o perfil exibido
+// ({ user, company, mode }) para render imediato. Ao sair, o backend limpa os cookies e
+// o cache do react-query é apagado para os dados de uma conta nunca vazarem para a próxima.
 
 import { useSyncExternalStore } from "react";
+import { apiPost } from "@/lib/api";
 import { queryClient } from "@/lib/queryClient";
 import type { Session } from "@/lib/types";
 
@@ -33,12 +35,15 @@ export function useSession(): Session | null {
 }
 
 export function signIn(session: Session): void {
+  queryClient.clear();
   current = session;
   localStorage.setItem(KEY, JSON.stringify(session));
   listeners.forEach((l) => l());
 }
 
-export function signOut(): void {
+/** Limpa o perfil local + cache. `server` = também encerra os cookies no backend. */
+export async function signOut(server = true): Promise<void> {
+  if (server) await apiPost("/auth/logout").catch(() => undefined);
   current = null;
   localStorage.removeItem(KEY);
   queryClient.clear();

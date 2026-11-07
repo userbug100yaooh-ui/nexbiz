@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Download, Percent, ShoppingCart, Ticket, TrendingUp } from "lucide-react";
+import { Download, FileDown, Percent, ShoppingCart, Ticket, TrendingUp } from "lucide-react";
 import { toast } from "sonner";
 import { Bar, BarChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { PageHeader } from "@/components/PageHeader";
@@ -11,7 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { CHART_COLORS, expenseByCategory, lastMonths, monthlyRevenue, round2, sum, topProducts } from "@/lib/calc";
 import { addDaysISO, formatBRL, formatDate, formatNumber, todayISO } from "@/lib/format";
-import { useProducts, useSales, useTransactions } from "@/lib/queries";
+import { exportPdf } from "@/lib/pdf";
+import { useCompany, useProducts, useSales, useTransactions } from "@/lib/queries";
 import { cn } from "@/lib/utils";
 
 const ABC_CLASS: Record<string, { label: string; tone: "success" | "warning" | "danger" }> = {
@@ -24,6 +25,7 @@ export default function Relatorios() {
   const { data: sales = [] } = useSales();
   const { data: products = [] } = useProducts();
   const { data: transactions = [] } = useTransactions();
+  const { data: company } = useCompany();
 
   const [days, setDays] = useState("90");
 
@@ -87,9 +89,48 @@ export default function Relatorios() {
     toast.success("Relatório exportado em CSV!");
   };
 
+  const exportReportPdf = () => {
+    exportPdf({
+      title: "Relatório de Desempenho",
+      subtitle: `Últimos ${days} dias · desde ${formatDate(periodStart)}`,
+      companyName: company?.name ?? "NEXBIZ",
+      summary: [
+        ["Faturamento", formatBRL(revenue)],
+        ["Vendas concluídas", formatNumber(salesInPeriod.length)],
+        ["Ticket médio", formatBRL(ticket)],
+        ["Margem bruta", `${formatNumber(margin, 1)}%`],
+        ["Recebido", formatBRL(recebido)],
+        ["Pago", formatBRL(pago)],
+        ["Resultado", formatBRL(round2(recebido - pago))],
+      ],
+      sections: [
+        {
+          title: "Faturamento por mês",
+          head: ["Mês", "Faturamento"],
+          rows: monthlyData.map((m) => [m.label, formatBRL(m.total)]),
+          rightAlign: [1],
+        },
+        {
+          title: "Curva ABC de produtos",
+          head: ["#", "Produto", "Qtd.", "Receita", "Acumulado", "Classe"],
+          rows: abc.map((r) => [r.rank, r.name, r.qty, formatBRL(r.revenue), `${formatNumber(r.cumShare, 1)}%`, r.klass]),
+          rightAlign: [2, 3, 4],
+        },
+        {
+          title: "Receita por categoria",
+          head: ["Categoria", "Receita"],
+          rows: categoryData.map((c) => [c.name, formatBRL(c.value)]),
+          rightAlign: [1],
+        },
+      ],
+      filename: `nexbiz-relatorio-${days}d.pdf`,
+    });
+    toast.success("Relatório exportado em PDF!");
+  };
+
   return (
     <div data-testid="page-relatorios">
-      <PageHeader title="Relatórios & BI" description="Desempenjo de vendas, produtos e resultado do negócio.">
+      <PageHeader title="Relatórios & BI" description="Desempenho de vendas, produtos e resultado do negócio.">
         <Select value={days} onValueChange={(v: string) => setDays(v)}>
           <SelectTrigger className="w-40" data-testid="select-periodo-relatorios">
             <SelectValue>{(v: string) => `Últimos ${v} dias`}</SelectValue>
@@ -102,6 +143,9 @@ export default function Relatorios() {
         </Select>
         <Button variant="outline" onClick={exportCsv} data-testid="btn-exportar-csv">
           <Download className="size-4" /> Exportar CSV
+        </Button>
+        <Button onClick={exportReportPdf} data-testid="btn-exportar-pdf">
+          <FileDown className="size-4" /> Exportar PDF
         </Button>
       </PageHeader>
 

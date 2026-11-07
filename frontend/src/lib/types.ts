@@ -22,12 +22,15 @@ export interface AppUser {
   name: string;
   email: string;
   role: string; // admin | gerente | vendedor
+  supabase_user_id: string; // "" = usuário demo/seed
   created_at: string;
 }
 
 export interface AuthOut {
   user: AppUser;
   company: Company;
+  mode: string; // demo | supabase
+  email_confirmation_required: boolean;
 }
 
 export interface Product {
@@ -106,6 +109,44 @@ export interface Transaction {
   created_at: string;
 }
 
+// Espelho de backend/models/service_orders.py
+export interface ServiceOrder {
+  id: string;
+  company_id: string;
+  code: string; // OS-0001
+  client_id: string;
+  client_name: string;
+  service_id: string;
+  service_name: string;
+  status: string; // aberta | em_andamento | concluida | cancelada
+  scheduled_date: string; // YYYY-MM-DD
+  price: number;
+  notes: string;
+  created_at: string;
+}
+
+export interface ServiceOrderInput {
+  client_id: string;
+  service_id: string;
+  status: string;
+  scheduled_date: string;
+  price: number | null;
+  notes: string;
+}
+
+export interface ServiceOrderUpdate {
+  status?: string;
+  scheduled_date?: string;
+  notes?: string;
+}
+
+// Espelho de ImportOut em backend/routers/importer.py
+export interface ImportOut {
+  created: number;
+  skipped: number;
+  total: number;
+}
+
 // ---- payloads de entrada (espelham *In / *Update no backend) ----
 
 export type ProductInput = Pick<Product, "name" | "sku" | "category" | "unit" | "price" | "cost" | "stock" | "min_stock" | "active">;
@@ -147,6 +188,7 @@ export interface RegisterInput {
 export interface Session {
   user: AppUser;
   company: Company;
+  mode?: string; // demo | supabase | offline
 }
 
 // ---- bundle de dados demonstrativos (gerado por backend/export_demo.py) ----
@@ -157,6 +199,7 @@ export interface DemoBundle {
   products: Product[];
   clients: Client[];
   services: Service[];
+  service_orders: ServiceOrder[];
   sales: Sale[];
   transactions: Transaction[];
 }

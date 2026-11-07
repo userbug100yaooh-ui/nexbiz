@@ -64,7 +64,7 @@ async def get_status_checks():
     return [StatusCheck(**status_check) for status_check in status_checks]
 
 # NEXBIZ — um módulo de router por recurso, todos dobrados no router /api acima da linha final
-from routers import auth, clients, companies, products, sales, services, transactions
+from routers import auth, clients, companies, importer, products, sales, service_orders, services, transactions
 
 api_router.include_router(auth.router)
 api_router.include_router(companies.router)
@@ -73,9 +73,15 @@ api_router.include_router(clients.router)
 api_router.include_router(services.router)
 api_router.include_router(sales.router)
 api_router.include_router(transactions.router)
+api_router.include_router(service_orders.router)
+api_router.include_router(importer.router)
 
 # Include the router in the main app
 app.include_router(api_router)
+
+from lib.tenant import tenant_middleware
+
+app.middleware("http")(tenant_middleware)  # sessão (cookie) → empresa, antes de qualquer rota /api
 
 app.add_middleware(
     CORSMiddleware,

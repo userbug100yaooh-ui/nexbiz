@@ -3,6 +3,7 @@ import { Building2, MoreHorizontal, Pencil, Plus, Search, Trash2, User, Users } 
 import { toast } from "sonner";
 import { ConfirmDialog } from "@/components/ConfirmDialog";
 import { EmptyState } from "@/components/EmptyState";
+import { ImportDialog } from "@/components/ImportDialog";
 import { Field } from "@/components/Field";
 import { PageHeader } from "@/components/PageHeader";
 import { StatCard } from "@/components/StatCard";
@@ -107,6 +108,7 @@ export default function Clientes() {
   return (
     <div data-testid="page-clientes">
       <PageHeader title="Clientes & CRM" description="Base de clientes com histórico de compras e contatos.">
+        <ImportDialog entity="clients" />
         <Button onClick={openCreate} data-testid="btn-novo-cliente">
           <Plus className="size-4" /> Novo cliente
         </Button>

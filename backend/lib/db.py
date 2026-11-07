@@ -22,8 +22,9 @@ INDEXES: dict[str, list[IndexModel]] = {
     "companies": [IndexModel([("id", ASCENDING)], name="id", unique=True)],
     "users": [
         IndexModel([("id", ASCENDING)], name="id", unique=True),
-        IndexModel([("email", ASCENDING)], name="email", unique=True),
+        IndexModel([("email", ASCENDING)], name="email"),
         IndexModel([("company_id", ASCENDING)], name="company_id"),
+        IndexModel([("supabase_user_id", ASCENDING)], name="supabase_user_id"),
     ],
     "products": [
         IndexModel([("id", ASCENDING)], name="id", unique=True),
@@ -38,6 +39,11 @@ INDEXES: dict[str, list[IndexModel]] = {
         IndexModel([("company_id", ASCENDING), ("name", ASCENDING)], name="company_name"),
     ],
     "sales": [
+        IndexModel([("id", ASCENDING)], name="id", unique=True),
+        IndexModel([("company_id", ASCENDING), ("code", ASCENDING)], name="company_code", unique=True),
+        IndexModel([("company_id", ASCENDING), ("created_at", DESCENDING)], name="company_created"),
+    ],
+    "service_orders": [
         IndexModel([("id", ASCENDING)], name="id", unique=True),
         IndexModel([("company_id", ASCENDING), ("code", ASCENDING)], name="company_code", unique=True),
         IndexModel([("company_id", ASCENDING), ("created_at", DESCENDING)], name="company_created"),

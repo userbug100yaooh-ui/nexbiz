@@ -3,7 +3,7 @@
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { ApiError, apiDelete, apiGet, apiPost, apiPut } from "@/lib/api";
+import { ApiError, apiDelete, apiGet, apiPost, apiPut, apiUpload } from "@/lib/api";
 import { demoData } from "@/lib/demo-data";
 import type {
   AppUser,
@@ -13,6 +13,7 @@ import type {
   Company,
   CompanyUpdate,
   DemoBundle,
+  ImportOut,
   Product,
   ProductInput,
   RegisterInput,
@@ -20,6 +21,9 @@ import type {
   SaleInput,
   Service,
   ServiceInput,
+  ServiceOrder,
+  ServiceOrderInput,
+  ServiceOrderUpdate,
   Transaction,
   TransactionInput,
 } from "@/lib/types";
@@ -38,7 +42,8 @@ export async function withFallback<T>(path: string, fallback: T): Promise<T> {
 export function errMessage(e: unknown): string {
   if (e instanceof ApiError) {
     const detail = (e.body as { detail?: unknown } | null)?.detail;
-    if (typeof detail === "string") return detail;
+    if (typeof detail === "string") return detail; // mensagem real do backend primeiro
+    if (e.status === 401) return "Sua sessão expirou — faça login novamente.";
     return `Não foi possível concluir a operação (erro ${e.status}).`;
   }
   if (e instanceof TypeError) return "Sem conexão com o servidor — no modo demonstração é possível apenas visualizar os dados.";
@@ -69,6 +74,9 @@ export const useSales = () =>
 
 export const useTransactions = () =>
   useQuery({ queryKey: ["transactions"], queryFn: () => withFallback<Transaction[]>("/transactions", bundle.transactions) });
+
+export const useServiceOrders = () =>
+  useQuery({ queryKey: ["service-orders"], queryFn: () => withFallback<ServiceOrder[]>("/service-orders", bundle.service_orders) });
 
 // ---------------------------------------------------------------- mutações
 
@@ -226,6 +234,60 @@ export function useTransactionMutations() {
   };
 }
 
+// ---------------------------------------------------------------- ordens de serviço
+
+const OS_STATUS_TOAST: Record<string, string> = {
+  em_andamento: "Ordem de serviço iniciada!",
+  concluida: "OS concluída — receita lançada no financeiro.",
+  cancelada: "Ordem de serviço cancelada.",
+  aberta: "Ordem de serviço reaberta.",
+};
+
+export function useServiceOrderMutations() {
+  const invalidate = useInvalidate();
+  const onError = (e: unknown) => toast.error(errMessage(e));
+  return {
+    create: useMutation({
+      mutationFn: (body: ServiceOrderInput) => apiPost<ServiceOrder>("/service-orders", body),
+      onSuccess: (os) => {
+        invalidate(["service-orders", "transactions"]);
+        toast.success(`Ordem de serviço ${os.code} criada!`);
+      },
+      onError,
+    }),
+    update: useMutation({
+      mutationFn: ({ id, body }: { id: string; body: ServiceOrderUpdate }) => apiPut<ServiceOrder>(`/service-orders/${id}`, body),
+      onSuccess: (os) => {
+        invalidate(["service-orders", "transactions"]);
+        toast.success(OS_STATUS_TOAST[os.status] ?? "Ordem de serviço atualizada!");
+      },
+      onError,
+    }),
+    remove: useMutation({
+      mutationFn: (id: string) => apiDelete<ServiceOrder>(`/service-orders/${id}`),
+      onSuccess: () => {
+        invalidate(["service-orders", "transactions"]);
+        toast.success("Ordem de serviço excluída.");
+      },
+      onError,
+    }),
+  };
+}
+
+// ---------------------------------------------------------------- importação
+
+export function useImportMutation(entity: "products" | "clients") {
+  const invalidate = useInvalidate();
+  return useMutation({
+    mutationFn: (file: File) => apiUpload<ImportOut>(`/import/${entity}`, file),
+    onSuccess: (res) => {
+      invalidate([entity]);
+      toast.success(`${res.created} registro(s) importado(s)${res.skipped ? ` · ${res.skipped} linha(s) ignorada(s)` : ""}.`);
+    },
+    onError: (e: unknown) => toast.error(errMessage(e)),
+  });
+}
+
 export function useCompanyMutation() {
   const invalidate = useInvalidate();
   return useMutation({
@@ -245,6 +307,14 @@ export function useLoginMutation() {
     mutationFn: (body: { email: string; password: string }) => apiPost<AuthOut>("/auth/login", body),
   });
 }
+
+export function useDemoMutation() {
+  return useMutation({ mutationFn: () => apiPost<AuthOut>("/auth/demo") });
+}
+
+/** Revalida a sessão do cookie no backend (401 = expirada). */
+export const useMe = () =>
+  useQuery({ queryKey: ["me"], queryFn: () => apiGet<AuthOut>("/auth/me"), retry: false, staleTime: 60_000 });
 
 export function useRegisterMutation() {
   return useMutation({

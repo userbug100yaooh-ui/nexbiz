@@ -10,6 +10,7 @@ import Vendas from "@/pages/Vendas";
 import Financeiro from "@/pages/Financeiro";
 import Clientes from "@/pages/Clientes";
 import Servicos from "@/pages/Servicos";
+import OrdensServico from "@/pages/OrdensServico";
 import Relatorios from "@/pages/Relatorios";
 import Configuracoes from "@/pages/Configuracoes";
 
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="financeiro" element={<Financeiro />} />
           <Route path="clientes" element={<Clientes />} />
           <Route path="servicos" element={<Servicos />} />
+          <Route path="ordens-servico" element={<OrdensServico />} />
           <Route path="relatorios" element={<Relatorios />} />
           <Route path="configuracoes" element={<Configuracoes />} />
         </Route>

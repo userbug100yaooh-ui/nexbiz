@@ -45,3 +45,23 @@ async def aclient():
 
 
 # --- app-specific fixtures below this line ---
+
+
+def demo_session_client() -> httpx.Client:
+    """Httpx client authenticated as the demo user.
+
+    The demo cookie is set with the Secure attribute, so when the backend is
+    exercised over plain http://localhost (test infra, not the real https
+    preview the browser hits) httpx's spec-compliant cookie jar correctly
+    refuses to replay it. We work around this locally by reading the Set-Cookie
+    response and resending it verbatim as a Cookie header on every request via
+    an event hook, mirroring what a real https browser session does for free.
+    """
+    client = httpx.Client(base_url=API_URL, timeout=30.0)
+    resp = client.post("/auth/demo")
+    if resp.status_code != 200:
+        client.close()
+        raise AssertionError(f"demo login failed: {resp.status_code} {resp.text}")
+    cookie_header = "; ".join(f"{k}={v}" for k, v in resp.cookies.items())
+    client.headers["Cookie"] = cookie_header
+    return client
